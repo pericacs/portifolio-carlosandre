@@ -1,0 +1,53 @@
+{
+  "screens": [
+    "docs/screenshots/cms/dashboard-1440.png",
+    "docs/screenshots/cms/perfil-1440.png",
+    "docs/screenshots/cms/experiencias-1440.png",
+    "docs/screenshots/cms/formacoes-1440.png",
+    "docs/screenshots/cms/certificacoes-1440.png",
+    "docs/screenshots/cms/idiomas-1440.png",
+    "docs/screenshots/cms/curriculo-1440.png",
+    "docs/screenshots/cms/skills-1440.png",
+    "docs/screenshots/cms/categorias-1440.png",
+    "docs/screenshots/cms/projetos-1440.png",
+    "docs/screenshots/cms/cases-1440.png",
+    "docs/screenshots/cms/artigos-1440.png",
+    "docs/screenshots/cms/videos-1440.png",
+    "docs/screenshots/cms/midia-1440.png",
+    "docs/screenshots/cms/mensagens-1440.png",
+    "docs/screenshots/cms/configuracoes-1440.png",
+    "docs/screenshots/cms/dashboard-390.png",
+    "docs/screenshots/cms/perfil-390.png",
+    "docs/screenshots/cms/experiencias-390.png",
+    "docs/screenshots/cms/formacoes-390.png",
+    "docs/screenshots/cms/certificacoes-390.png",
+    "docs/screenshots/cms/idiomas-390.png",
+    "docs/screenshots/cms/curriculo-390.png",
+    "docs/screenshots/cms/skills-390.png",
+    "docs/screenshots/cms/categorias-390.png",
+    "docs/screenshots/cms/projetos-390.png",
+    "docs/screenshots/cms/cases-390.png",
+    "docs/screenshots/cms/artigos-390.png",
+    "docs/screenshots/cms/videos-390.png",
+    "docs/screenshots/cms/midia-390.png",
+    "docs/screenshots/cms/mensagens-390.png",
+    "docs/screenshots/cms/configuracoes-390.png"
+  ],
+  "flows": [
+    "Projeto: criar, editar, rascunho privado, preview, publicar, preservar versão pública, upload, arquivar e excluir",
+    "Artigo: editor visual, salvar e publicar",
+    "Contato público → PostgreSQL → atendimento administrativo"
+  ],
+  "visual": [
+    {
+      "width": 1440,
+      "contactTop": 2503,
+      "changedChannelsBeforeContact": 510
+    },
+    {
+      "width": 390,
+      "contactTop": 7323,
+      "changedChannelsBeforeContact": 102
+    }
+  ]
+}

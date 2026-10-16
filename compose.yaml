@@ -1,0 +1,75 @@
+name: carlos-andre-portfolio
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-portfolio}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Defina POSTGRES_PASSWORD no arquivo .env}
+      POSTGRES_DB: ${POSTGRES_DB:-portfolio}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+  migrate:
+    build: ./backend
+    env_file: .env
+    environment:
+      DB_HOST: db
+    command: [alembic, upgrade, head]
+    depends_on:
+      db:
+        condition: service_healthy
+  backend:
+    build: ./backend
+    env_file: .env
+    environment:
+      DB_HOST: db
+    volumes:
+      - media_data:/app/uploads
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health/ready')"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+  frontend:
+    build: ./frontend
+    environment:
+      API_INTERNAL_URL: http://backend:8000
+      NEXT_TELEMETRY_DISABLED: '1'
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+  worker:
+    build: ./backend
+    env_file: .env
+    environment:
+      DB_HOST: db
+    command: [python, -m, app.worker]
+    volumes:
+      - media_data:/app/uploads
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - '127.0.0.1:8080:80'
+    volumes:
+      - ./infra/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - frontend
+      - backend
+    restart: unless-stopped
+volumes:
+  postgres_data:
+  media_data:

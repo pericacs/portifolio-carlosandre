@@ -1,0 +1,19 @@
+# Override opcional para recarregamento automático durante o desenvolvimento.
+services:
+  backend:
+    volumes:
+      - ./backend:/app
+      - media_data:/app/uploads
+    command: [uvicorn, app.main:app, --host, 0.0.0.0, --port, '8000', --reload, --no-proxy-headers]
+  frontend:
+    build:
+      context: ./frontend
+      target: dependencies
+    volumes:
+      - ./frontend:/app
+      - frontend_modules:/app/node_modules
+      - frontend_next:/app/.next
+    command: [pnpm, dev]
+volumes:
+  frontend_modules:
+  frontend_next:

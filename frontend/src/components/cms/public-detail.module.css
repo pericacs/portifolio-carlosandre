@@ -1,0 +1,9 @@
+.project { padding: clamp(24px, 4vw, 56px); margin-bottom: 64px; }
+.project h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.12; margin: 12px 0 24px; letter-spacing: -.025em; }
+.project > p { max-width: 900px; font-size: 17px; line-height: 1.7; }
+.project section { margin-top: 32px; }
+.project h2 { font-size: 24px; font-weight: 700; margin-bottom: 16px; }
+.project ul { list-style: disc; padding-left: 22px; line-height: 1.9; }
+.project > div:global(.tags) { margin: 28px 0; gap: 8px; }
+.project > div:global(.tags) span { font-size: 13px; padding: 6px 12px; }
+.project a { font-weight: 600; }

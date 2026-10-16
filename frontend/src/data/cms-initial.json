@@ -1,0 +1,3705 @@
+[
+  {
+    "module": "perfil",
+    "source_key": "initial:perfil:main",
+    "data": {
+      "title": "Carlos André",
+      "professionalTitle": "TECHNOLOGY & VENTURES",
+      "subtitle": "TECNOLOGIA · DADOS · IA · NEGÓCIOS",
+      "heroPrefix": "Da ideia ao ",
+      "heroHighlight": "impacto real.",
+      "heroDescription": "Transformo problemas complexos em produtos, plataformas\n e soluções de alto impacto, unindo tecnologia, dados e visão de negócio.",
+      "biographyPt": [
+        "Profissional com mais de 20 anos de experiência em Tecnologia da Informação, especializado em Arquitetura de Soluções, Engenharia de Dados, Desenvolvimento de Software e Transformação Digital, atuando na concepção, modernização e implantação de plataformas críticas para os setores financeiro, meios de pagamento, saúde, varejo, governo e tecnologia.",
+        "Ao longo da carreira participei da arquitetura, desenvolvimento e evolução de soluções responsáveis pelo processamento de milhões de transações financeiras e bilhões de registros analíticos, atuando diretamente em projetos de adquirência, subadquirência, gateways de pagamento, gestão de recebíveis, cobrança recorrente, split financeiro, contas escrow, integrações bancárias, prevenção à fraude, análise de crédito e plataformas SaaS de missão crítica.",
+        "Possuo sólida experiência na definição de arquiteturas distribuídas, microsserviços, APIs REST, integração entre sistemas corporativos, modernização de ambientes legados, computação em nuvem e engenharia de dados em larga escala, sempre buscando soluções escaláveis, resilientes e alinhadas às necessidades do negócio.",
+        "Minha atuação vai além do desenvolvimento técnico. Participo desde a identificação dos desafios de negócio e levantamento de requisitos até a definição da arquitetura, desenvolvimento, implantação e evolução contínua das soluções, trabalhando diretamente com executivos, áreas de negócio, arquitetos e equipes multidisciplinares.",
+        "Nos últimos anos ampliei minha atuação para Inteligência Artificial aplicada ao ambiente corporativo, desenvolvendo soluções voltadas à preparação de dados, classificação inteligente de informações, análise de risco, detecção de anomalias, automação de processos, modelos preditivos e IA Generativa, integrando essas tecnologias às plataformas de dados e sistemas financeiros.",
+        "Minha experiência combina Arquitetura Corporativa, Plataformas Financeiras, Engenharia de Dados, Cloud Computing e Inteligência Artificial, permitindo transformar desafios complexos de negócio em soluções tecnológicas escaláveis, seguras e sustentáveis."
+      ],
+      "biographyEn": [],
+      "objective": "Atuar como Data Engineering, Principal Solution Architect, Enterprise Architect, CTO ou Head de Tecnologia, contribuindo com minha experiência em Arquitetura Corporativa, Plataformas Financeiras, Engenharia de Dados, Cloud Computing e Inteligência Artificial para apoiar empresas na construção de soluções escaláveis, seguras e alinhadas aos objetivos estratégicos do negócio.",
+      "quote": "Construir tecnologia é, para mim, uma forma de servir pessoas.",
+      "signature": [
+        "Tecnologia",
+        "para um futuro",
+        "mais humano."
+      ],
+      "metrics": [
+        {
+          "value": "20+",
+          "label": "anos de experiência\nem tecnologia"
+        },
+        {
+          "value": "9B+",
+          "label": "registros processados\nno projeto CEF"
+        },
+        {
+          "value": "4",
+          "label": "projetos e iniciativas\napresentados"
+        },
+        {
+          "value": "∞",
+          "label": "novos desafios\na construir"
+        }
+      ],
+      "photo": "/images/carlos-andre-executivo.png",
+      "email": "pericacs@gmail.com",
+      "whatsapp": "5548996277411"
+    }
+  },
+  {
+    "module": "configuracoes",
+    "source_key": "initial:configuracoes:main",
+    "data": {
+      "title": "Carlos André | Technology & Ventures",
+      "footer": [
+        "Tecnologia hoje.",
+        "Um futuro melhor amanhã."
+      ],
+      "services": [
+        {
+          "title": "Desenvolvimento de Produtos",
+          "shortTitle": "Produtos Digitais",
+          "tagline": "Ideias que viram valor",
+          "description": "Da concepção ao lançamento, com foco em experiência do usuário, escalabilidade e resultado.",
+          "icon": "cube",
+          "color": "blue"
+        },
+        {
+          "title": "Dados & Inteligência Artificial",
+          "shortTitle": "Dados & IA",
+          "tagline": "Inteligência para decidir melhor",
+          "description": "Arquitetura de dados, analytics e soluções com IA para apoiar a tomada de decisão.",
+          "icon": "database",
+          "color": "green"
+        },
+        {
+          "title": "Consultoria Estratégica",
+          "shortTitle": "Consultoria Estratégica",
+          "tagline": "Experiência que acelera",
+          "description": "Tecnologia, produtos e inovação para empresas que querem crescer de forma sustentável.",
+          "icon": "chart",
+          "color": "violet"
+        },
+        {
+          "title": "Arquitetura de Soluções",
+          "shortTitle": "Parcerias & Investimentos",
+          "tagline": "Vamos construir juntos",
+          "description": "Soluções escaláveis com cloud, integrações, segurança e alta disponibilidade.",
+          "icon": "rocket",
+          "color": "cyan"
+        }
+      ],
+      "sectionOrder": [
+        "projetos",
+        "consultoria",
+        "experiencia",
+        "competencias",
+        "artigos",
+        "videos"
+      ],
+      "retentionDays": 180,
+      "locales": [
+        "pt-BR"
+      ],
+      "categories": [
+        "Tecnologia",
+        "Dados",
+        "IA",
+        "Negócios"
+      ],
+      "seoTitle": "Carlos André | Technology & Ventures",
+      "metaDescription": "Da ideia ao impacto real. Arquitetura de soluções, engenharia de dados, inteligência artificial e produtos digitais com Carlos André."
+    }
+  },
+  {
+    "module": "experiencias",
+    "source_key": "initial:experiencias:compass-cef",
+    "data": {
+      "title": "Compass UOL / Caixa Econômica Federal",
+      "slug": "compass-cef",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0,
+      "id": "compass-cef",
+      "company": "Compass UOL / Caixa Econômica Federal",
+      "wordmark": "CAIXA",
+      "role": "PL DEVELOPER | DATA ENGINEERING | DATA SOLUTION ARCHITECT",
+      "period": "Jun/2024 · término em validação",
+      "description": "Mais de 9 bilhões de registros processados e redução superior a 80% no tempo das cargas analíticas.",
+      "tags": [
+        "Dados",
+        "Databricks",
+        "Arquitetura"
+      ],
+      "narrative": [
+        "Atuação no projeto estratégico de modernização da plataforma analítica da Caixa Econômica Federal, participando da definição e implementação da arquitetura de dados responsável pela migração de processos legados para uma plataforma moderna baseada em Databricks, Apache Spark, Python e SQL Server.",
+        "Responsável pelo desenho, implementação e sustentação das camadas Raw e Bronze da arquitetura Lakehouse, estruturando pipelines de ingestão, validação, transformação e disponibilização de grandes volumes de dados provenientes de sistemas legados, garantindo governança, rastreabilidade, qualidade e escalabilidade.",
+        "Participei da modernização de processos originalmente executados em ambiente Mainframe (COBOL), contribuindo para a migração para uma arquitetura distribuída em nuvem, reduzindo significativamente o tempo de processamento e aumentando a disponibilidade das informações para consumo analítico.",
+        "Atuei em conjunto com arquitetos de soluções, especialistas de negócio, analistas e engenheiros de dados na definição da estratégia de modernização da plataforma analítica, assegurando integração entre sistemas legados e tecnologias modernas de processamento distribuído.",
+        "Também contribui para iniciativas de Pesquisa & Desenvolvimento e Inteligência Artificial, apoiando estudos relacionados à preparação de datasets, qualidade de dados, modelos analíticos, Machine Learning e evolução contínua de soluções baseadas em IA aplicadas ao ambiente corporativo.",
+        "Além do desenvolvimento dos pipelines, participei da implantação de práticas de CI/CD, Infraestrutura como Código (Terraform), automação de deploy utilizando GitHub Actions, padronizando ambientes, reduzindo erros operacionais e acelerando o ciclo de entrega das soluções."
+      ],
+      "responsibilities": [
+        "Arquitetura de Data Lakehouse.",
+        "Desenvolvimento de pipelines ETL/ELT em larga escala.",
+        "Modelagem de dados (Raw, Bronze, Silver e Gold).",
+        "Processamento distribuído utilizando Apache Spark.",
+        "Desenvolvimento em Python e PySpark.",
+        "Databricks.",
+        "Azure Data Factory.",
+        "SQL Server, PostgreSQL e Oracle.",
+        "Performance e otimização de consultas.",
+        "Governança e Qualidade de Dados.",
+        "Arquitetura de integração entre sistemas legados e Cloud.",
+        "CI/CD utilizando Terraform, GitHub Actions",
+        "Metodologias Ágeis (Scrum/Kanban).",
+        "Apoio técnico em iniciativas de Inteligência Artificial."
+      ],
+      "results": [
+        "Participação na modernização da plataforma analítica da Caixa Econômica Federal.",
+        "Processamento superior a 9 bilhões de registros.",
+        "Redução superior a 80% no tempo de processamento das cargas analíticas.",
+        "Redução de aproximadamente 16 horas para cerca de 1 hora nas principais cargas do ambiente analítico.",
+        "Redução do processamento de arquivos TXT de aproximadamente 24 horas para cerca de 3h45.",
+        "Estruturação da arquitetura inicial do ambiente Lakehouse utilizada pelas camadas posteriores do projeto.",
+        "Implantação de práticas de automação, governança e qualidade de dados para suportar um ambiente analítico corporativo de missão crítica."
+      ],
+      "technologies": [
+        "Databricks",
+        "Apache Spark",
+        "Python",
+        "PySpark",
+        "SQL Server",
+        "PostgreSQL",
+        "Oracle",
+        "Azure Data Factory",
+        "Terraform",
+        "GitHub Actions"
+      ],
+      "endDateValidationRequired": true,
+      "sourceParagraphs": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "startMonth": "2024-06",
+      "endMonth": "",
+      "datePrecision": "month",
+      "displayRole": "PL DEVELOPER | DATA ENGINEERING | DATA SOLUTION ARCHITECT",
+      "current": false,
+      "_legacy": {
+        "id": "compass-cef",
+        "company": "Compass UOL / Caixa Econômica Federal",
+        "wordmark": "CAIXA",
+        "role": "PL DEVELOPER | DATA ENGINEERING | DATA SOLUTION ARCHITECT",
+        "period": "Jun/2024 · término em validação",
+        "description": "Mais de 9 bilhões de registros processados e redução superior a 80% no tempo das cargas analíticas.",
+        "tags": [
+          "Dados",
+          "Databricks",
+          "Arquitetura"
+        ],
+        "narrative": [
+          "Atuação no projeto estratégico de modernização da plataforma analítica da Caixa Econômica Federal, participando da definição e implementação da arquitetura de dados responsável pela migração de processos legados para uma plataforma moderna baseada em Databricks, Apache Spark, Python e SQL Server.",
+          "Responsável pelo desenho, implementação e sustentação das camadas Raw e Bronze da arquitetura Lakehouse, estruturando pipelines de ingestão, validação, transformação e disponibilização de grandes volumes de dados provenientes de sistemas legados, garantindo governança, rastreabilidade, qualidade e escalabilidade.",
+          "Participei da modernização de processos originalmente executados em ambiente Mainframe (COBOL), contribuindo para a migração para uma arquitetura distribuída em nuvem, reduzindo significativamente o tempo de processamento e aumentando a disponibilidade das informações para consumo analítico.",
+          "Atuei em conjunto com arquitetos de soluções, especialistas de negócio, analistas e engenheiros de dados na definição da estratégia de modernização da plataforma analítica, assegurando integração entre sistemas legados e tecnologias modernas de processamento distribuído.",
+          "Também contribui para iniciativas de Pesquisa & Desenvolvimento e Inteligência Artificial, apoiando estudos relacionados à preparação de datasets, qualidade de dados, modelos analíticos, Machine Learning e evolução contínua de soluções baseadas em IA aplicadas ao ambiente corporativo.",
+          "Além do desenvolvimento dos pipelines, participei da implantação de práticas de CI/CD, Infraestrutura como Código (Terraform), automação de deploy utilizando GitHub Actions, padronizando ambientes, reduzindo erros operacionais e acelerando o ciclo de entrega das soluções."
+        ],
+        "responsibilities": [
+          "Arquitetura de Data Lakehouse.",
+          "Desenvolvimento de pipelines ETL/ELT em larga escala.",
+          "Modelagem de dados (Raw, Bronze, Silver e Gold).",
+          "Processamento distribuído utilizando Apache Spark.",
+          "Desenvolvimento em Python e PySpark.",
+          "Databricks.",
+          "Azure Data Factory.",
+          "SQL Server, PostgreSQL e Oracle.",
+          "Performance e otimização de consultas.",
+          "Governança e Qualidade de Dados.",
+          "Arquitetura de integração entre sistemas legados e Cloud.",
+          "CI/CD utilizando Terraform, GitHub Actions",
+          "Metodologias Ágeis (Scrum/Kanban).",
+          "Apoio técnico em iniciativas de Inteligência Artificial."
+        ],
+        "results": [
+          "Participação na modernização da plataforma analítica da Caixa Econômica Federal.",
+          "Processamento superior a 9 bilhões de registros.",
+          "Redução superior a 80% no tempo de processamento das cargas analíticas.",
+          "Redução de aproximadamente 16 horas para cerca de 1 hora nas principais cargas do ambiente analítico.",
+          "Redução do processamento de arquivos TXT de aproximadamente 24 horas para cerca de 3h45.",
+          "Estruturação da arquitetura inicial do ambiente Lakehouse utilizada pelas camadas posteriores do projeto.",
+          "Implantação de práticas de automação, governança e qualidade de dados para suportar um ambiente analítico corporativo de missão crítica."
+        ],
+        "technologies": [
+          "Databricks",
+          "Apache Spark",
+          "Python",
+          "PySpark",
+          "SQL Server",
+          "PostgreSQL",
+          "Oracle",
+          "Azure Data Factory",
+          "Terraform",
+          "GitHub Actions"
+        ],
+        "endDateValidationRequired": true,
+        "featured": true,
+        "visible": true,
+        "sourceParagraphs": [
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "startMonth": "2024-06",
+        "endMonth": null,
+        "datePrecision": "month",
+        "sortOrder": 0,
+        "displayRole": "PL DEVELOPER | DATA ENGINEERING | DATA SOLUTION ARCHITECT"
+      }
+    }
+  },
+  {
+    "module": "experiencias",
+    "source_key": "initial:experiencias:rpe-tech",
+    "data": {
+      "title": "RPE.tech / Fiabilité Tech",
+      "slug": "rpe-tech",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1,
+      "id": "rpe-tech",
+      "company": "RPE.tech / Fiabilité Tech",
+      "wordmark": "RPE.tech",
+      "role": "Senior Data Engineer",
+      "period": "Jan/2025 – Nov/2025",
+      "description": "RPE Analisa: cerca de 12 milhões de registros por dia e informações disponíveis em D+1.",
+      "tags": [
+        "Spark",
+        "Databricks",
+        "APIs"
+      ],
+      "narrative": [
+        "Fiabilité Tech, posteriormente incorporada à RPE.tech.",
+        "Empresa especializada em soluções de inteligência de dados para o varejo, desenvolvendo plataformas analíticas voltadas à consolidação, processamento e disponibilização de informações estratégicas para grandes redes varejistas nacionais.",
+        "Atuei como Senior Data Engineer, sendo responsável pela concepção, arquitetura e implementação da plataforma RPE Analisa, desenvolvendo toda a estrutura necessária para ingestão, consolidação, transformação e disponibilização de grandes volumes de dados provenientes de diferentes ERPs e sistemas corporativos.",
+        "Participei diretamente da definição da arquitetura do ambiente analítico, criando pipelines escaláveis para ingestão de dados, padronização das informações, processamento distribuído e disponibilização dos dados em ambiente analítico de alta performance.",
+        "Minha atuação concentrou-se principalmente na arquitetura das camadas iniciais da plataforma (Raw e Bronze), estruturando processos responsáveis pela ingestão, validação, padronização e enriquecimento dos dados antes de sua disponibilização para as camadas analíticas posteriores.",
+        "Também participei da definição das integrações entre diferentes sistemas ERP utilizados pelos clientes, desenvolvendo APIs, rotinas automatizadas e pipelines ETL/ELT capazes de consolidar informações provenientes de diversas fontes em uma única plataforma analítica.",
+        "A arquitetura desenvolvida permitiu que grandes grupos varejistas passassem a utilizar informações consolidadas em D+1, reduzindo significativamente o tempo necessário para obtenção de indicadores estratégicos e apoiando decisões comerciais, financeiras e operacionais.",
+        "A solução construída tornou-se a base tecnológica da plataforma RPE Analisa, permanecendo em utilização após a conclusão do projeto e sendo continuamente expandida para novos clientes do segmento varejista."
+      ],
+      "responsibilities": [
+        "Arquitetura da plataforma analítica RPE Analisa.",
+        "Arquitetura de Data Lake.",
+        "Engenharia de Dados.",
+        "Desenvolvimento de pipelines ETL/ELT.",
+        "Processamento distribuído utilizando Apache Spark.",
+        "Python.",
+        "PySpark.",
+        "Databricks.",
+        "SQL.",
+        "Desenvolvimento de APIs REST.",
+        "Integração entre múltiplos ERPs.",
+        "Modelagem de Dados.",
+        "Governança de Dados.",
+        "Qualidade de Dados.",
+        "Cloud Computing.",
+        "Performance de ambientes analíticos.",
+        "Arquitetura de soluções corporativas.",
+        "Integração entre sistemas corporativos.",
+        "Metodologias Ágeis."
+      ],
+      "results": [
+        "Desenvolvimento da arquitetura da plataforma RPE Analisa.",
+        "Processamento de aproximadamente 12 milhões de registros diariamente.",
+        "Disponibilização de informações analíticas em D+1.",
+        "Integração entre múltiplos sistemas ERP.",
+        "Plataforma utilizada por grandes grupos varejistas nacionais.",
+        "Arquitetura replicada para diversos clientes da empresa.",
+        "Apoio à expansão comercial da plataforma por meio da criação de uma solução escalável e reutilizável."
+      ],
+      "technologies": [
+        "Python",
+        "PySpark",
+        "Apache Spark",
+        "Databricks",
+        "SQL",
+        "PostgreSQL",
+        "APIs REST",
+        "Data Lake",
+        "ETL",
+        "ELT",
+        "Azure",
+        "AWS",
+        "Docker",
+        "Git",
+        "Modelagem de Dados",
+        "Cloud Computing",
+        "Engenharia de Dados",
+        "Integração entre ERPs"
+      ],
+      "endDateValidationRequired": false,
+      "sourceParagraphs": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88
+      ],
+      "startMonth": "2025-01",
+      "endMonth": "2025-11",
+      "datePrecision": "month",
+      "displayRole": "Senior Data Engineer",
+      "current": false,
+      "_legacy": {
+        "id": "rpe-tech",
+        "company": "RPE.tech / Fiabilité Tech",
+        "wordmark": "RPE.tech",
+        "role": "Senior Data Engineer",
+        "period": "Jan/2025 – Nov/2025",
+        "description": "RPE Analisa: cerca de 12 milhões de registros por dia e informações disponíveis em D+1.",
+        "tags": [
+          "Spark",
+          "Databricks",
+          "APIs"
+        ],
+        "narrative": [
+          "Fiabilité Tech, posteriormente incorporada à RPE.tech.",
+          "Empresa especializada em soluções de inteligência de dados para o varejo, desenvolvendo plataformas analíticas voltadas à consolidação, processamento e disponibilização de informações estratégicas para grandes redes varejistas nacionais.",
+          "Atuei como Senior Data Engineer, sendo responsável pela concepção, arquitetura e implementação da plataforma RPE Analisa, desenvolvendo toda a estrutura necessária para ingestão, consolidação, transformação e disponibilização de grandes volumes de dados provenientes de diferentes ERPs e sistemas corporativos.",
+          "Participei diretamente da definição da arquitetura do ambiente analítico, criando pipelines escaláveis para ingestão de dados, padronização das informações, processamento distribuído e disponibilização dos dados em ambiente analítico de alta performance.",
+          "Minha atuação concentrou-se principalmente na arquitetura das camadas iniciais da plataforma (Raw e Bronze), estruturando processos responsáveis pela ingestão, validação, padronização e enriquecimento dos dados antes de sua disponibilização para as camadas analíticas posteriores.",
+          "Também participei da definição das integrações entre diferentes sistemas ERP utilizados pelos clientes, desenvolvendo APIs, rotinas automatizadas e pipelines ETL/ELT capazes de consolidar informações provenientes de diversas fontes em uma única plataforma analítica.",
+          "A arquitetura desenvolvida permitiu que grandes grupos varejistas passassem a utilizar informações consolidadas em D+1, reduzindo significativamente o tempo necessário para obtenção de indicadores estratégicos e apoiando decisões comerciais, financeiras e operacionais.",
+          "A solução construída tornou-se a base tecnológica da plataforma RPE Analisa, permanecendo em utilização após a conclusão do projeto e sendo continuamente expandida para novos clientes do segmento varejista."
+        ],
+        "responsibilities": [
+          "Arquitetura da plataforma analítica RPE Analisa.",
+          "Arquitetura de Data Lake.",
+          "Engenharia de Dados.",
+          "Desenvolvimento de pipelines ETL/ELT.",
+          "Processamento distribuído utilizando Apache Spark.",
+          "Python.",
+          "PySpark.",
+          "Databricks.",
+          "SQL.",
+          "Desenvolvimento de APIs REST.",
+          "Integração entre múltiplos ERPs.",
+          "Modelagem de Dados.",
+          "Governança de Dados.",
+          "Qualidade de Dados.",
+          "Cloud Computing.",
+          "Performance de ambientes analíticos.",
+          "Arquitetura de soluções corporativas.",
+          "Integração entre sistemas corporativos.",
+          "Metodologias Ágeis."
+        ],
+        "results": [
+          "Desenvolvimento da arquitetura da plataforma RPE Analisa.",
+          "Processamento de aproximadamente 12 milhões de registros diariamente.",
+          "Disponibilização de informações analíticas em D+1.",
+          "Integração entre múltiplos sistemas ERP.",
+          "Plataforma utilizada por grandes grupos varejistas nacionais.",
+          "Arquitetura replicada para diversos clientes da empresa.",
+          "Apoio à expansão comercial da plataforma por meio da criação de uma solução escalável e reutilizável."
+        ],
+        "technologies": [
+          "Python",
+          "PySpark",
+          "Apache Spark",
+          "Databricks",
+          "SQL",
+          "PostgreSQL",
+          "APIs REST",
+          "Data Lake",
+          "ETL",
+          "ELT",
+          "Azure",
+          "AWS",
+          "Docker",
+          "Git",
+          "Modelagem de Dados",
+          "Cloud Computing",
+          "Engenharia de Dados",
+          "Integração entre ERPs"
+        ],
+        "endDateValidationRequired": false,
+        "featured": true,
+        "visible": true,
+        "sourceParagraphs": [
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88
+        ],
+        "startMonth": "2025-01",
+        "endMonth": "2025-11",
+        "datePrecision": "month",
+        "sortOrder": 1,
+        "displayRole": "Senior Data Engineer"
+      }
+    }
+  },
+  {
+    "module": "experiencias",
+    "source_key": "initial:experiencias:alibin",
+    "data": {
+      "title": "Alibin",
+      "slug": "alibin",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 2,
+      "id": "alibin",
+      "company": "Alibin",
+      "wordmark": "alibin",
+      "role": "CTO | ARQUITETO DE SOLUÇÕES | ENGENHEIRO DE DADOS",
+      "period": "Jan/2021 – Jun/2024",
+      "description": "Liderança tecnológica, estruturação de SCD, plataformas financeiras, dados e IA.",
+      "tags": [
+        "CTO",
+        "Banking",
+        "Cloud"
+      ],
+      "narrative": [
+        "Empresa do segmento financeiro (Fintech) especializada em meios de pagamento, gestão de recebíveis, vínculos de cobrança, concessão de crédito e integração com instituições financeiras, desenvolvendo soluções aderentes às regulamentações do Banco Central do Brasil, compliance financeiro e requisitos de segurança do mercado de pagamentos.",
+        "Atuei como Chief Technology Officer (CTO) e principal responsável pela estratégia tecnológica da empresa, liderando equipes multidisciplinares e conduzindo a evolução da arquitetura da plataforma financeira, infraestrutura em nuvem, engenharia de dados e desenvolvimento de novos produtos para o mercado financeiro.",
+        "Participei diretamente da estruturação tecnológica para criação de uma Instituição Financeira (SCD), apoiando a definição dos processos de concessão de crédito, garantias financeiras, gestão de recebíveis, liquidação financeira, análise transacional, cobrança, prevenção à fraude, sustentabilidade operacional e conformidade regulatória.",
+        "Fui responsável pela arquitetura das soluções financeiras da empresa, desenvolvendo plataformas para meios de pagamento, integração bancária, gestão de recebíveis, conciliação financeira, processamento transacional e comunicação com registradoras financeiras e instituições regulatórias.",
+        "Também liderei a evolução da arquitetura de dados da organização, implantando ambientes modernos baseados em Data Lake, Databricks, Apache Spark, PySpark e Azure Data Factory, permitindo processamento distribuído de grandes volumes de dados financeiros, monitoramento em tempo real e geração de informações estratégicas para apoio à tomada de decisão.",
+        "Participei da definição e implementação de integrações financeiras complexas envolvendo Banco Central do Brasil, Mastercard, Visa, Elo, American Express, adquirentes, instituições financeiras e registradoras como a CERC, utilizando APIs REST para comunicação entre sistemas críticos.",
+        "Nos últimos anos também conduzi iniciativas relacionadas à aplicação de Inteligência Artificial e Machine Learning no ambiente corporativo, desenvolvendo soluções voltadas para classificação inteligente de transações financeiras, preparação de datasets, detecção de anomalias, análise de risco, comportamento transacional, apoio à decisão de crédito e automação de processos internos.",
+        "Além do desenvolvimento das soluções financeiras, participei da implantação de práticas de DevOps, Infraestrutura como Código (IaC), automação de pipelines e ambientes cloud utilizando Terraform, GitHub Actions, AWS CloudFormation, AWS, Microsoft Azure e Google Cloud Platform, garantindo maior escalabilidade, disponibilidade e padronização dos ambientes corporativos."
+      ],
+      "responsibilities": [
+        "Liderança da área de Tecnologia.",
+        "Definição da arquitetura tecnológica corporativa.",
+        "Estruturação tecnológica da Instituição Financeira (SCD).",
+        "Arquitetura de plataformas financeiras.",
+        "Desenvolvimento de soluções para meios de pagamento.",
+        "Gestão de recebíveis.",
+        "Concessão de crédito.",
+        "Garantias financeiras.",
+        "Liquidação financeira.",
+        "Conciliação financeira.",
+        "Integração com Banco Central do Brasil.",
+        "Integração com Mastercard, Visa, Elo e American Express.",
+        "Integração com CERC.",
+        "Desenvolvimento de APIs REST.",
+        "Arquitetura baseada em microsserviços.",
+        "Engenharia de Dados.",
+        "Arquitetura de Data Lake.",
+        "Apache Spark.",
+        "Databricks.",
+        "PySpark.",
+        "Azure Data Factory.",
+        "Python.",
+        "Django.",
+        "PostgreSQL.",
+        "SQL Server.",
+        "Oracle.",
+        "AWS.",
+        "Azure.",
+        "Google Cloud Platform.",
+        "Terraform.",
+        "GitHub Actions.",
+        "CI/CD.",
+        "Inteligência Artificial aplicada ao ambiente financeiro.",
+        "Machine Learning.",
+        "Governança de Dados.",
+        "Compliance.",
+        "Metodologias Ágeis (Scrum e Kanban)."
+      ],
+      "results": [
+        "Estruturação tecnológica da criação de uma Instituição Financeira (SCD).",
+        "Evolução da arquitetura da plataforma financeira da empresa.",
+        "Implantação de arquitetura moderna de dados baseada em Data Lake e processamento distribuído.",
+        "Integração entre instituições financeiras, adquirentes, bandeiras de cartões e registradoras financeiras.",
+        "Modernização dos ambientes cloud utilizando práticas de DevOps e Infraestrutura como Código.",
+        "Aplicação de Inteligência Artificial em processos de análise transacional, risco e automação.",
+        "Implantação de pipelines automatizados de processamento de dados, reduzindo atividades manuais e aumentando a confiabilidade operacional.",
+        "Desenvolvimento de soluções escaláveis para suportar crescimento das operações financeiras da empresa."
+      ],
+      "technologies": [
+        "Python",
+        "Django",
+        "Databricks",
+        "Apache Spark",
+        "PySpark",
+        "Azure Data Factory",
+        "PostgreSQL",
+        "SQL Server",
+        "Oracle",
+        "AWS",
+        "Azure",
+        "GCP",
+        "Terraform",
+        "GitHub Actions",
+        "AWS CloudFormation"
+      ],
+      "endDateValidationRequired": false,
+      "sourceParagraphs": [
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163
+      ],
+      "startMonth": "2021-01",
+      "endMonth": "2024-06",
+      "datePrecision": "month",
+      "displayRole": "CTO | ARQUITETO DE SOLUÇÕES | ENGENHEIRO DE DADOS",
+      "current": false,
+      "_legacy": {
+        "id": "alibin",
+        "company": "Alibin",
+        "wordmark": "alibin",
+        "role": "CTO | ARQUITETO DE SOLUÇÕES | ENGENHEIRO DE DADOS",
+        "period": "Jan/2021 – Jun/2024",
+        "description": "Liderança tecnológica, estruturação de SCD, plataformas financeiras, dados e IA.",
+        "tags": [
+          "CTO",
+          "Banking",
+          "Cloud"
+        ],
+        "narrative": [
+          "Empresa do segmento financeiro (Fintech) especializada em meios de pagamento, gestão de recebíveis, vínculos de cobrança, concessão de crédito e integração com instituições financeiras, desenvolvendo soluções aderentes às regulamentações do Banco Central do Brasil, compliance financeiro e requisitos de segurança do mercado de pagamentos.",
+          "Atuei como Chief Technology Officer (CTO) e principal responsável pela estratégia tecnológica da empresa, liderando equipes multidisciplinares e conduzindo a evolução da arquitetura da plataforma financeira, infraestrutura em nuvem, engenharia de dados e desenvolvimento de novos produtos para o mercado financeiro.",
+          "Participei diretamente da estruturação tecnológica para criação de uma Instituição Financeira (SCD), apoiando a definição dos processos de concessão de crédito, garantias financeiras, gestão de recebíveis, liquidação financeira, análise transacional, cobrança, prevenção à fraude, sustentabilidade operacional e conformidade regulatória.",
+          "Fui responsável pela arquitetura das soluções financeiras da empresa, desenvolvendo plataformas para meios de pagamento, integração bancária, gestão de recebíveis, conciliação financeira, processamento transacional e comunicação com registradoras financeiras e instituições regulatórias.",
+          "Também liderei a evolução da arquitetura de dados da organização, implantando ambientes modernos baseados em Data Lake, Databricks, Apache Spark, PySpark e Azure Data Factory, permitindo processamento distribuído de grandes volumes de dados financeiros, monitoramento em tempo real e geração de informações estratégicas para apoio à tomada de decisão.",
+          "Participei da definição e implementação de integrações financeiras complexas envolvendo Banco Central do Brasil, Mastercard, Visa, Elo, American Express, adquirentes, instituições financeiras e registradoras como a CERC, utilizando APIs REST para comunicação entre sistemas críticos.",
+          "Nos últimos anos também conduzi iniciativas relacionadas à aplicação de Inteligência Artificial e Machine Learning no ambiente corporativo, desenvolvendo soluções voltadas para classificação inteligente de transações financeiras, preparação de datasets, detecção de anomalias, análise de risco, comportamento transacional, apoio à decisão de crédito e automação de processos internos.",
+          "Além do desenvolvimento das soluções financeiras, participei da implantação de práticas de DevOps, Infraestrutura como Código (IaC), automação de pipelines e ambientes cloud utilizando Terraform, GitHub Actions, AWS CloudFormation, AWS, Microsoft Azure e Google Cloud Platform, garantindo maior escalabilidade, disponibilidade e padronização dos ambientes corporativos."
+        ],
+        "responsibilities": [
+          "Liderança da área de Tecnologia.",
+          "Definição da arquitetura tecnológica corporativa.",
+          "Estruturação tecnológica da Instituição Financeira (SCD).",
+          "Arquitetura de plataformas financeiras.",
+          "Desenvolvimento de soluções para meios de pagamento.",
+          "Gestão de recebíveis.",
+          "Concessão de crédito.",
+          "Garantias financeiras.",
+          "Liquidação financeira.",
+          "Conciliação financeira.",
+          "Integração com Banco Central do Brasil.",
+          "Integração com Mastercard, Visa, Elo e American Express.",
+          "Integração com CERC.",
+          "Desenvolvimento de APIs REST.",
+          "Arquitetura baseada em microsserviços.",
+          "Engenharia de Dados.",
+          "Arquitetura de Data Lake.",
+          "Apache Spark.",
+          "Databricks.",
+          "PySpark.",
+          "Azure Data Factory.",
+          "Python.",
+          "Django.",
+          "PostgreSQL.",
+          "SQL Server.",
+          "Oracle.",
+          "AWS.",
+          "Azure.",
+          "Google Cloud Platform.",
+          "Terraform.",
+          "GitHub Actions.",
+          "CI/CD.",
+          "Inteligência Artificial aplicada ao ambiente financeiro.",
+          "Machine Learning.",
+          "Governança de Dados.",
+          "Compliance.",
+          "Metodologias Ágeis (Scrum e Kanban)."
+        ],
+        "results": [
+          "Estruturação tecnológica da criação de uma Instituição Financeira (SCD).",
+          "Evolução da arquitetura da plataforma financeira da empresa.",
+          "Implantação de arquitetura moderna de dados baseada em Data Lake e processamento distribuído.",
+          "Integração entre instituições financeiras, adquirentes, bandeiras de cartões e registradoras financeiras.",
+          "Modernização dos ambientes cloud utilizando práticas de DevOps e Infraestrutura como Código.",
+          "Aplicação de Inteligência Artificial em processos de análise transacional, risco e automação.",
+          "Implantação de pipelines automatizados de processamento de dados, reduzindo atividades manuais e aumentando a confiabilidade operacional.",
+          "Desenvolvimento de soluções escaláveis para suportar crescimento das operações financeiras da empresa."
+        ],
+        "technologies": [
+          "Python",
+          "Django",
+          "Databricks",
+          "Apache Spark",
+          "PySpark",
+          "Azure Data Factory",
+          "PostgreSQL",
+          "SQL Server",
+          "Oracle",
+          "AWS",
+          "Azure",
+          "GCP",
+          "Terraform",
+          "GitHub Actions",
+          "AWS CloudFormation"
+        ],
+        "endDateValidationRequired": false,
+        "featured": true,
+        "visible": true,
+        "sourceParagraphs": [
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163
+        ],
+        "startMonth": "2021-01",
+        "endMonth": "2024-06",
+        "datePrecision": "month",
+        "sortOrder": 2,
+        "displayRole": "CTO | ARQUITETO DE SOLUÇÕES | ENGENHEIRO DE DADOS"
+      }
+    }
+  },
+  {
+    "module": "experiencias",
+    "source_key": "initial:experiencias:fastconnect",
+    "data": {
+      "title": "Fastconnect",
+      "slug": "fastconnect",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 3,
+      "id": "fastconnect",
+      "company": "Fastconnect",
+      "wordmark": "fastconnect",
+      "role": "FOUNDER | CEO | PRINCIPAL SOLUTION ARCHITECT | ARQUITETO DE SOLUÇÕES | ENGENHEIRO DE DADOS",
+      "period": "Jan/2014 – Dez/2020",
+      "description": "Plataforma de subadquirência e soluções para Winker, Khronos, Top Clínicas e outros clientes.",
+      "tags": [
+        "Founder",
+        "Payments",
+        "SaaS"
+      ],
+      "narrative": [
+        "Empresa de tecnologia especializada no desenvolvimento de plataformas financeiras, meios de pagamento, soluções SaaS e sistemas corporativos para os segmentos financeiro, saúde, varejo e tecnologia.",
+        "Atuei como principal responsável pela arquitetura técnica e evolução de plataformas financeiras críticas, participando desde a concepção das soluções até sua implantação em produção, atuando diretamente com áreas de negócio, clientes, equipes de desenvolvimento e diretoria.",
+        "Durante minha atuação participei da criação e evolução de uma plataforma completa de subadquirência, desenvolvendo soluções responsáveis pelo processamento de transações financeiras, gestão de estabelecimentos comerciais, cobrança recorrente, split financeiro, conciliação bancária, gestão de recebíveis, antecipação de recebíveis, integração com adquirentes, bancos, bandeiras de cartões e registradoras financeiras.",
+        "Também fui responsável pelo desenho da arquitetura utilizada por diversos clientes estratégicos da empresa, desenvolvendo soluções específicas para fintechs, empresas de tecnologia, saúde, administração condominial, plataformas SaaS e sistemas corporativos de missão crítica.",
+        "Minha atuação envolveu todas as etapas do ciclo de vida das soluções, incluindo levantamento de requisitos, arquitetura, modelagem de dados, definição tecnológica, desenvolvimento, integrações, implantação, sustentação e evolução contínua dos produtos.",
+        "Durante esse período participei diretamente da implementação de integrações financeiras envolvendo Banco Central do Brasil, Mastercard, Visa, Elo, American Express, adquirentes, registradoras financeiras e APIs bancárias, sempre respeitando requisitos regulatórios, compliance e padrões de segurança compatíveis com PCI DSS.",
+        "Além das plataformas financeiras, também liderei iniciativas relacionadas à arquitetura de dados, processamento distribuído, ambientes em nuvem, APIs corporativas, microsserviços, DevOps e automação de infraestrutura, apoiando a modernização tecnológica da empresa."
+      ],
+      "responsibilities": [
+        "Arquitetura de Soluções Corporativas.",
+        "Arquitetura de Plataformas Financeiras.",
+        "Desenvolvimento de plataformas de adquirência e subadquirência.",
+        "Gateways de Pagamento.",
+        "Gestão de Recebíveis.",
+        "Cobrança Recorrente.",
+        "Split Financeiro.",
+        "Contas Escrow.",
+        "Liquidação Financeira.",
+        "Conciliação Bancária.",
+        "Antecipação de Recebíveis.",
+        "Integrações Bancárias.",
+        "Banco Central do Brasil.",
+        "Mastercard.",
+        "Visa.",
+        "Elo.",
+        "American Express.",
+        "APIs REST.",
+        "Microsserviços.",
+        "Arquitetura de Dados.",
+        "Engenharia de Dados.",
+        "Data Lake.",
+        "Apache Spark.",
+        "Python.",
+        "PostgreSQL.",
+        "SQL Server.",
+        "Oracle.",
+        "MySQL.",
+        "AWS.",
+        "Azure.",
+        "Terraform.",
+        "Git.",
+        "GitHub.",
+        "Jira.",
+        "DevOps.",
+        "CI/CD.",
+        "Modelagem de Dados.",
+        "Governança de Dados.",
+        "Metodologias Ágeis (Scrum e Kanban)."
+      ],
+      "results": [
+        "Participação na arquitetura de uma plataforma completa de subadquirência.",
+        "Desenvolvimento de soluções financeiras para empresas de diferentes segmentos.",
+        "Integração entre Banco Central, instituições financeiras, adquirentes, registradoras e bandeiras de cartões.",
+        "Implantação de plataformas utilizadas por empresas dos segmentos financeiro, saúde, administração condominial e tecnologia.",
+        "Modernização de ambientes legados utilizando arquitetura distribuída, APIs REST e Cloud Computing.",
+        "Desenvolvimento de soluções escaláveis para processamento financeiro e integração entre sistemas corporativos.",
+        "Participação em projetos responsáveis pela expansão operacional e tecnológica de diversos clientes da empresa."
+      ],
+      "technologies": [
+        "APIs REST",
+        "Microsserviços",
+        "Apache Spark",
+        "Python",
+        "PostgreSQL",
+        "SQL Server",
+        "Oracle",
+        "MySQL",
+        "AWS",
+        "Azure",
+        "Terraform",
+        "Git",
+        "GitHub",
+        "Jira"
+      ],
+      "endDateValidationRequired": false,
+      "sourceParagraphs": [
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255
+      ],
+      "startMonth": "2014-01",
+      "endMonth": "2020-12",
+      "datePrecision": "month",
+      "displayRole": "Founder · CEO · Principal Solution Architect",
+      "current": false,
+      "_legacy": {
+        "id": "fastconnect",
+        "company": "Fastconnect",
+        "wordmark": "fastconnect",
+        "role": "FOUNDER | CEO | PRINCIPAL SOLUTION ARCHITECT | ARQUITETO DE SOLUÇÕES | ENGENHEIRO DE DADOS",
+        "period": "Jan/2014 – Dez/2020",
+        "description": "Plataforma de subadquirência e soluções para Winker, Khronos, Top Clínicas e outros clientes.",
+        "tags": [
+          "Founder",
+          "Payments",
+          "SaaS"
+        ],
+        "narrative": [
+          "Empresa de tecnologia especializada no desenvolvimento de plataformas financeiras, meios de pagamento, soluções SaaS e sistemas corporativos para os segmentos financeiro, saúde, varejo e tecnologia.",
+          "Atuei como principal responsável pela arquitetura técnica e evolução de plataformas financeiras críticas, participando desde a concepção das soluções até sua implantação em produção, atuando diretamente com áreas de negócio, clientes, equipes de desenvolvimento e diretoria.",
+          "Durante minha atuação participei da criação e evolução de uma plataforma completa de subadquirência, desenvolvendo soluções responsáveis pelo processamento de transações financeiras, gestão de estabelecimentos comerciais, cobrança recorrente, split financeiro, conciliação bancária, gestão de recebíveis, antecipação de recebíveis, integração com adquirentes, bancos, bandeiras de cartões e registradoras financeiras.",
+          "Também fui responsável pelo desenho da arquitetura utilizada por diversos clientes estratégicos da empresa, desenvolvendo soluções específicas para fintechs, empresas de tecnologia, saúde, administração condominial, plataformas SaaS e sistemas corporativos de missão crítica.",
+          "Minha atuação envolveu todas as etapas do ciclo de vida das soluções, incluindo levantamento de requisitos, arquitetura, modelagem de dados, definição tecnológica, desenvolvimento, integrações, implantação, sustentação e evolução contínua dos produtos.",
+          "Durante esse período participei diretamente da implementação de integrações financeiras envolvendo Banco Central do Brasil, Mastercard, Visa, Elo, American Express, adquirentes, registradoras financeiras e APIs bancárias, sempre respeitando requisitos regulatórios, compliance e padrões de segurança compatíveis com PCI DSS.",
+          "Além das plataformas financeiras, também liderei iniciativas relacionadas à arquitetura de dados, processamento distribuído, ambientes em nuvem, APIs corporativas, microsserviços, DevOps e automação de infraestrutura, apoiando a modernização tecnológica da empresa."
+        ],
+        "responsibilities": [
+          "Arquitetura de Soluções Corporativas.",
+          "Arquitetura de Plataformas Financeiras.",
+          "Desenvolvimento de plataformas de adquirência e subadquirência.",
+          "Gateways de Pagamento.",
+          "Gestão de Recebíveis.",
+          "Cobrança Recorrente.",
+          "Split Financeiro.",
+          "Contas Escrow.",
+          "Liquidação Financeira.",
+          "Conciliação Bancária.",
+          "Antecipação de Recebíveis.",
+          "Integrações Bancárias.",
+          "Banco Central do Brasil.",
+          "Mastercard.",
+          "Visa.",
+          "Elo.",
+          "American Express.",
+          "APIs REST.",
+          "Microsserviços.",
+          "Arquitetura de Dados.",
+          "Engenharia de Dados.",
+          "Data Lake.",
+          "Apache Spark.",
+          "Python.",
+          "PostgreSQL.",
+          "SQL Server.",
+          "Oracle.",
+          "MySQL.",
+          "AWS.",
+          "Azure.",
+          "Terraform.",
+          "Git.",
+          "GitHub.",
+          "Jira.",
+          "DevOps.",
+          "CI/CD.",
+          "Modelagem de Dados.",
+          "Governança de Dados.",
+          "Metodologias Ágeis (Scrum e Kanban)."
+        ],
+        "results": [
+          "Participação na arquitetura de uma plataforma completa de subadquirência.",
+          "Desenvolvimento de soluções financeiras para empresas de diferentes segmentos.",
+          "Integração entre Banco Central, instituições financeiras, adquirentes, registradoras e bandeiras de cartões.",
+          "Implantação de plataformas utilizadas por empresas dos segmentos financeiro, saúde, administração condominial e tecnologia.",
+          "Modernização de ambientes legados utilizando arquitetura distribuída, APIs REST e Cloud Computing.",
+          "Desenvolvimento de soluções escaláveis para processamento financeiro e integração entre sistemas corporativos.",
+          "Participação em projetos responsáveis pela expansão operacional e tecnológica de diversos clientes da empresa."
+        ],
+        "technologies": [
+          "APIs REST",
+          "Microsserviços",
+          "Apache Spark",
+          "Python",
+          "PostgreSQL",
+          "SQL Server",
+          "Oracle",
+          "MySQL",
+          "AWS",
+          "Azure",
+          "Terraform",
+          "Git",
+          "GitHub",
+          "Jira"
+        ],
+        "endDateValidationRequired": false,
+        "featured": true,
+        "visible": true,
+        "sourceParagraphs": [
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211,
+          212,
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224,
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255
+        ],
+        "startMonth": "2014-01",
+        "endMonth": "2020-12",
+        "datePrecision": "month",
+        "sortOrder": 3,
+        "displayRole": "Founder · CEO · Principal Solution Architect"
+      }
+    }
+  },
+  {
+    "module": "experiencias",
+    "source_key": "initial:experiencias:manager-systems",
+    "data": {
+      "title": "Manager Systems",
+      "slug": "manager-systems",
+      "visible": true,
+      "featured": false,
+      "sortOrder": 4,
+      "id": "manager-systems",
+      "company": "Manager Systems",
+      "wordmark": "Manager Systems",
+      "role": "SENIOR SYSTEMS DEVELOPER | DATABASE ARCHITECT",
+      "period": "Jan/2013 – Dez/2013",
+      "description": "ERP para saúde, arquitetura de banco de dados e evolução de módulos corporativos.",
+      "tags": [
+        "ERP",
+        "Saúde",
+        "Dados"
+      ],
+      "narrative": [
+        "Empresa especializada no desenvolvimento de soluções ERP para o segmento de saúde, atuando na modernização de sistemas corporativos utilizados por clínicas, hospitais e instituições da área médica.",
+        "Atuei como Senior Systems Developer, sendo responsável pelo desenvolvimento e evolução da plataforma ERP da empresa, participando da definição da arquitetura de banco de dados, modelagem das informações, implementação de novos módulos e otimização do desempenho das aplicações.",
+        "Minha atuação concentrou-se principalmente na arquitetura da camada de dados, desenvolvimento de funcionalidades críticas e integração entre os diferentes módulos do sistema, garantindo consistência, desempenho e escalabilidade para suportar as operações dos clientes.",
+        "Também participei da definição de padrões de modelagem, estruturação de banco de dados e melhoria contínua dos processos de desenvolvimento, contribuindo para maior estabilidade e qualidade da plataforma."
+      ],
+      "responsibilities": [
+        "Desenvolvimento de ERP para o segmento de saúde.",
+        "Arquitetura e modelagem de banco de dados.",
+        "Desenvolvimento de módulos corporativos.",
+        "Otimização de consultas SQL.",
+        "Administração de PostgreSQL.",
+        "Administração de SQL Server.",
+        "Firebird.",
+        "Delphi.",
+        "Modelagem utilizando ERWin.",
+        "Versionamento de código.",
+        "Monitoramento de projetos utilizando Jira."
+      ],
+      "results": [],
+      "technologies": [
+        "Delphi",
+        "PostgreSQL",
+        "SQL Server",
+        "Firebird",
+        "ERWin",
+        "Jira",
+        "Modelagem de Dados",
+        "Banco de Dados Relacional"
+      ],
+      "endDateValidationRequired": false,
+      "sourceParagraphs": [
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276
+      ],
+      "startMonth": "2013-01",
+      "endMonth": "2013-12",
+      "datePrecision": "month",
+      "displayRole": "SENIOR SYSTEMS DEVELOPER | DATABASE ARCHITECT",
+      "current": false,
+      "_legacy": {
+        "id": "manager-systems",
+        "company": "Manager Systems",
+        "wordmark": "Manager Systems",
+        "role": "SENIOR SYSTEMS DEVELOPER | DATABASE ARCHITECT",
+        "period": "Jan/2013 – Dez/2013",
+        "description": "ERP para saúde, arquitetura de banco de dados e evolução de módulos corporativos.",
+        "tags": [
+          "ERP",
+          "Saúde",
+          "Dados"
+        ],
+        "narrative": [
+          "Empresa especializada no desenvolvimento de soluções ERP para o segmento de saúde, atuando na modernização de sistemas corporativos utilizados por clínicas, hospitais e instituições da área médica.",
+          "Atuei como Senior Systems Developer, sendo responsável pelo desenvolvimento e evolução da plataforma ERP da empresa, participando da definição da arquitetura de banco de dados, modelagem das informações, implementação de novos módulos e otimização do desempenho das aplicações.",
+          "Minha atuação concentrou-se principalmente na arquitetura da camada de dados, desenvolvimento de funcionalidades críticas e integração entre os diferentes módulos do sistema, garantindo consistência, desempenho e escalabilidade para suportar as operações dos clientes.",
+          "Também participei da definição de padrões de modelagem, estruturação de banco de dados e melhoria contínua dos processos de desenvolvimento, contribuindo para maior estabilidade e qualidade da plataforma."
+        ],
+        "responsibilities": [
+          "Desenvolvimento de ERP para o segmento de saúde.",
+          "Arquitetura e modelagem de banco de dados.",
+          "Desenvolvimento de módulos corporativos.",
+          "Otimização de consultas SQL.",
+          "Administração de PostgreSQL.",
+          "Administração de SQL Server.",
+          "Firebird.",
+          "Delphi.",
+          "Modelagem utilizando ERWin.",
+          "Versionamento de código.",
+          "Monitoramento de projetos utilizando Jira."
+        ],
+        "results": [],
+        "technologies": [
+          "Delphi",
+          "PostgreSQL",
+          "SQL Server",
+          "Firebird",
+          "ERWin",
+          "Jira",
+          "Modelagem de Dados",
+          "Banco de Dados Relacional"
+        ],
+        "endDateValidationRequired": false,
+        "featured": false,
+        "visible": true,
+        "sourceParagraphs": [
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268,
+          269,
+          270,
+          271,
+          272,
+          273,
+          274,
+          275,
+          276
+        ],
+        "startMonth": "2013-01",
+        "endMonth": "2013-12",
+        "datePrecision": "month",
+        "sortOrder": 4,
+        "displayRole": "SENIOR SYSTEMS DEVELOPER | DATABASE ARCHITECT"
+      }
+    }
+  },
+  {
+    "module": "experiencias",
+    "source_key": "initial:experiencias:cetil",
+    "data": {
+      "title": "Cetil Sistemas de Informação",
+      "slug": "cetil",
+      "visible": true,
+      "featured": false,
+      "sortOrder": 5,
+      "id": "cetil",
+      "company": "Cetil Sistemas de Informação",
+      "wordmark": "Cetil",
+      "role": "FULL SYSTEMS DEVELOPER ANALYST",
+      "period": "Nov/2011 – Dez/2012",
+      "description": "Transparência pública e BI com informações provenientes de mais de 500 prefeituras.",
+      "tags": [
+        "BI",
+        "ETL",
+        "Governo"
+      ],
+      "narrative": [
+        "Atuação em projetos voltados à transparência pública e Business Intelligence, desenvolvendo soluções para consolidação, integração e análise de informações provenientes de mais de 500 prefeituras brasileiras, apoiando iniciativas de controle, auditoria e disponibilização de dados para órgãos públicos.",
+        "Participei do desenvolvimento de soluções de integração de dados, processos ETL, Data Warehouse, Cubos OLAP e Business Intelligence, consolidando informações provenientes de diferentes sistemas corporativos e bases de dados heterogêneas.",
+        "Também fui responsável pelo desenvolvimento de novos módulos do sistema, modelagem de dados, integração entre bancos de dados distintos e construção de estruturas analíticas para geração de indicadores estratégicos.",
+        "Essa experiência consolidou minha atuação em projetos envolvendo grandes volumes de dados, governança da informação, arquitetura analítica e integração de ambientes corporativos."
+      ],
+      "responsibilities": [
+        "Desenvolvimento de soluções para transparência pública.",
+        "Integração de dados entre diferentes sistemas.",
+        "Processos ETL.",
+        "Arquitetura de Data Warehouse.",
+        "Cubos OLAP.",
+        "SAP BusinessObjects.",
+        "Desenvolvimento em Delphi.",
+        "SQL Server.",
+        "Modelagem de Dados.",
+        "Administração de Banco de Dados.",
+        "ERWin.",
+        "Jira."
+      ],
+      "results": [],
+      "technologies": [
+        "Delphi",
+        "SQL Server",
+        "PostgreSQL",
+        "ETL",
+        "Data Warehouse",
+        "OLAP",
+        "SAP BusinessObjects",
+        "ERWin",
+        "Jira"
+      ],
+      "endDateValidationRequired": false,
+      "sourceParagraphs": [
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301
+      ],
+      "startMonth": "2011-11",
+      "endMonth": "2012-12",
+      "datePrecision": "month",
+      "displayRole": "FULL SYSTEMS DEVELOPER ANALYST",
+      "current": false,
+      "_legacy": {
+        "id": "cetil",
+        "company": "Cetil Sistemas de Informação",
+        "wordmark": "Cetil",
+        "role": "FULL SYSTEMS DEVELOPER ANALYST",
+        "period": "Nov/2011 – Dez/2012",
+        "description": "Transparência pública e BI com informações provenientes de mais de 500 prefeituras.",
+        "tags": [
+          "BI",
+          "ETL",
+          "Governo"
+        ],
+        "narrative": [
+          "Atuação em projetos voltados à transparência pública e Business Intelligence, desenvolvendo soluções para consolidação, integração e análise de informações provenientes de mais de 500 prefeituras brasileiras, apoiando iniciativas de controle, auditoria e disponibilização de dados para órgãos públicos.",
+          "Participei do desenvolvimento de soluções de integração de dados, processos ETL, Data Warehouse, Cubos OLAP e Business Intelligence, consolidando informações provenientes de diferentes sistemas corporativos e bases de dados heterogêneas.",
+          "Também fui responsável pelo desenvolvimento de novos módulos do sistema, modelagem de dados, integração entre bancos de dados distintos e construção de estruturas analíticas para geração de indicadores estratégicos.",
+          "Essa experiência consolidou minha atuação em projetos envolvendo grandes volumes de dados, governança da informação, arquitetura analítica e integração de ambientes corporativos."
+        ],
+        "responsibilities": [
+          "Desenvolvimento de soluções para transparência pública.",
+          "Integração de dados entre diferentes sistemas.",
+          "Processos ETL.",
+          "Arquitetura de Data Warehouse.",
+          "Cubos OLAP.",
+          "SAP BusinessObjects.",
+          "Desenvolvimento em Delphi.",
+          "SQL Server.",
+          "Modelagem de Dados.",
+          "Administração de Banco de Dados.",
+          "ERWin.",
+          "Jira."
+        ],
+        "results": [],
+        "technologies": [
+          "Delphi",
+          "SQL Server",
+          "PostgreSQL",
+          "ETL",
+          "Data Warehouse",
+          "OLAP",
+          "SAP BusinessObjects",
+          "ERWin",
+          "Jira"
+        ],
+        "endDateValidationRequired": false,
+        "featured": false,
+        "visible": true,
+        "sourceParagraphs": [
+          284,
+          285,
+          286,
+          287,
+          288,
+          289,
+          290,
+          291,
+          292,
+          293,
+          294,
+          295,
+          296,
+          297,
+          298,
+          299,
+          300,
+          301
+        ],
+        "startMonth": "2011-11",
+        "endMonth": "2012-12",
+        "datePrecision": "month",
+        "sortOrder": 5,
+        "displayRole": "FULL SYSTEMS DEVELOPER ANALYST"
+      }
+    }
+  },
+  {
+    "module": "experiencias",
+    "source_key": "initial:experiencias:senai",
+    "data": {
+      "title": "SENAI/SC",
+      "slug": "senai",
+      "visible": true,
+      "featured": false,
+      "sortOrder": 6,
+      "id": "senai",
+      "company": "SENAI/SC",
+      "wordmark": "SENAI/SC",
+      "role": "PROJECT MANAGER",
+      "period": "Mar/2009 – Nov/2011",
+      "description": "Coordenação das equipes de Florianópolis e Tubarão em projetos do Sistema FIESC.",
+      "tags": [
+        "Liderança",
+        "Projetos",
+        "ERP"
+      ],
+      "narrative": [
+        "Atuei como Gerente de Projetos, coordenando equipes de desenvolvimento das unidades de Florianópolis e Tubarão na implementação de soluções corporativas para o Sistema FIESC.",
+        "Fui responsável pelo planejamento, coordenação técnica e acompanhamento de projetos estratégicos, atuando desde o levantamento de requisitos até a implantação das soluções, garantindo qualidade, cumprimento de prazos e alinhamento com os objetivos institucionais.",
+        "Coordenei equipes multidisciplinares utilizando práticas de gerenciamento de projetos baseadas em PMBOK, Scrum e ITIL, conduzindo iniciativas como o Banco de Recursos Didáticos e o desenvolvimento do ERP da Faculdade SENAI 2.0.",
+        "Essa experiência fortaleceu minha atuação em liderança técnica, gestão de equipes, arquitetura corporativa e gerenciamento de projetos de software."
+      ],
+      "responsibilities": [
+        "Gerenciamento de Projetos.",
+        "Coordenação de equipes.",
+        "Arquitetura de Sistemas.",
+        "Levantamento de Requisitos.",
+        "UML.",
+        "Case Studio.",
+        "PHP.",
+        "PostgreSQL.",
+        "PMBOK.",
+        "ITIL.",
+        "Scrum."
+      ],
+      "results": [],
+      "technologies": [
+        "PHP",
+        "PostgreSQL",
+        "UML",
+        "Case Studio",
+        "PMBOK",
+        "ITIL",
+        "Scrum",
+        "Arquitetura de Software"
+      ],
+      "endDateValidationRequired": false,
+      "sourceParagraphs": [
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325
+      ],
+      "startMonth": "2009-03",
+      "endMonth": "2011-11",
+      "datePrecision": "month",
+      "displayRole": "PROJECT MANAGER",
+      "current": false,
+      "_legacy": {
+        "id": "senai",
+        "company": "SENAI/SC",
+        "wordmark": "SENAI/SC",
+        "role": "PROJECT MANAGER",
+        "period": "Mar/2009 – Nov/2011",
+        "description": "Coordenação das equipes de Florianópolis e Tubarão em projetos do Sistema FIESC.",
+        "tags": [
+          "Liderança",
+          "Projetos",
+          "ERP"
+        ],
+        "narrative": [
+          "Atuei como Gerente de Projetos, coordenando equipes de desenvolvimento das unidades de Florianópolis e Tubarão na implementação de soluções corporativas para o Sistema FIESC.",
+          "Fui responsável pelo planejamento, coordenação técnica e acompanhamento de projetos estratégicos, atuando desde o levantamento de requisitos até a implantação das soluções, garantindo qualidade, cumprimento de prazos e alinhamento com os objetivos institucionais.",
+          "Coordenei equipes multidisciplinares utilizando práticas de gerenciamento de projetos baseadas em PMBOK, Scrum e ITIL, conduzindo iniciativas como o Banco de Recursos Didáticos e o desenvolvimento do ERP da Faculdade SENAI 2.0.",
+          "Essa experiência fortaleceu minha atuação em liderança técnica, gestão de equipes, arquitetura corporativa e gerenciamento de projetos de software."
+        ],
+        "responsibilities": [
+          "Gerenciamento de Projetos.",
+          "Coordenação de equipes.",
+          "Arquitetura de Sistemas.",
+          "Levantamento de Requisitos.",
+          "UML.",
+          "Case Studio.",
+          "PHP.",
+          "PostgreSQL.",
+          "PMBOK.",
+          "ITIL.",
+          "Scrum."
+        ],
+        "results": [],
+        "technologies": [
+          "PHP",
+          "PostgreSQL",
+          "UML",
+          "Case Studio",
+          "PMBOK",
+          "ITIL",
+          "Scrum",
+          "Arquitetura de Software"
+        ],
+        "endDateValidationRequired": false,
+        "featured": false,
+        "visible": true,
+        "sourceParagraphs": [
+          309,
+          310,
+          311,
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          318,
+          319,
+          320,
+          321,
+          322,
+          323,
+          324,
+          325
+        ],
+        "startMonth": "2009-03",
+        "endMonth": "2011-11",
+        "datePrecision": "month",
+        "sortOrder": 6,
+        "displayRole": "PROJECT MANAGER"
+      }
+    }
+  },
+  {
+    "module": "experiencias",
+    "source_key": "initial:experiencias:unimed",
+    "data": {
+      "title": "Unimed",
+      "slug": "unimed",
+      "visible": true,
+      "featured": false,
+      "sortOrder": 7,
+      "id": "unimed",
+      "company": "Unimed",
+      "wordmark": "Unimed",
+      "role": "MANAGEMENT INFORMATION SYSTEM ANALYST",
+      "period": "Abr/2008 – Mar/2009",
+      "description": "Business Intelligence e indicadores para o Conselho de Administração e a Diretoria Executiva.",
+      "tags": [
+        "BI",
+        "Data Warehouse",
+        "SQL"
+      ],
+      "narrative": [
+        "Atuei na área de Business Intelligence da Unimed, sendo responsável pelo desenvolvimento de indicadores estratégicos destinados ao Conselho de Administração e à Diretoria Executiva, apoiando processos de tomada de decisão por meio da consolidação e análise de informações corporativas.",
+        "Participei da arquitetura e desenvolvimento do ambiente analítico da organização, criando processos de extração, transformação e consolidação de dados provenientes de diferentes sistemas corporativos, estruturando Data Warehouse, Data Marts e Cubos OLAP para geração de indicadores gerenciais.",
+        "Também fui responsável pela modelagem de dados, desenvolvimento de consultas complexas em PL/SQL, construção de relatórios analíticos e validação das informações utilizadas pela alta administração, garantindo consistência, qualidade e confiabilidade dos dados estratégicos.",
+        "Essa experiência consolidou minha base em Business Intelligence, Modelagem de Dados, Governança da Informação e Arquitetura Analítica, conhecimentos que posteriormente evoluíram para projetos de Big Data, Engenharia de Dados e Inteligência Artificial."
+      ],
+      "responsibilities": [
+        "Business Intelligence.",
+        "Desenvolvimento de indicadores estratégicos.",
+        "Data Warehouse.",
+        "Data Mart.",
+        "Cubos OLAP.",
+        "Modelagem de Dados.",
+        "Oracle PL/SQL.",
+        "SQL Server.",
+        "Firebird.",
+        "Power BI.",
+        "QlikView.",
+        "ETL.",
+        "Desenvolvimento de relatórios gerenciais."
+      ],
+      "results": [],
+      "technologies": [
+        "Oracle",
+        "PL/SQL",
+        "SQL Server",
+        "Firebird",
+        "QlikView",
+        "Power BI",
+        "Data Warehouse",
+        "OLAP",
+        "ETL",
+        "Modelagem de Dados"
+      ],
+      "endDateValidationRequired": false,
+      "sourceParagraphs": [
+        333,
+        334,
+        335,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351
+      ],
+      "startMonth": "2008-04",
+      "endMonth": "2009-03",
+      "datePrecision": "month",
+      "displayRole": "MANAGEMENT INFORMATION SYSTEM ANALYST",
+      "current": false,
+      "_legacy": {
+        "id": "unimed",
+        "company": "Unimed",
+        "wordmark": "Unimed",
+        "role": "MANAGEMENT INFORMATION SYSTEM ANALYST",
+        "period": "Abr/2008 – Mar/2009",
+        "description": "Business Intelligence e indicadores para o Conselho de Administração e a Diretoria Executiva.",
+        "tags": [
+          "BI",
+          "Data Warehouse",
+          "SQL"
+        ],
+        "narrative": [
+          "Atuei na área de Business Intelligence da Unimed, sendo responsável pelo desenvolvimento de indicadores estratégicos destinados ao Conselho de Administração e à Diretoria Executiva, apoiando processos de tomada de decisão por meio da consolidação e análise de informações corporativas.",
+          "Participei da arquitetura e desenvolvimento do ambiente analítico da organização, criando processos de extração, transformação e consolidação de dados provenientes de diferentes sistemas corporativos, estruturando Data Warehouse, Data Marts e Cubos OLAP para geração de indicadores gerenciais.",
+          "Também fui responsável pela modelagem de dados, desenvolvimento de consultas complexas em PL/SQL, construção de relatórios analíticos e validação das informações utilizadas pela alta administração, garantindo consistência, qualidade e confiabilidade dos dados estratégicos.",
+          "Essa experiência consolidou minha base em Business Intelligence, Modelagem de Dados, Governança da Informação e Arquitetura Analítica, conhecimentos que posteriormente evoluíram para projetos de Big Data, Engenharia de Dados e Inteligência Artificial."
+        ],
+        "responsibilities": [
+          "Business Intelligence.",
+          "Desenvolvimento de indicadores estratégicos.",
+          "Data Warehouse.",
+          "Data Mart.",
+          "Cubos OLAP.",
+          "Modelagem de Dados.",
+          "Oracle PL/SQL.",
+          "SQL Server.",
+          "Firebird.",
+          "Power BI.",
+          "QlikView.",
+          "ETL.",
+          "Desenvolvimento de relatórios gerenciais."
+        ],
+        "results": [],
+        "technologies": [
+          "Oracle",
+          "PL/SQL",
+          "SQL Server",
+          "Firebird",
+          "QlikView",
+          "Power BI",
+          "Data Warehouse",
+          "OLAP",
+          "ETL",
+          "Modelagem de Dados"
+        ],
+        "endDateValidationRequired": false,
+        "featured": false,
+        "visible": true,
+        "sourceParagraphs": [
+          333,
+          334,
+          335,
+          336,
+          337,
+          338,
+          339,
+          340,
+          341,
+          342,
+          343,
+          344,
+          345,
+          346,
+          347,
+          348,
+          349,
+          350,
+          351
+        ],
+        "startMonth": "2008-04",
+        "endMonth": "2009-03",
+        "datePrecision": "month",
+        "sortOrder": 7,
+        "displayRole": "MANAGEMENT INFORMATION SYSTEM ANALYST"
+      }
+    }
+  },
+  {
+    "module": "experiencias",
+    "source_key": "initial:experiencias:someday",
+    "data": {
+      "title": "Someday",
+      "slug": "someday",
+      "visible": true,
+      "featured": false,
+      "sortOrder": 8,
+      "id": "someday",
+      "company": "Someday",
+      "wordmark": "Someday",
+      "role": "IT MANAGER",
+      "period": "Mai/2006 – Mar/2008",
+      "description": "Gestão de tecnologia e sistemas de produção, estoque, logística, vendas e administração.",
+      "tags": [
+        "Liderança",
+        ".NET",
+        "ERP"
+      ],
+      "narrative": [
+        "Empresa do segmento têxtil responsável pela fabricação e distribuição de produtos para o mercado nacional.",
+        "Atuei como Gerente de Tecnologia, coordenando a equipe de desenvolvimento e conduzindo a evolução tecnológica da empresa, participando da arquitetura dos sistemas responsáveis pelo gerenciamento dos processos produtivos, controle de estoque, logística, vendas e administração.",
+        "Fui responsável pelo planejamento de projetos de software, definição de arquitetura, desenvolvimento de soluções corporativas em .NET e Delphi, modelagem de banco de dados e integração entre os diferentes setores da organização.",
+        "Essa experiência proporcionou uma sólida base em gestão de equipes, arquitetura de sistemas corporativos, desenvolvimento de software e processos industriais, consolidando competências que posteriormente foram aplicadas em projetos de maior complexidade nos segmentos financeiro e de tecnologia."
+      ],
+      "responsibilities": [
+        "Gestão da área de Tecnologia.",
+        "Coordenação de equipe de desenvolvimento.",
+        "Arquitetura de Sistemas.",
+        "Desenvolvimento .NET.",
+        "Desenvolvimento Delphi.",
+        "SQL Server.",
+        "Modelagem de Dados.",
+        "Sistemas ERP.",
+        "Controle de Produção.",
+        "Gestão de Estoque.",
+        "Integração entre sistemas corporativos."
+      ],
+      "results": [],
+      "technologies": [
+        ".NET Framework",
+        "Delphi",
+        "SQL Server",
+        "Arquitetura de Software",
+        "Banco de Dados Relacional"
+      ],
+      "endDateValidationRequired": false,
+      "sourceParagraphs": [
+        359,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375
+      ],
+      "startMonth": "2006-05",
+      "endMonth": "2008-03",
+      "datePrecision": "month",
+      "displayRole": "IT MANAGER",
+      "current": false,
+      "_legacy": {
+        "id": "someday",
+        "company": "Someday",
+        "wordmark": "Someday",
+        "role": "IT MANAGER",
+        "period": "Mai/2006 – Mar/2008",
+        "description": "Gestão de tecnologia e sistemas de produção, estoque, logística, vendas e administração.",
+        "tags": [
+          "Liderança",
+          ".NET",
+          "ERP"
+        ],
+        "narrative": [
+          "Empresa do segmento têxtil responsável pela fabricação e distribuição de produtos para o mercado nacional.",
+          "Atuei como Gerente de Tecnologia, coordenando a equipe de desenvolvimento e conduzindo a evolução tecnológica da empresa, participando da arquitetura dos sistemas responsáveis pelo gerenciamento dos processos produtivos, controle de estoque, logística, vendas e administração.",
+          "Fui responsável pelo planejamento de projetos de software, definição de arquitetura, desenvolvimento de soluções corporativas em .NET e Delphi, modelagem de banco de dados e integração entre os diferentes setores da organização.",
+          "Essa experiência proporcionou uma sólida base em gestão de equipes, arquitetura de sistemas corporativos, desenvolvimento de software e processos industriais, consolidando competências que posteriormente foram aplicadas em projetos de maior complexidade nos segmentos financeiro e de tecnologia."
+        ],
+        "responsibilities": [
+          "Gestão da área de Tecnologia.",
+          "Coordenação de equipe de desenvolvimento.",
+          "Arquitetura de Sistemas.",
+          "Desenvolvimento .NET.",
+          "Desenvolvimento Delphi.",
+          "SQL Server.",
+          "Modelagem de Dados.",
+          "Sistemas ERP.",
+          "Controle de Produção.",
+          "Gestão de Estoque.",
+          "Integração entre sistemas corporativos."
+        ],
+        "results": [],
+        "technologies": [
+          ".NET Framework",
+          "Delphi",
+          "SQL Server",
+          "Arquitetura de Software",
+          "Banco de Dados Relacional"
+        ],
+        "endDateValidationRequired": false,
+        "featured": false,
+        "visible": true,
+        "sourceParagraphs": [
+          359,
+          360,
+          361,
+          362,
+          363,
+          364,
+          365,
+          366,
+          367,
+          368,
+          369,
+          370,
+          371,
+          372,
+          373,
+          374,
+          375
+        ],
+        "startMonth": "2006-05",
+        "endMonth": "2008-03",
+        "datePrecision": "month",
+        "sortOrder": 8,
+        "displayRole": "IT MANAGER"
+      }
+    }
+  },
+  {
+    "module": "categorias",
+    "source_key": "initial:categorias:engenharia-de-dados",
+    "data": {
+      "title": "Engenharia de Dados",
+      "slug": "engenharia-de-dados",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0,
+      "icon": "database",
+      "color": "violet"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:engenharia-de-dados-0",
+    "data": {
+      "title": "Data Engineering",
+      "slug": "engenharia-de-dados-data-engineering-0",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0,
+      "categoryId": "SOURCE:initial:categorias:engenharia-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:engenharia-de-dados-1",
+    "data": {
+      "title": "Data Architecture",
+      "slug": "engenharia-de-dados-data-architecture-1",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1,
+      "categoryId": "SOURCE:initial:categorias:engenharia-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:engenharia-de-dados-2",
+    "data": {
+      "title": "Data Lake",
+      "slug": "engenharia-de-dados-data-lake-2",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 2,
+      "categoryId": "SOURCE:initial:categorias:engenharia-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:engenharia-de-dados-3",
+    "data": {
+      "title": "Data Lakehouse",
+      "slug": "engenharia-de-dados-data-lakehouse-3",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 3,
+      "categoryId": "SOURCE:initial:categorias:engenharia-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:engenharia-de-dados-4",
+    "data": {
+      "title": "Data Warehouse",
+      "slug": "engenharia-de-dados-data-warehouse-4",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 4,
+      "categoryId": "SOURCE:initial:categorias:engenharia-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:engenharia-de-dados-5",
+    "data": {
+      "title": "ETL / ELT",
+      "slug": "engenharia-de-dados-etl-elt-5",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 5,
+      "categoryId": "SOURCE:initial:categorias:engenharia-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:engenharia-de-dados-6",
+    "data": {
+      "title": "Apache Spark",
+      "slug": "engenharia-de-dados-apache-spark-6",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 6,
+      "categoryId": "SOURCE:initial:categorias:engenharia-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:engenharia-de-dados-7",
+    "data": {
+      "title": "Databricks",
+      "slug": "engenharia-de-dados-databricks-7",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 7,
+      "categoryId": "SOURCE:initial:categorias:engenharia-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:engenharia-de-dados-8",
+    "data": {
+      "title": "Python",
+      "slug": "engenharia-de-dados-python-8",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 8,
+      "categoryId": "SOURCE:initial:categorias:engenharia-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:engenharia-de-dados-9",
+    "data": {
+      "title": "PySpark",
+      "slug": "engenharia-de-dados-pyspark-9",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 9,
+      "categoryId": "SOURCE:initial:categorias:engenharia-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:engenharia-de-dados-10",
+    "data": {
+      "title": "SQL",
+      "slug": "engenharia-de-dados-sql-10",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 10,
+      "categoryId": "SOURCE:initial:categorias:engenharia-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:engenharia-de-dados-11",
+    "data": {
+      "title": "DBT",
+      "slug": "engenharia-de-dados-dbt-11",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 11,
+      "categoryId": "SOURCE:initial:categorias:engenharia-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:engenharia-de-dados-12",
+    "data": {
+      "title": "Airflow",
+      "slug": "engenharia-de-dados-airflow-12",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 12,
+      "categoryId": "SOURCE:initial:categorias:engenharia-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:engenharia-de-dados-13",
+    "data": {
+      "title": "Azure Data Factory",
+      "slug": "engenharia-de-dados-azure-data-factory-13",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 13,
+      "categoryId": "SOURCE:initial:categorias:engenharia-de-dados"
+    }
+  },
+  {
+    "module": "categorias",
+    "source_key": "initial:categorias:cloud-devops",
+    "data": {
+      "title": "Cloud & DevOps",
+      "slug": "cloud-devops",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1,
+      "icon": "cloud",
+      "color": "cyan"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:cloud-devops-0",
+    "data": {
+      "title": "Microsoft Azure",
+      "slug": "cloud-devops-microsoft-azure-0",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0,
+      "categoryId": "SOURCE:initial:categorias:cloud-devops"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:cloud-devops-1",
+    "data": {
+      "title": "Amazon Web Services (AWS)",
+      "slug": "cloud-devops-amazon-web-services-aws-1",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1,
+      "categoryId": "SOURCE:initial:categorias:cloud-devops"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:cloud-devops-2",
+    "data": {
+      "title": "Google Cloud Platform (GCP)",
+      "slug": "cloud-devops-google-cloud-platform-gcp-2",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 2,
+      "categoryId": "SOURCE:initial:categorias:cloud-devops"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:cloud-devops-3",
+    "data": {
+      "title": "Docker",
+      "slug": "cloud-devops-docker-3",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 3,
+      "categoryId": "SOURCE:initial:categorias:cloud-devops"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:cloud-devops-4",
+    "data": {
+      "title": "Terraform",
+      "slug": "cloud-devops-terraform-4",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 4,
+      "categoryId": "SOURCE:initial:categorias:cloud-devops"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:cloud-devops-5",
+    "data": {
+      "title": "Git",
+      "slug": "cloud-devops-git-5",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 5,
+      "categoryId": "SOURCE:initial:categorias:cloud-devops"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:cloud-devops-6",
+    "data": {
+      "title": "GitHub",
+      "slug": "cloud-devops-github-6",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 6,
+      "categoryId": "SOURCE:initial:categorias:cloud-devops"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:cloud-devops-7",
+    "data": {
+      "title": "GitHub Actions",
+      "slug": "cloud-devops-github-actions-7",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 7,
+      "categoryId": "SOURCE:initial:categorias:cloud-devops"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:cloud-devops-8",
+    "data": {
+      "title": "AWS CloudFormation",
+      "slug": "cloud-devops-aws-cloudformation-8",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 8,
+      "categoryId": "SOURCE:initial:categorias:cloud-devops"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:cloud-devops-9",
+    "data": {
+      "title": "CI/CD",
+      "slug": "cloud-devops-ci-cd-9",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 9,
+      "categoryId": "SOURCE:initial:categorias:cloud-devops"
+    }
+  },
+  {
+    "module": "categorias",
+    "source_key": "initial:categorias:arquitetura-de-software",
+    "data": {
+      "title": "Arquitetura de Software",
+      "slug": "arquitetura-de-software",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 2,
+      "icon": "code",
+      "color": "violet"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:arquitetura-de-software-0",
+    "data": {
+      "title": "Enterprise Architecture",
+      "slug": "arquitetura-de-software-enterprise-architecture-0",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0,
+      "categoryId": "SOURCE:initial:categorias:arquitetura-de-software"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:arquitetura-de-software-1",
+    "data": {
+      "title": "Solution Architecture",
+      "slug": "arquitetura-de-software-solution-architecture-1",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1,
+      "categoryId": "SOURCE:initial:categorias:arquitetura-de-software"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:arquitetura-de-software-2",
+    "data": {
+      "title": "Software Architecture",
+      "slug": "arquitetura-de-software-software-architecture-2",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 2,
+      "categoryId": "SOURCE:initial:categorias:arquitetura-de-software"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:arquitetura-de-software-3",
+    "data": {
+      "title": "Distributed Systems",
+      "slug": "arquitetura-de-software-distributed-systems-3",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 3,
+      "categoryId": "SOURCE:initial:categorias:arquitetura-de-software"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:arquitetura-de-software-4",
+    "data": {
+      "title": "Event Driven Architecture",
+      "slug": "arquitetura-de-software-event-driven-architecture-4",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 4,
+      "categoryId": "SOURCE:initial:categorias:arquitetura-de-software"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:arquitetura-de-software-5",
+    "data": {
+      "title": "REST APIs",
+      "slug": "arquitetura-de-software-rest-apis-5",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 5,
+      "categoryId": "SOURCE:initial:categorias:arquitetura-de-software"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:arquitetura-de-software-6",
+    "data": {
+      "title": "Microservices",
+      "slug": "arquitetura-de-software-microservices-6",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 6,
+      "categoryId": "SOURCE:initial:categorias:arquitetura-de-software"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:arquitetura-de-software-7",
+    "data": {
+      "title": "Domain Driven Design",
+      "slug": "arquitetura-de-software-domain-driven-design-7",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 7,
+      "categoryId": "SOURCE:initial:categorias:arquitetura-de-software"
+    }
+  },
+  {
+    "module": "categorias",
+    "source_key": "initial:categorias:banking-payments",
+    "data": {
+      "title": "Banking & Payments",
+      "slug": "banking-payments",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 3,
+      "icon": "card",
+      "color": "blue"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-0",
+    "data": {
+      "title": "Banking Platforms",
+      "slug": "banking-payments-banking-platforms-0",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-1",
+    "data": {
+      "title": "Financial Services",
+      "slug": "banking-payments-financial-services-1",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-2",
+    "data": {
+      "title": "Acquiring",
+      "slug": "banking-payments-acquiring-2",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 2,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-3",
+    "data": {
+      "title": "Sub-Acquiring",
+      "slug": "banking-payments-sub-acquiring-3",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 3,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-4",
+    "data": {
+      "title": "Payment Gateway",
+      "slug": "banking-payments-payment-gateway-4",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 4,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-5",
+    "data": {
+      "title": "Payment Processing",
+      "slug": "banking-payments-payment-processing-5",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 5,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-6",
+    "data": {
+      "title": "Split Payments",
+      "slug": "banking-payments-split-payments-6",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 6,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-7",
+    "data": {
+      "title": "Billing",
+      "slug": "banking-payments-billing-7",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 7,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-8",
+    "data": {
+      "title": "Recurring Payments",
+      "slug": "banking-payments-recurring-payments-8",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 8,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-9",
+    "data": {
+      "title": "Escrow Accounts",
+      "slug": "banking-payments-escrow-accounts-9",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 9,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-10",
+    "data": {
+      "title": "Financial Reconciliation",
+      "slug": "banking-payments-financial-reconciliation-10",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 10,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-11",
+    "data": {
+      "title": "Credit Analysis",
+      "slug": "banking-payments-credit-analysis-11",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 11,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-12",
+    "data": {
+      "title": "Receivables Management",
+      "slug": "banking-payments-receivables-management-12",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 12,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-13",
+    "data": {
+      "title": "PCI DSS",
+      "slug": "banking-payments-pci-dss-13",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 13,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-14",
+    "data": {
+      "title": "Banco Central do Brasil",
+      "slug": "banking-payments-banco-central-do-brasil-14",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 14,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-15",
+    "data": {
+      "title": "Mastercard",
+      "slug": "banking-payments-mastercard-15",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 15,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-16",
+    "data": {
+      "title": "Visa",
+      "slug": "banking-payments-visa-16",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 16,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-17",
+    "data": {
+      "title": "Elo",
+      "slug": "banking-payments-elo-17",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 17,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-18",
+    "data": {
+      "title": "American Express",
+      "slug": "banking-payments-american-express-18",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 18,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:banking-payments-19",
+    "data": {
+      "title": "CERC",
+      "slug": "banking-payments-cerc-19",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 19,
+      "categoryId": "SOURCE:initial:categorias:banking-payments"
+    }
+  },
+  {
+    "module": "categorias",
+    "source_key": "initial:categorias:inteligencia-artificial",
+    "data": {
+      "title": "Inteligência Artificial",
+      "slug": "inteligencia-artificial",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 4,
+      "icon": "brain",
+      "color": "violet"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:inteligencia-artificial-0",
+    "data": {
+      "title": "Machine Learning",
+      "slug": "inteligencia-artificial-machine-learning-0",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0,
+      "categoryId": "SOURCE:initial:categorias:inteligencia-artificial"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:inteligencia-artificial-1",
+    "data": {
+      "title": "IA Generativa",
+      "slug": "inteligencia-artificial-ia-generativa-1",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1,
+      "categoryId": "SOURCE:initial:categorias:inteligencia-artificial"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:inteligencia-artificial-2",
+    "data": {
+      "title": "Preparação de Datasets",
+      "slug": "inteligencia-artificial-preparacao-de-datasets-2",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 2,
+      "categoryId": "SOURCE:initial:categorias:inteligencia-artificial"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:inteligencia-artificial-3",
+    "data": {
+      "title": "Engenharia de Features",
+      "slug": "inteligencia-artificial-engenharia-de-features-3",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 3,
+      "categoryId": "SOURCE:initial:categorias:inteligencia-artificial"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:inteligencia-artificial-4",
+    "data": {
+      "title": "Classificação Inteligente",
+      "slug": "inteligencia-artificial-classificacao-inteligente-4",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 4,
+      "categoryId": "SOURCE:initial:categorias:inteligencia-artificial"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:inteligencia-artificial-5",
+    "data": {
+      "title": "Detecção de Anomalias",
+      "slug": "inteligencia-artificial-deteccao-de-anomalias-5",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 5,
+      "categoryId": "SOURCE:initial:categorias:inteligencia-artificial"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:inteligencia-artificial-6",
+    "data": {
+      "title": "Análise de Risco",
+      "slug": "inteligencia-artificial-analise-de-risco-6",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 6,
+      "categoryId": "SOURCE:initial:categorias:inteligencia-artificial"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:inteligencia-artificial-7",
+    "data": {
+      "title": "Automação Inteligente",
+      "slug": "inteligencia-artificial-automacao-inteligente-7",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 7,
+      "categoryId": "SOURCE:initial:categorias:inteligencia-artificial"
+    }
+  },
+  {
+    "module": "categorias",
+    "source_key": "initial:categorias:bancos-de-dados",
+    "data": {
+      "title": "Bancos de Dados",
+      "slug": "bancos-de-dados",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 5,
+      "icon": "database",
+      "color": "cyan"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:bancos-de-dados-0",
+    "data": {
+      "title": "PostgreSQL",
+      "slug": "bancos-de-dados-postgresql-0",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0,
+      "categoryId": "SOURCE:initial:categorias:bancos-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:bancos-de-dados-1",
+    "data": {
+      "title": "SQL Server",
+      "slug": "bancos-de-dados-sql-server-1",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1,
+      "categoryId": "SOURCE:initial:categorias:bancos-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:bancos-de-dados-2",
+    "data": {
+      "title": "Oracle",
+      "slug": "bancos-de-dados-oracle-2",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 2,
+      "categoryId": "SOURCE:initial:categorias:bancos-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:bancos-de-dados-3",
+    "data": {
+      "title": "MySQL",
+      "slug": "bancos-de-dados-mysql-3",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 3,
+      "categoryId": "SOURCE:initial:categorias:bancos-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:bancos-de-dados-4",
+    "data": {
+      "title": "DB2",
+      "slug": "bancos-de-dados-db2-4",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 4,
+      "categoryId": "SOURCE:initial:categorias:bancos-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:bancos-de-dados-5",
+    "data": {
+      "title": "MongoDB",
+      "slug": "bancos-de-dados-mongodb-5",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 5,
+      "categoryId": "SOURCE:initial:categorias:bancos-de-dados"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:bancos-de-dados-6",
+    "data": {
+      "title": "Firebird",
+      "slug": "bancos-de-dados-firebird-6",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 6,
+      "categoryId": "SOURCE:initial:categorias:bancos-de-dados"
+    }
+  },
+  {
+    "module": "categorias",
+    "source_key": "initial:categorias:lideranca",
+    "data": {
+      "title": "Liderança",
+      "slug": "lideranca",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 6,
+      "icon": "people",
+      "color": "blue"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:lideranca-0",
+    "data": {
+      "title": "Gestão de Tecnologia",
+      "slug": "lideranca-gestao-de-tecnologia-0",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0,
+      "categoryId": "SOURCE:initial:categorias:lideranca"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:lideranca-1",
+    "data": {
+      "title": "Coordenação de equipes",
+      "slug": "lideranca-coordenacao-de-equipes-1",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1,
+      "categoryId": "SOURCE:initial:categorias:lideranca"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:lideranca-2",
+    "data": {
+      "title": "Gerenciamento de Projetos",
+      "slug": "lideranca-gerenciamento-de-projetos-2",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 2,
+      "categoryId": "SOURCE:initial:categorias:lideranca"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:lideranca-3",
+    "data": {
+      "title": "PMBOK",
+      "slug": "lideranca-pmbok-3",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 3,
+      "categoryId": "SOURCE:initial:categorias:lideranca"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:lideranca-4",
+    "data": {
+      "title": "Scrum",
+      "slug": "lideranca-scrum-4",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 4,
+      "categoryId": "SOURCE:initial:categorias:lideranca"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:lideranca-5",
+    "data": {
+      "title": "Kanban",
+      "slug": "lideranca-kanban-5",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 5,
+      "categoryId": "SOURCE:initial:categorias:lideranca"
+    }
+  },
+  {
+    "module": "skills",
+    "source_key": "initial:skills:lideranca-6",
+    "data": {
+      "title": "ITIL",
+      "slug": "lideranca-itil-6",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 6,
+      "categoryId": "SOURCE:initial:categorias:lideranca"
+    }
+  },
+  {
+    "module": "formacoes",
+    "source_key": "initial:formacoes:original",
+    "data": {
+      "title": "Bacharelado em Ciência da Computação",
+      "slug": "bacharelado-em-ciencia-da-computacao",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0,
+      "institution": "Universidade do Sul de Santa Catarina – UNISUL",
+      "degree": "Bacharelado em Ciência da Computação",
+      "period": "1998 – 2004"
+    }
+  },
+  {
+    "module": "certificacoes",
+    "source_key": "initial:certificacoes:original-0",
+    "data": {
+      "title": "Microsoft Certified: Azure Fundamentals (AZ-900)",
+      "slug": "microsoft-certified-azure-fundamentals-az-900",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0
+    }
+  },
+  {
+    "module": "idiomas",
+    "source_key": "initial:idiomas:original-0",
+    "data": {
+      "title": "Português — Nativo",
+      "slug": "portugues-nativo",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0
+    }
+  },
+  {
+    "module": "idiomas",
+    "source_key": "initial:idiomas:original-1",
+    "data": {
+      "title": "Inglês — Intermediário (Leitura técnica, escrita e comunicação profissional em evolução)",
+      "slug": "ingles-intermediario-leitura-tecnica-escrita-e-comunicacao-profissional-em-evolucao",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1
+    }
+  },
+  {
+    "module": "curriculo",
+    "source_key": "initial:curriculo:main",
+    "data": {
+      "title": "Currículo profissional — versão pública",
+      "file": "/documents/carlos-andre-curriculo-publico.docx",
+      "privacyReviewed": true
+    }
+  },
+  {
+    "module": "projetos",
+    "source_key": "initial:projetos:smartfamily",
+    "data": {
+      "title": "SmartFamily",
+      "slug": "smartfamily",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0,
+      "description": "Organização familiar com inteligência artificial, WhatsApp e calendário inteligente.",
+      "body": "<p>Gestão familiar com IA, integração com WhatsApp e calendário inteligente para apoiar a organização da família.</p>",
+      "technologies": [
+        "FastAPI",
+        "React",
+        "PostgreSQL"
+      ],
+      "tags": [
+        "IA",
+        "Produtividade",
+        "Família"
+      ],
+      "_legacy": {
+        "name": "SmartFamily",
+        "description": "Organização familiar com inteligência artificial, WhatsApp e calendário inteligente.",
+        "detail": "Gestão familiar com IA, integração com WhatsApp e calendário inteligente para apoiar a organização da família.",
+        "tags": [
+          "IA",
+          "Produtividade",
+          "Família"
+        ],
+        "technologies": [
+          "FastAPI",
+          "React",
+          "PostgreSQL"
+        ],
+        "crop": [
+          45,
+          271,
+          192,
+          67
+        ],
+        "imageAlt": "Família reunida em torno de um computador",
+        "icon": "people",
+        "color": "blue"
+      }
+    }
+  },
+  {
+    "module": "projetos",
+    "source_key": "initial:projetos:beloria",
+    "data": {
+      "title": "Beloria",
+      "slug": "beloria",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1,
+      "description": "Gestão de salões e barbearias com atendimentos, comissões, financeiro e planos SaaS.",
+      "body": "<p>Plataforma SaaS para salões e barbearias. Gestão de atendimentos, comissões e financeiro, planos e assinaturas, com arquitetura multi-tenant.</p>",
+      "technologies": [],
+      "tags": [
+        "SaaS",
+        "Gestão",
+        "Beleza"
+      ],
+      "_legacy": {
+        "name": "Beloria",
+        "description": "Gestão de salões e barbearias com atendimentos, comissões, financeiro e planos SaaS.",
+        "detail": "Plataforma SaaS para salões e barbearias. Gestão de atendimentos, comissões e financeiro, planos e assinaturas, com arquitetura multi-tenant.",
+        "tags": [
+          "SaaS",
+          "Gestão",
+          "Beleza"
+        ],
+        "technologies": [],
+        "crop": [
+          251,
+          271,
+          185,
+          67
+        ],
+        "imageAlt": "Profissional atendendo uma cliente em um salão",
+        "icon": "network",
+        "color": "violet"
+      }
+    }
+  },
+  {
+    "module": "projetos",
+    "source_key": "initial:projetos:onstar-scd",
+    "data": {
+      "title": "OnStar SCD",
+      "slug": "onstar-scd",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 2,
+      "description": "Estudo de plataforma fintech: energia, modelagem de crédito e integração financeira.",
+      "body": "<p>Estudo de plataforma fintech para análise de consumo de energia, modelagem de crédito e integração financeira. Não representa oferta de serviços financeiros em operação.</p>",
+      "technologies": [],
+      "tags": [
+        "Fintech",
+        "Dados",
+        "Energia"
+      ],
+      "_legacy": {
+        "name": "OnStar SCD",
+        "description": "Estudo de plataforma fintech: energia, modelagem de crédito e integração financeira.",
+        "detail": "Estudo de plataforma fintech para análise de consumo de energia, modelagem de crédito e integração financeira. Não representa oferta de serviços financeiros em operação.",
+        "tags": [
+          "Fintech",
+          "Dados",
+          "Energia"
+        ],
+        "technologies": [],
+        "crop": [
+          451,
+          271,
+          186,
+          67
+        ],
+        "imageAlt": "Cidade iluminada à noite",
+        "icon": "bolt",
+        "color": "cyan"
+      }
+    }
+  },
+  {
+    "module": "projetos",
+    "source_key": "initial:projetos:orquestrador-ia",
+    "data": {
+      "title": "Orquestrador IA",
+      "slug": "orquestrador-ia",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 3,
+      "description": "Agentes inteligentes, ferramentas e integrações para automatizar processos empresariais.",
+      "body": "<p>Plataforma de orquestração de agentes inteligentes para coordenar ferramentas, integrações e workflows em processos empresariais.</p>",
+      "technologies": [],
+      "tags": [
+        "IA",
+        "Automação",
+        "Integrações"
+      ],
+      "_legacy": {
+        "name": "Orquestrador IA",
+        "description": "Agentes inteligentes, ferramentas e integrações para automatizar processos empresariais.",
+        "detail": "Plataforma de orquestração de agentes inteligentes para coordenar ferramentas, integrações e workflows em processos empresariais.",
+        "tags": [
+          "IA",
+          "Automação",
+          "Integrações"
+        ],
+        "technologies": [],
+        "crop": [
+          651,
+          271,
+          190,
+          67
+        ],
+        "imageAlt": "Cérebro digital conectado a ferramentas",
+        "icon": "brain",
+        "color": "violet"
+      }
+    }
+  },
+  {
+    "module": "cases",
+    "source_key": "initial:cases:cef",
+    "data": {
+      "title": "Modernização analítica da CEF",
+      "slug": "cef",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0,
+      "company": "Compass UOL / Caixa Econômica Federal",
+      "description": "Mais de 9 bilhões de registros; redução superior a 80% no tempo de processamento.",
+      "body": "<p>Atuação no projeto estratégico de modernização da plataforma analítica da Caixa Econômica Federal, participando da definição e implementação da arquitetura de dados responsável pela migração de processos legados para uma plataforma moderna baseada em Databricks, Apache Spark, Python e SQL Server.</p><p>Responsável pelo desenho, implementação e sustentação das camadas Raw e Bronze da arquitetura Lakehouse, estruturando pipelines de ingestão, validação, transformação e disponibilização de grandes volumes de dados provenientes de sistemas legados, garantindo governança, rastreabilidade, qualidade e escalabilidade.</p><p>Participei da modernização de processos originalmente executados em ambiente Mainframe (COBOL), contribuindo para a migração para uma arquitetura distribuída em nuvem, reduzindo significativamente o tempo de processamento e aumentando a disponibilidade das informações para consumo analítico.</p><p>Atuei em conjunto com arquitetos de soluções, especialistas de negócio, analistas e engenheiros de dados na definição da estratégia de modernização da plataforma analítica, assegurando integração entre sistemas legados e tecnologias modernas de processamento distribuído.</p><p>Também contribui para iniciativas de Pesquisa &amp; Desenvolvimento e Inteligência Artificial, apoiando estudos relacionados à preparação de datasets, qualidade de dados, modelos analíticos, Machine Learning e evolução contínua de soluções baseadas em IA aplicadas ao ambiente corporativo.</p><p>Além do desenvolvimento dos pipelines, participei da implantação de práticas de CI/CD, Infraestrutura como Código (Terraform), automação de deploy utilizando GitHub Actions, padronizando ambientes, reduzindo erros operacionais e acelerando o ciclo de entrega das soluções.</p>",
+      "confidentialityReviewed": false,
+      "_legacy": {
+        "id": "cef",
+        "title": "Modernização analítica da CEF",
+        "company": "Compass UOL / Caixa Econômica Federal",
+        "summary": "Mais de 9 bilhões de registros; redução superior a 80% no tempo de processamento.",
+        "narrative": [
+          "Atuação no projeto estratégico de modernização da plataforma analítica da Caixa Econômica Federal, participando da definição e implementação da arquitetura de dados responsável pela migração de processos legados para uma plataforma moderna baseada em Databricks, Apache Spark, Python e SQL Server.",
+          "Responsável pelo desenho, implementação e sustentação das camadas Raw e Bronze da arquitetura Lakehouse, estruturando pipelines de ingestão, validação, transformação e disponibilização de grandes volumes de dados provenientes de sistemas legados, garantindo governança, rastreabilidade, qualidade e escalabilidade.",
+          "Participei da modernização de processos originalmente executados em ambiente Mainframe (COBOL), contribuindo para a migração para uma arquitetura distribuída em nuvem, reduzindo significativamente o tempo de processamento e aumentando a disponibilidade das informações para consumo analítico.",
+          "Atuei em conjunto com arquitetos de soluções, especialistas de negócio, analistas e engenheiros de dados na definição da estratégia de modernização da plataforma analítica, assegurando integração entre sistemas legados e tecnologias modernas de processamento distribuído.",
+          "Também contribui para iniciativas de Pesquisa & Desenvolvimento e Inteligência Artificial, apoiando estudos relacionados à preparação de datasets, qualidade de dados, modelos analíticos, Machine Learning e evolução contínua de soluções baseadas em IA aplicadas ao ambiente corporativo.",
+          "Além do desenvolvimento dos pipelines, participei da implantação de práticas de CI/CD, Infraestrutura como Código (Terraform), automação de deploy utilizando GitHub Actions, padronizando ambientes, reduzindo erros operacionais e acelerando o ciclo de entrega das soluções."
+        ],
+        "sourceParagraphs": [
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "evidence": "Resultado declarado no currículo fornecido pelo proprietário.",
+        "publicationReviewRequired": true
+      }
+    }
+  },
+  {
+    "module": "cases",
+    "source_key": "initial:cases:rpe-analisa",
+    "data": {
+      "title": "RPE Analisa",
+      "slug": "rpe-analisa",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1,
+      "company": "RPE.tech / Fiabilité Tech",
+      "description": "Cerca de 12 milhões de registros por dia e dados consolidados em D+1.",
+      "body": "<p>Atuei como Senior Data Engineer, sendo responsável pela concepção, arquitetura e implementação da plataforma RPE Analisa, desenvolvendo toda a estrutura necessária para ingestão, consolidação, transformação e disponibilização de grandes volumes de dados provenientes de diferentes ERPs e sistemas corporativos.</p><p>Participei diretamente da definição da arquitetura do ambiente analítico, criando pipelines escaláveis para ingestão de dados, padronização das informações, processamento distribuído e disponibilização dos dados em ambiente analítico de alta performance.</p><p>Minha atuação concentrou-se principalmente na arquitetura das camadas iniciais da plataforma (Raw e Bronze), estruturando processos responsáveis pela ingestão, validação, padronização e enriquecimento dos dados antes de sua disponibilização para as camadas analíticas posteriores.</p><p>Também participei da definição das integrações entre diferentes sistemas ERP utilizados pelos clientes, desenvolvendo APIs, rotinas automatizadas e pipelines ETL/ELT capazes de consolidar informações provenientes de diversas fontes em uma única plataforma analítica.</p><p>A arquitetura desenvolvida permitiu que grandes grupos varejistas passassem a utilizar informações consolidadas em D+1, reduzindo significativamente o tempo necessário para obtenção de indicadores estratégicos e apoiando decisões comerciais, financeiras e operacionais.</p><p>A solução construída tornou-se a base tecnológica da plataforma RPE Analisa, permanecendo em utilização após a conclusão do projeto e sendo continuamente expandida para novos clientes do segmento varejista.</p>",
+      "confidentialityReviewed": false,
+      "_legacy": {
+        "id": "rpe-analisa",
+        "title": "RPE Analisa",
+        "company": "RPE.tech / Fiabilité Tech",
+        "summary": "Cerca de 12 milhões de registros por dia e dados consolidados em D+1.",
+        "narrative": [
+          "Atuei como Senior Data Engineer, sendo responsável pela concepção, arquitetura e implementação da plataforma RPE Analisa, desenvolvendo toda a estrutura necessária para ingestão, consolidação, transformação e disponibilização de grandes volumes de dados provenientes de diferentes ERPs e sistemas corporativos.",
+          "Participei diretamente da definição da arquitetura do ambiente analítico, criando pipelines escaláveis para ingestão de dados, padronização das informações, processamento distribuído e disponibilização dos dados em ambiente analítico de alta performance.",
+          "Minha atuação concentrou-se principalmente na arquitetura das camadas iniciais da plataforma (Raw e Bronze), estruturando processos responsáveis pela ingestão, validação, padronização e enriquecimento dos dados antes de sua disponibilização para as camadas analíticas posteriores.",
+          "Também participei da definição das integrações entre diferentes sistemas ERP utilizados pelos clientes, desenvolvendo APIs, rotinas automatizadas e pipelines ETL/ELT capazes de consolidar informações provenientes de diversas fontes em uma única plataforma analítica.",
+          "A arquitetura desenvolvida permitiu que grandes grupos varejistas passassem a utilizar informações consolidadas em D+1, reduzindo significativamente o tempo necessário para obtenção de indicadores estratégicos e apoiando decisões comerciais, financeiras e operacionais.",
+          "A solução construída tornou-se a base tecnológica da plataforma RPE Analisa, permanecendo em utilização após a conclusão do projeto e sendo continuamente expandida para novos clientes do segmento varejista."
+        ],
+        "sourceParagraphs": [
+          53,
+          54,
+          55,
+          56,
+          57,
+          58
+        ],
+        "evidence": "Resultado declarado no currículo fornecido pelo proprietário.",
+        "publicationReviewRequired": true
+      }
+    }
+  },
+  {
+    "module": "cases",
+    "source_key": "initial:cases:alibin-scd",
+    "data": {
+      "title": "Arquitetura financeira e estruturação de SCD",
+      "slug": "alibin-scd",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 2,
+      "company": "Alibin",
+      "description": "Evolução de plataformas financeiras, Data Lake, cloud e IA aplicada.",
+      "body": "<p>Atuei como Chief Technology Officer (CTO) e principal responsável pela estratégia tecnológica da empresa, liderando equipes multidisciplinares e conduzindo a evolução da arquitetura da plataforma financeira, infraestrutura em nuvem, engenharia de dados e desenvolvimento de novos produtos para o mercado financeiro.</p><p>Participei diretamente da estruturação tecnológica para criação de uma Instituição Financeira (SCD), apoiando a definição dos processos de concessão de crédito, garantias financeiras, gestão de recebíveis, liquidação financeira, análise transacional, cobrança, prevenção à fraude, sustentabilidade operacional e conformidade regulatória.</p><p>Fui responsável pela arquitetura das soluções financeiras da empresa, desenvolvendo plataformas para meios de pagamento, integração bancária, gestão de recebíveis, conciliação financeira, processamento transacional e comunicação com registradoras financeiras e instituições regulatórias.</p><p>Também liderei a evolução da arquitetura de dados da organização, implantando ambientes modernos baseados em Data Lake, Databricks, Apache Spark, PySpark e Azure Data Factory, permitindo processamento distribuído de grandes volumes de dados financeiros, monitoramento em tempo real e geração de informações estratégicas para apoio à tomada de decisão.</p><p>Participei da definição e implementação de integrações financeiras complexas envolvendo Banco Central do Brasil, Mastercard, Visa, Elo, American Express, adquirentes, instituições financeiras e registradoras como a CERC, utilizando APIs REST para comunicação entre sistemas críticos.</p><p>Nos últimos anos também conduzi iniciativas relacionadas à aplicação de Inteligência Artificial e Machine Learning no ambiente corporativo, desenvolvendo soluções voltadas para classificação inteligente de transações financeiras, preparação de datasets, detecção de anomalias, análise de risco, comportamento transacional, apoio à decisão de crédito e automação de processos internos.</p><p>Além do desenvolvimento das soluções financeiras, participei da implantação de práticas de DevOps, Infraestrutura como Código (IaC), automação de pipelines e ambientes cloud utilizando Terraform, GitHub Actions, AWS CloudFormation, AWS, Microsoft Azure e Google Cloud Platform, garantindo maior escalabilidade, disponibilidade e padronização dos ambientes corporativos.</p>",
+      "confidentialityReviewed": false,
+      "_legacy": {
+        "id": "alibin-scd",
+        "title": "Arquitetura financeira e estruturação de SCD",
+        "company": "Alibin",
+        "summary": "Evolução de plataformas financeiras, Data Lake, cloud e IA aplicada.",
+        "narrative": [
+          "Atuei como Chief Technology Officer (CTO) e principal responsável pela estratégia tecnológica da empresa, liderando equipes multidisciplinares e conduzindo a evolução da arquitetura da plataforma financeira, infraestrutura em nuvem, engenharia de dados e desenvolvimento de novos produtos para o mercado financeiro.",
+          "Participei diretamente da estruturação tecnológica para criação de uma Instituição Financeira (SCD), apoiando a definição dos processos de concessão de crédito, garantias financeiras, gestão de recebíveis, liquidação financeira, análise transacional, cobrança, prevenção à fraude, sustentabilidade operacional e conformidade regulatória.",
+          "Fui responsável pela arquitetura das soluções financeiras da empresa, desenvolvendo plataformas para meios de pagamento, integração bancária, gestão de recebíveis, conciliação financeira, processamento transacional e comunicação com registradoras financeiras e instituições regulatórias.",
+          "Também liderei a evolução da arquitetura de dados da organização, implantando ambientes modernos baseados em Data Lake, Databricks, Apache Spark, PySpark e Azure Data Factory, permitindo processamento distribuído de grandes volumes de dados financeiros, monitoramento em tempo real e geração de informações estratégicas para apoio à tomada de decisão.",
+          "Participei da definição e implementação de integrações financeiras complexas envolvendo Banco Central do Brasil, Mastercard, Visa, Elo, American Express, adquirentes, instituições financeiras e registradoras como a CERC, utilizando APIs REST para comunicação entre sistemas críticos.",
+          "Nos últimos anos também conduzi iniciativas relacionadas à aplicação de Inteligência Artificial e Machine Learning no ambiente corporativo, desenvolvendo soluções voltadas para classificação inteligente de transações financeiras, preparação de datasets, detecção de anomalias, análise de risco, comportamento transacional, apoio à decisão de crédito e automação de processos internos.",
+          "Além do desenvolvimento das soluções financeiras, participei da implantação de práticas de DevOps, Infraestrutura como Código (IaC), automação de pipelines e ambientes cloud utilizando Terraform, GitHub Actions, AWS CloudFormation, AWS, Microsoft Azure e Google Cloud Platform, garantindo maior escalabilidade, disponibilidade e padronização dos ambientes corporativos."
+        ],
+        "sourceParagraphs": [
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116
+        ],
+        "evidence": "Resultado declarado no currículo fornecido pelo proprietário.",
+        "publicationReviewRequired": true
+      }
+    }
+  },
+  {
+    "module": "cases",
+    "source_key": "initial:cases:subadquirencia",
+    "data": {
+      "title": "Plataforma de Subadquirência",
+      "slug": "subadquirencia",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 3,
+      "company": "Fastconnect",
+      "description": "Processamento financeiro, split, conciliação e gestão de recebíveis.",
+      "body": "<p>Participei da concepção, arquitetura e desenvolvimento da plataforma responsável pela operação de subadquirência da empresa, permitindo processamento de pagamentos eletrônicos, gestão de estabelecimentos comerciais, captura de transações, liquidação financeira, billing, cobrança recorrente, split financeiro, conciliação bancária e antecipação de recebíveis.</p><p>A solução foi construída seguindo requisitos de alta disponibilidade, escalabilidade e segurança, integrando adquirentes, instituições financeiras, bandeiras de cartões, APIs REST e ambientes aderentes ao PCI DSS.</p>",
+      "confidentialityReviewed": false,
+      "_legacy": {
+        "id": "subadquirencia",
+        "title": "Plataforma de Subadquirência",
+        "company": "Fastconnect",
+        "summary": "Processamento financeiro, split, conciliação e gestão de recebíveis.",
+        "narrative": [
+          "Participei da concepção, arquitetura e desenvolvimento da plataforma responsável pela operação de subadquirência da empresa, permitindo processamento de pagamentos eletrônicos, gestão de estabelecimentos comerciais, captura de transações, liquidação financeira, billing, cobrança recorrente, split financeiro, conciliação bancária e antecipação de recebíveis.",
+          "A solução foi construída seguindo requisitos de alta disponibilidade, escalabilidade e segurança, integrando adquirentes, instituições financeiras, bandeiras de cartões, APIs REST e ambientes aderentes ao PCI DSS."
+        ],
+        "sourceParagraphs": [
+          179,
+          180
+        ],
+        "evidence": "Resultado declarado no currículo fornecido pelo proprietário.",
+        "publicationReviewRequired": true
+      }
+    }
+  },
+  {
+    "module": "cases",
+    "source_key": "initial:cases:winker",
+    "data": {
+      "title": "Winker",
+      "slug": "winker",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 4,
+      "company": "Fastconnect",
+      "description": "Contas escrow e volume superior a um milhão de boletos mensais.",
+      "body": "<p>Fui responsável pelo desenho da arquitetura financeira utilizada na implantação das contas escrow para o mercado condominial, desenvolvendo toda a integração entre plataforma de gestão condominial, instituições financeiras e requisitos regulatórios definidos pelo Banco Central.</p><p>A solução automatizou processos de cobrança, segregação financeira, liquidação, conciliação bancária e gestão dos recursos administrados pelos condomínios, suportando milhares de operações financeiras mensais.</p><p>A solução passou a suportar volume superior a um milhão de boletos mensais, com contas individualizadas, conciliação automatizada e infraestrutura financeira própria.</p>",
+      "confidentialityReviewed": false,
+      "_legacy": {
+        "id": "winker",
+        "title": "Winker",
+        "company": "Fastconnect",
+        "summary": "Contas escrow e volume superior a um milhão de boletos mensais.",
+        "narrative": [
+          "Fui responsável pelo desenho da arquitetura financeira utilizada na implantação das contas escrow para o mercado condominial, desenvolvendo toda a integração entre plataforma de gestão condominial, instituições financeiras e requisitos regulatórios definidos pelo Banco Central.",
+          "A solução automatizou processos de cobrança, segregação financeira, liquidação, conciliação bancária e gestão dos recursos administrados pelos condomínios, suportando milhares de operações financeiras mensais.",
+          "A solução passou a suportar volume superior a um milhão de boletos mensais, com contas individualizadas, conciliação automatizada e infraestrutura financeira própria."
+        ],
+        "sourceParagraphs": [
+          183,
+          184,
+          185
+        ],
+        "evidence": "Resultado declarado no currículo fornecido pelo proprietário.",
+        "publicationReviewRequired": true
+      }
+    }
+  },
+  {
+    "module": "cases",
+    "source_key": "initial:cases:khronos",
+    "data": {
+      "title": "Khronos",
+      "slug": "khronos",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 5,
+      "company": "Fastconnect",
+      "description": "Ciclo de vendas de 30–45 para cerca de 7 dias; inadimplência de aproximadamente 15% para 4%.",
+      "body": "<p>Conduzi o redesenho completo da arquitetura comercial e financeira da plataforma da Khronos, substituindo processos manuais por uma solução totalmente integrada envolvendo CRM, ERP, meios de pagamento, faturamento, assinatura eletrônica, gestão comercial e acompanhamento operacional.</p><p>A nova arquitetura reduziu o ciclo médio de vendas de aproximadamente 30–45 dias para cerca de 7 dias, permitindo cobrança imediata após a contratação e início praticamente instantâneo da operação.</p><p>inadimplência de aproximadamente 15% para 4%;</p><p>perdas estimadas de R$ 150 mil para R$ 40 mil mensais;</p><p>plataforma ainda em uso.</p>",
+      "confidentialityReviewed": false,
+      "_legacy": {
+        "id": "khronos",
+        "title": "Khronos",
+        "company": "Fastconnect",
+        "summary": "Ciclo de vendas de 30–45 para cerca de 7 dias; inadimplência de aproximadamente 15% para 4%.",
+        "narrative": [
+          "Conduzi o redesenho completo da arquitetura comercial e financeira da plataforma da Khronos, substituindo processos manuais por uma solução totalmente integrada envolvendo CRM, ERP, meios de pagamento, faturamento, assinatura eletrônica, gestão comercial e acompanhamento operacional.",
+          "A nova arquitetura reduziu o ciclo médio de vendas de aproximadamente 30–45 dias para cerca de 7 dias, permitindo cobrança imediata após a contratação e início praticamente instantâneo da operação.",
+          "inadimplência de aproximadamente 15% para 4%;",
+          "perdas estimadas de R$ 150 mil para R$ 40 mil mensais;",
+          "plataforma ainda em uso."
+        ],
+        "sourceParagraphs": [
+          188,
+          189,
+          190,
+          191,
+          192
+        ],
+        "evidence": "Resultado declarado no currículo fornecido pelo proprietário.",
+        "publicationReviewRequired": true
+      }
+    }
+  },
+  {
+    "module": "cases",
+    "source_key": "initial:cases:sistemapet",
+    "data": {
+      "title": "SistemaPet",
+      "slug": "sistemapet",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 6,
+      "company": "Fastconnect",
+      "description": "Arquitetura implantada em 2018 como parte da infraestrutura da expansão posterior.",
+      "body": "<p>Participei da arquitetura e evolução da plataforma financeira utilizada pelo SistemaPet, implementando recursos de cobrança recorrente, antecipação de recebíveis, integração com meios de pagamento, gestão financeira e operação white-label para expansão da solução em diferentes clientes.</p><p>A arquitetura construída permitiu significativa expansão da plataforma e crescimento da base de clientes, mantendo escalabilidade para novas operações.</p><p>A solução implantada em 2018 tornou-se parte da infraestrutura utilizada na expansão posterior do SistemaPet, que alcançou aproximadamente 650 clientes empresariais e receita anual de aproximadamente R$ 1 milhão em 2024.</p>",
+      "confidentialityReviewed": false,
+      "_legacy": {
+        "id": "sistemapet",
+        "title": "SistemaPet",
+        "company": "Fastconnect",
+        "summary": "Arquitetura implantada em 2018 como parte da infraestrutura da expansão posterior.",
+        "narrative": [
+          "Participei da arquitetura e evolução da plataforma financeira utilizada pelo SistemaPet, implementando recursos de cobrança recorrente, antecipação de recebíveis, integração com meios de pagamento, gestão financeira e operação white-label para expansão da solução em diferentes clientes.",
+          "A arquitetura construída permitiu significativa expansão da plataforma e crescimento da base de clientes, mantendo escalabilidade para novas operações.",
+          "A solução implantada em 2018 tornou-se parte da infraestrutura utilizada na expansão posterior do SistemaPet, que alcançou aproximadamente 650 clientes empresariais e receita anual de aproximadamente R$ 1 milhão em 2024."
+        ],
+        "sourceParagraphs": [
+          195,
+          196,
+          197
+        ],
+        "evidence": "Resultado declarado no currículo fornecido pelo proprietário.",
+        "publicationReviewRequired": true
+      }
+    }
+  },
+  {
+    "module": "cases",
+    "source_key": "initial:cases:top-clinicas",
+    "data": {
+      "title": "Top Clínicas",
+      "slug": "top-clinicas",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 7,
+      "company": "Fastconnect",
+      "description": "Split financeiro, faturamento, cobrança e conciliação para diferentes especialidades médicas.",
+      "body": "<p>Desenvolvi, em conjunto com os analistas de negócios da Top Clínicas, a arquitetura tecnológica responsável por eliminar a bitributação relacionada às diferentes especialidades médicas da clínica. A solução automatizou os processos de faturamento, cobrança e conciliação financeira, além de integrar os meios de pagamento e realizar a divisão automática das receitas (split financeiro) e dos repasses aos médicos.</p><p>Essa arquitetura substituiu diversos processos anteriormente executados de forma manual, proporcionando maior controle financeiro, rastreabilidade das operações, redução de erros e aumento significativo da eficiência operacional.</p>",
+      "confidentialityReviewed": false,
+      "_legacy": {
+        "id": "top-clinicas",
+        "title": "Top Clínicas",
+        "company": "Fastconnect",
+        "summary": "Split financeiro, faturamento, cobrança e conciliação para diferentes especialidades médicas.",
+        "narrative": [
+          "Desenvolvi, em conjunto com os analistas de negócios da Top Clínicas, a arquitetura tecnológica responsável por eliminar a bitributação relacionada às diferentes especialidades médicas da clínica. A solução automatizou os processos de faturamento, cobrança e conciliação financeira, além de integrar os meios de pagamento e realizar a divisão automática das receitas (split financeiro) e dos repasses aos médicos.",
+          "Essa arquitetura substituiu diversos processos anteriormente executados de forma manual, proporcionando maior controle financeiro, rastreabilidade das operações, redução de erros e aumento significativo da eficiência operacional."
+        ],
+        "sourceParagraphs": [
+          200,
+          201
+        ],
+        "evidence": "Resultado declarado no currículo fornecido pelo proprietário.",
+        "publicationReviewRequired": true
+      }
+    }
+  },
+  {
+    "module": "cases",
+    "source_key": "initial:cases:jogos-do-rei",
+    "data": {
+      "title": "Jogos do Rei",
+      "slug": "jogos-do-rei",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 8,
+      "company": "Fastconnect",
+      "description": "Assinaturas, cobrança recorrente e automação financeira.",
+      "body": "<p>Participei da evolução da plataforma de assinaturas e processamento financeiro, implementando mecanismos de cobrança recorrente, gestão de pagamentos, retentativas automáticas, integrações financeiras e automação dos processos de faturamento.</p><p>A arquitetura desenvolvida permitiu a expansão da plataforma e sustentou o crescimento contínuo da operação.</p>",
+      "confidentialityReviewed": false,
+      "_legacy": {
+        "id": "jogos-do-rei",
+        "title": "Jogos do Rei",
+        "company": "Fastconnect",
+        "summary": "Assinaturas, cobrança recorrente e automação financeira.",
+        "narrative": [
+          "Participei da evolução da plataforma de assinaturas e processamento financeiro, implementando mecanismos de cobrança recorrente, gestão de pagamentos, retentativas automáticas, integrações financeiras e automação dos processos de faturamento.",
+          "A arquitetura desenvolvida permitiu a expansão da plataforma e sustentou o crescimento contínuo da operação."
+        ],
+        "sourceParagraphs": [
+          204,
+          205
+        ],
+        "evidence": "Resultado declarado no currículo fornecido pelo proprietário.",
+        "publicationReviewRequired": true
+      }
+    }
+  },
+  {
+    "module": "artigos",
+    "source_key": "initial:artigos:engenharia-de-dados-da-origem-a-arquitetura-medallion",
+    "data": {
+      "title": "Engenharia de Dados: da origem à arquitetura Medallion",
+      "slug": "engenharia-de-dados-da-origem-a-arquitetura-medallion",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0,
+      "description": "Uma visão sobre bronze, silver e gold e a organização dos dados em camadas.",
+      "tags": [
+        "Dados",
+        "Arquitetura",
+        "Databricks"
+      ],
+      "planned": true,
+      "_legacy": {
+        "title": "Engenharia de Dados: da origem à arquitetura Medallion",
+        "description": "Uma visão sobre bronze, silver e gold e a organização dos dados em camadas.",
+        "tags": [
+          "Dados",
+          "Arquitetura",
+          "Databricks"
+        ],
+        "crop": [
+          46,
+          853,
+          257,
+          53
+        ],
+        "imageAlt": "Camadas de dados em blocos tridimensionais"
+      }
+    }
+  },
+  {
+    "module": "artigos",
+    "source_key": "initial:artigos:fraudes-em-cartoes-como-os-criminosos-exploram-o-ecossistema-de-pagamentos",
+    "data": {
+      "title": "Fraudes em cartões: como os criminosos exploram o ecossistema de pagamentos",
+      "slug": "fraudes-em-cartoes-como-os-criminosos-exploram-o-ecossistema-de-pagamentos",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1,
+      "description": "Modalidades, padrões e mecanismos de prevenção no universo dos pagamentos.",
+      "tags": [
+        "Fintech",
+        "Segurança",
+        "Pagamentos"
+      ],
+      "planned": true,
+      "_legacy": {
+        "title": "Fraudes em cartões: como os criminosos exploram o ecossistema de pagamentos",
+        "description": "Modalidades, padrões e mecanismos de prevenção no universo dos pagamentos.",
+        "tags": [
+          "Fintech",
+          "Segurança",
+          "Pagamentos"
+        ],
+        "crop": [
+          317,
+          853,
+          253,
+          53
+        ],
+        "imageAlt": "Cartões, pagamentos digitais e segurança"
+      }
+    }
+  },
+  {
+    "module": "artigos",
+    "source_key": "initial:artigos:orquestrador-ia-alem-de-um-simples-chatbot",
+    "data": {
+      "title": "Orquestrador IA: além de um simples chatbot",
+      "slug": "orquestrador-ia-alem-de-um-simples-chatbot",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 2,
+      "description": "Agentes, modelos de linguagem e ferramentas conectados em fluxos inteligentes.",
+      "tags": [
+        "IA",
+        "Automação",
+        "Arquitetura"
+      ],
+      "planned": true,
+      "_legacy": {
+        "title": "Orquestrador IA: além de um simples chatbot",
+        "description": "Agentes, modelos de linguagem e ferramentas conectados em fluxos inteligentes.",
+        "tags": [
+          "IA",
+          "Automação",
+          "Arquitetura"
+        ],
+        "crop": [
+          585,
+          853,
+          255,
+          53
+        ],
+        "imageAlt": "Inteligência artificial conectada a múltiplas ferramentas"
+      }
+    }
+  },
+  {
+    "module": "videos",
+    "source_key": "initial:videos:engenharia-de-dados-na-pratica",
+    "data": {
+      "title": "Engenharia de Dados na prática",
+      "slug": "engenharia-de-dados-na-pratica",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 0,
+      "planned": true,
+      "_legacy": {
+        "title": "Engenharia de Dados na prática",
+        "crop": [
+          70,
+          853,
+          170,
+          53
+        ]
+      }
+    }
+  },
+  {
+    "module": "videos",
+    "source_key": "initial:videos:orquestrador-ia-em-acao",
+    "data": {
+      "title": "Orquestrador IA em ação",
+      "slug": "orquestrador-ia-em-acao",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 1,
+      "planned": true,
+      "_legacy": {
+        "title": "Orquestrador IA em ação",
+        "crop": [
+          624,
+          853,
+          170,
+          53
+        ]
+      }
+    }
+  },
+  {
+    "module": "videos",
+    "source_key": "initial:videos:o-ecossistema-de-pagamentos",
+    "data": {
+      "title": "O ecossistema de pagamentos",
+      "slug": "o-ecossistema-de-pagamentos",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 2,
+      "planned": true,
+      "_legacy": {
+        "title": "O ecossistema de pagamentos",
+        "crop": [
+          350,
+          853,
+          170,
+          53
+        ]
+      }
+    }
+  },
+  {
+    "module": "videos",
+    "source_key": "initial:videos:do-problema-ao-saas",
+    "data": {
+      "title": "Do problema ao SaaS",
+      "slug": "do-problema-ao-saas",
+      "visible": true,
+      "featured": true,
+      "sortOrder": 3,
+      "planned": true,
+      "_legacy": {
+        "title": "Do problema ao SaaS",
+        "crop": [
+          660,
+          278,
+          170,
+          53
+        ]
+      }
+    }
+  }
+]

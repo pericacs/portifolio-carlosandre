@@ -1,0 +1,90 @@
+{
+  "sfApproved": true,
+  "sfFinalHero": "<div class=\"eyebrow\">Projeto • Assistente para a rotina familiar</div><h1>Sua família organizada.<br><span>Seu tempo de volta.</span></h1><p>Agenda, tarefas e finanças reunidas no SmartFamily. Veja como o assistente organiza pedidos e devolve informações pelo WhatsApp.</p><div class=\"actions\"><a class=\"btn\" href=\"#assistente\">Ver o assistente em ação ↓</a><a class=\"btn secondary\" href=\"https://www.smartfamily.com.br\" target=\"_blank\" rel=\"noopener\">Conhecer o produto ↗</a></div>",
+  "sfFinalIntro": "<div><strong>📅 Uma rotina compartilhada</strong><p>Compromissos com horários, responsáveis e lembretes visíveis na confirmação.</p></div><div><strong>💬 Conversas com contexto</strong><p>Pedidos por mensagem ou áudio, com respostas organizadas e detalhes da ação.</p></div><div><strong>💰 Finanças mais próximas</strong><p>Consulte despesas, categorias e resumos sem sair da conversa.</p></div>",
+  "sfFinalDemos": [
+    {
+      "title": "Criar um compromisso",
+      "category": "Agenda",
+      "description": "Um pedido por mensagem vira um compromisso com data, horário, local e lembretes.",
+      "message": "✅ Compromisso criado com sucesso!\n\n📌 Título: Feira de produtos 3D\n📅 Data: 20/11/2026\n🕒 Horário: 08:00\n👥 Visibilidade: Família\n📍 Local: Blumenau\n📝 Descrição: Não informado\n🔔 Lembretes: WhatsApp 1 dia antes e 1 hora antes\n🔄 Sincronização: apenas SmartFamily/WhatsApp",
+      "image": "ASSET:smartfamily-criar-compromisso",
+      "visibility": "PÚBLICO",
+      "order": 0
+    },
+    {
+      "title": "Consultar a agenda",
+      "category": "Agenda",
+      "description": "Consulte horários, recorrências, visibilidade e lembretes na conversa.",
+      "message": "📅 Agenda\n\n1. Aula de Pilates\n📅 Data: 15/10/2026\n🕒 Horário: 11:00\n🔄 Toda semana: terça-feira, quinta-feira\n🔄 Sem data final\n👥 Visibilidade: Família\n📍 Local: Não informado\n📝 Descrição: Não informado\n🔔 Lembretes: WhatsApp 1 dia antes e 1 hora antes\n🔄 Sincronização: apenas SmartFamily/WhatsApp\n\n2. Aula de Pilates\n📅 Data: 20/10/2026\n🕒 Horário: 11:00\n🔄 Toda semana: terça-feira, quinta-feira\n🔄 Sem data final\n👥 Visibilidade: Família\n📍 Local: Não informado\n📝 Descrição: Não informado\n🔔 Lembretes: WhatsApp 1 dia antes e 1 hora antes\n🔄 Sincronização: apenas SmartFamily/WhatsApp\n\n3. Aula de Pilates\n📅 Data: 22/10/2026\n🕒 Horário: 11:00\n🔄 Toda semana: terça-feira, quinta-feira\n🔄 Sem data final\n👥 Visibilidade: Família\n📍 Local: Não infor… Ler mais",
+      "image": "ASSET:smartfamily-consultar-agenda",
+      "visibility": "PÚBLICO",
+      "order": 1
+    },
+    {
+      "title": "Criar uma tarefa",
+      "category": "Tarefas",
+      "description": "A confirmação reúne prazo, responsável, prioridade e visibilidade.",
+      "message": "✅ Tarefa criada com sucesso.\n\nOlá, Carlos André Cardoso dos Santos! 👋\n\n📋 Uma nova tarefa foi criada.\n\n📝 Dever de Matemática\n📅 Prazo: 16/10/2026\n👤 Responsável: Alice\n🎯 Prioridade: Normal\n👥 Visibilidade: Família",
+      "image": "ASSET:smartfamily-criar-tarefa",
+      "visibility": "PÚBLICO",
+      "order": 2
+    },
+    {
+      "title": "Listar tarefas",
+      "category": "Tarefas",
+      "description": "Acompanhe as atividades de cada membro, com entrega e status.",
+      "message": "✅ Tarefas\n\n1. Criar Deveres De Português, Página 4546, Para O De Julho. Criar Deveres da Alice de Português, página 4546, para o dia 10 de julho.\n👤 Membro: Alice\n📅 Entrega: 10/07/2026\n🔵 Status: Pendente\n🟢 Prioridade: Normal\n\n2. Criar Deveres, Matéria Biologia De Julho. Criar deveres para Bianca matéria biologia dia 10 de julho\n👤 Membro: Bianca\n📅 Entrega: 10/07/2026\n🔵 Status: Pendente\n🟢 Prioridade: Normal\n\n3. Dever De Geografia Página 45\n👤 Membro: Alice\n📅 Entrega: 11/07/2026\n🔵 Status: Pendente\n🟢 Prioridade: Normal\n\n4. Criar Deveres Matemática Página 47 A 50, Para O De Julho. Criar deveres para Alice matemática página 47 a 50, para o dia 11 de julho\n👤 Membro: Alice\n📅 Entrega: 11/07/2026\n🔵 Status: Pendente\n🟢 Prioridade: Normal",
+      "image": "ASSET:smartfamily-listar-tarefas",
+      "visibility": "PÚBLICO",
+      "order": 3
+    },
+    {
+      "title": "Consultar despesas",
+      "category": "Financeiro",
+      "description": "Veja lançamentos, categorias, formas de pagamento e o total do período.",
+      "message": "💰 Despesas de 10/2026\n\n1. 11/10/2026 — OVM R$ Lazer — Outros — outros — R$ 70,00\n\n2. 10/10/2026 — Videogame — Lazer — outros — R$ 70,00\n\n3. 10/10/2026 — Conta Videogame Parcelados 10 Julho — Outros — outros — R$ 70,00\n\n4. 09/10/2026 — Hotel Dona Francisca — Outros — cartão — R$ 406,40\n\n5. 06/10/2026 — Cadastrar Consulta Médica R$ 800 00 — Saúde — cartão — R$ 200,00\n\n6. 03/10/2026 — Cadastrar Consulta Bianca Parcelamento — Saúde — cartão — R$ 125,00\n\nTotal: R$ 941,40",
+      "image": "ASSET:smartfamily-consultar-despesas",
+      "visibility": "PÚBLICO",
+      "order": 4
+    },
+    {
+      "title": "Resumo financeiro",
+      "category": "Financeiro",
+      "description": "Receitas, despesas e saldo, com detalhamento por categoria e forma de pagamento.",
+      "message": "📊 Resumo financeiro\n\nTotal de receitas: R$ 0,00\nTotal de despesas: R$ 941,40\nSaldo: R$ -941,40\n\nDespesas por categoria:\n· Outros: R$ 546,40\n· Saúde: R$ 325,00\n· Lazer: R$ 70,00\n\nDespesa por forma de pagamento:\n· cartão: R$ 731,40\n· outros: R$ 210,00",
+      "image": "ASSET:smartfamily-resumo-financeiro",
+      "visibility": "PÚBLICO",
+      "order": 5
+    },
+    {
+      "title": "Sua família",
+      "category": "Família",
+      "description": "Membros e vínculos familiares reunidos na conversa. Captura editada para esta apresentação.",
+      "message": "👥 Sua família\n\n1. 🛡️ Carlos André Cardoso dos Santos — Administrador\n2. 💖 Alice — Filha\n3. 💖 Bianca — Filha\n4. 💍 Compra Presente Para Liz Hoje No Valor R 55 00 — Marido\n5. 💙 Lucca — Filho\n\nVocê pode pedir, por exemplo:\n📅 Listar agenda da Alice\n✅ Criar tarefa para Lucca\n🔔 Me lembrar algo da Micheli",
+      "image": "ASSET:smartfamily-sua-familia",
+      "visibility": "PÚBLICO",
+      "order": 6
+    },
+    {
+      "title": "Agendamento por voz",
+      "category": "Agenda",
+      "description": "A captura mostra a confirmação após uma mensagem de áudio, com os detalhes do compromisso.",
+      "message": "✅ Compromisso criado com sucesso!\n\n📌 Título: Noite de Autógrafos da Bianca\n📅 Data: 03/11/2026\n🕒 Horário: 16:00\n👥 Visibilidade: Família\n📍 Local: Colégio Nossa Senhora de Fátima\n📝 Descrição: Não informado\n🔔 Lembretes: WhatsApp 1 dia antes e 1 hora antes\n🔄 Sincronização: apenas SmartFamily/WhatsApp",
+      "image": "ASSET:smartfamily-agendamento-voz",
+      "visibility": "PÚBLICO",
+      "order": 7
+    }
+  ],
+  "sfFinalLogo": "ASSET:smartfamily-logo-oficial",
+  "sfFinalDashboard": "ASSET:smartfamily-dashboard-real",
+  "sfFinalMap": "ASSET:smartfamily-mapa-infraestrutura",
+  "sfFinalOverview": "<div class=\"eyebrow\">Visão geral</div><h2>Organizar a família também é organizar informação.</h2><div class=\"richgrid\"><article class=\"richbox\"><h3>O problema de negócio</h3><p>Uma consulta fica na conversa. A tarefa da escola, em outro grupo. A conta vence antes de alguém lembrar. Quando a informação se espalha, acompanhar a rotina exige procurar, perguntar e registrar tudo novamente.</p><p>O SmartFamily reúne esses assuntos em um produto voltado à organização familiar, com uma aplicação web e um assistente no WhatsApp.</p></article><article class=\"richbox\"><h3>A solução na prática</h3><p>O usuário faz um pedido em linguagem natural. O assistente devolve uma resposta estruturada, com os detalhes relevantes para conferir a ação ou consultar os registros.</p><ul><li>Compromissos: data, horário, local e lembretes.</li><li>Tarefas: responsável, prazo, prioridade e status.</li><li>Finanças: lançamentos, categorias e resumos.</li><li>Família: membros e seus vínculos.</li></ul></article></div>",
+  "sfFinalFeatures": "<div class=\"eyebrow\">Funcionalidades do produto</div><h2>Tudo o que faz parte da rotina. Em um só lugar.</h2><p>O SmartFamily conecta agenda, tarefas, lembretes, membros da família e informações financeiras. Escola e saúde aparecem no contexto dos compromissos e responsabilidades de cada pessoa.</p><div class=\"richgrid\"><article class=\"richbox\"><h3>📅 Agenda familiar</h3><p>Organização dos compromissos por pessoa, com data, horário, local e visibilidade. As confirmações deixam explícitos os lembretes e o destino de sincronização.</p><p>A captura de pilates mostra uma rotina recorrente às terças e quintas, sem data final. A listagem permite acompanhar as próximas ocorrências.</p></article><article class=\"richbox\"><h3>✅ Tarefas e deveres</h3><p>Atividades com responsável, prazo, prioridade e status. Deveres escolares podem incluir matéria e página na descrição, para que a informação não se perca em mensagens separadas.</p><p>Os exemplos reais mostram criação de tarefa para a Alice e uma lista de atividades de diferentes membros.</p></article><article class=\"richbox\"><h3>🔔 Lembretes e acompanhamento</h3><p>As mensagens de confirmação apresentam os avisos associados ao compromisso. Nos exemplos enviados, aparecem lembretes pelo WhatsApp um dia e uma hora antes.</p><p>O responsável consegue conferir essa configuração junto dos demais detalhes da atividade.</p></article><article class=\"richbox\"><h3>👨‍👩‍👧‍👦 Membros e contexto familiar</h3><p>A identificação de cada pessoa permite direcionar tarefas e consultar informações no contexto correto. A listagem reúne membros e vínculos, enquanto o painel oferece uma visão geral da família.</p><p>Responsável, membro da família e visibilidade são informações importantes para definir quem acompanha cada registro.</p></article><article class=\"richbox\"><h3>💰 Gestão financeira</h3><p>Consulta de movimentações e resumos com receitas, despesas e saldo. As capturas detalham categorias e formas de pagamento, além do total do período.</p><p>Essa visão ajuda a acompanhar o orçamento doméstico no mesmo ambiente usado para organizar a rotina.</p></article><article class=\"richbox\"><h3>🎙 Assistente por texto e voz</h3><p>O usuário escreve ou envia um áudio, e o assistente interpreta o pedido para encaminhá-lo ao módulo correspondente. A confirmação devolve os dados organizados para conferência.</p><p>O áudio apresentado nos prints antecede a criação de um compromisso com título, data, horário, local e lembretes.</p></article></div>",
+  "sfFinalChannels": "<div class=\"eyebrow\">Experiência do usuário</div><h2>Uma conversa para agir. Um painel para acompanhar.</h2><div class=\"richgrid\"><article class=\"richbox\"><h3>WhatsApp: perto da rotina</h3><p>Consultar a agenda, listar tarefas ou verificar despesas pode começar com uma mensagem. O usuário continua no canal que já utiliza e recebe uma resposta estruturada, com ícones e campos identificados.</p><p>Nas capturas, comandos como “listar financeiro”, “listar tarefas” e “listar família” mostram essa experiência diretamente.</p></article><article class=\"richbox\"><h3>Web: a visão do responsável</h3><p>O dashboard reúne membros da família, tarefas pendentes e atrasadas, próximos compromissos e atalhos para criar registros ou abrir o assistente.</p><p>A navegação conecta agenda, assistente de IA, tarefas, gestão financeira e configurações. O painel complementa a conversa quando é necessário enxergar o conjunto.</p></article></div>",
+  "sfFinalFaq": "<div class=\"eyebrow\">Perguntas frequentes</div><h2>Como isso entra no dia a dia?</h2><details class=\"detail\" open=\"\"><summary>Preciso instalar outro aplicativo?</summary><p>A proposta combina o WhatsApp com o painel acessível pelo navegador. O usuário pode conversar com o assistente e acessar a interface web quando precisar de uma visão mais ampla.</p></details><details class=\"detail\"><summary>Consigo organizar informações de diferentes pessoas?</summary><p>O produto trabalha com membros da família. Os exemplos mostram tarefas atribuídas à Alice e à Bianca, além de compromissos com visibilidade para a família.</p></details><details class=\"detail\"><summary>Posso fazer pedidos por áudio?</summary><p>Sim. As capturas fornecidas mostram mensagens de áudio seguidas de consulta à agenda ou confirmação de compromisso. O resultado é apresentado em texto para conferência.</p></details><details class=\"detail\"><summary>O financeiro aparece junto da rotina familiar?</summary><p>O painel inclui Gestão Financeira, e as conversas mostram consulta de despesas e resumo financeiro com categorias e formas de pagamento.</p></details><details class=\"detail\"><summary>Como funciona a integração com calendários externos?</summary><p>Google Calendar e Apple Calendar estão no escopo técnico do projeto. Os exemplos desta apresentação indicam sincronização apenas com SmartFamily/WhatsApp; a captura, isoladamente, não comprova envio aos calendários externos.</p></details>",
+  "sfFinalFlow": "<div class=\"eyebrow\">Como a experiência funciona</div><h2>Da mensagem ao registro organizado.</h2><div class=\"process\"><div><b>01 · Pedir</b><p>Escrever ou enviar um áudio com a necessidade da rotina.</p></div><div><b>02 · Interpretar</b><p>Identificar a intenção e os dados necessários: pessoa, data, valor ou atividade.</p></div><div><b>03 · Organizar</b><p>Aplicar as regras do produto e registrar a operação no módulo correspondente.</p></div><div><b>04 · Conferir</b><p>Retornar os detalhes para o usuário verificar o resultado na conversa.</p></div></div>",
+  "sfFinalTechnology": "<div class=\"tech\"><div class=\"eyebrow\">Engenharia por trás do produto</div><h2>Uma interface simples. Serviços conectados.</h2><p>A aplicação web e o canal de conversa dão acesso à organização familiar. A API coordena as regras do produto, o processamento de linguagem e a persistência dos registros.</p><div class=\"stack\"><span>React • interface web</span><span>Python / FastAPI • aplicação</span><span>PostgreSQL • dados</span><span>IA e voz • interpretação</span><span>WhatsApp • conversa</span><span>Docker / Nginx • execução</span></div></div><div class=\"richgrid\"><article class=\"richbox\"><h3>Arquitetura e responsabilidades</h3><p><b>React:</b> interface web para navegar pelos módulos e acompanhar a rotina.</p><p><b>Python / FastAPI:</b> camada de aplicação que coordena requisições, regras de negócio e integrações.</p><p><b>PostgreSQL:</b> persistência dos registros da aplicação.</p><p><b>IA e voz:</b> interpretação dos pedidos e transcrição de áudio antes do tratamento pela aplicação.</p><p><b>Docker / Nginx:</b> organização dos serviços e entrada das requisições web.</p></article><article class=\"richbox\"><h3>Canais e integrações</h3><p><b>WhatsApp:</b> canal demonstrado nas capturas, com criação e consulta de compromissos, tarefas e informações financeiras.</p><p><b>Aplicação web:</b> dashboard com membros, tarefas e próximos compromissos.</p><p><b>Calendários externos:</b> Google Calendar e Apple Calendar fazem parte do escopo de integração do projeto. As capturas apresentadas indicam sincronização apenas com SmartFamily/WhatsApp; não demonstram sincronização externa.</p></article></div><div><div class=\"eyebrow\">Decisões de engenharia</div><h2>O cuidado está nos detalhes da rotina.</h2><details class=\"detail\" open=\"\"><summary>Recorrência é mais do que repetir uma data</summary><p>A consulta de pilates mostra dias da semana e uma série sem data final. No tratamento de recorrências, é importante distinguir uma ocorrência da série inteira, inclusive ao alterar ou cancelar compromissos.</p></details><details class=\"detail\"><summary>Uma intenção precisa de contexto</summary><p>“Amanhã”, “para a Alice” e “pago hoje” exigem interpretação de data, pessoa e estado do registro. Quando faltar informação, uma pergunta de confirmação ajuda a evitar uma ação incorreta.</p></details><details class=\"detail\"><summary>A confirmação precisa permitir conferência</summary><p>As respostas exibem campos como horário, visibilidade, prazo e responsável. Essa estrutura permite ao usuário conferir o que foi registrado e perceber o que precisa corrigir.</p></details><details class=\"detail\"><summary>Família, acesso e visibilidade</summary><p>O contexto familiar precisa acompanhar cada operação. A visibilidade mostrada nas mensagens faz parte dessa experiência; o controle de acesso deve ser aplicado também no backend, e não apenas na interface.</p></details></div>",
+  "sfFinalEvolution": "<div class=\"eyebrow\">Evolução do produto</div><h2>Uma base para ampliar a organização familiar.</h2><p>O projeto reúne experiência conversacional, gestão web e contexto familiar. A evolução pode aprofundar integrações de calendário, acompanhamento de notificações e tratamento de situações como exceções de recorrência e pedidos ambíguos.</p><p>As imagens desta página apresentam o comportamento capturado no produto. Funcionalidades futuras devem ser acompanhadas separadamente, sem confundir proposta de evolução com entrega demonstrada.</p>",
+  "sfFinalCta": "<div><h2>Conheça o SmartFamily.</h2><p>Explore o produto e sua proposta para organizar a rotina familiar.</p></div><a class=\"btn\" href=\"https://app.smartfamily.com.br\" target=\"_blank\" rel=\"noopener\">Acessar o aplicativo ↗</a>"
+}

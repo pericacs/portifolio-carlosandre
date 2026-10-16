@@ -1,0 +1,79 @@
+[
+  {
+    "name": "smartfamily-logo-oficial",
+    "file": "smartfamily-logo-oficial.webp",
+    "mime": "image/webp",
+    "sha256": "7e089fb2d8851440264463f130e4f4cb980c8ccf903b8614caa1f8bea0284989",
+    "size": 82092
+  },
+  {
+    "name": "smartfamily-dashboard-real",
+    "file": "smartfamily-dashboard-real.webp",
+    "mime": "image/webp",
+    "sha256": "46035cfdfdd30d794682decae70533fa43ea0133c87a8ed8c59e84f089071916",
+    "size": 155240
+  },
+  {
+    "name": "smartfamily-mapa-infraestrutura",
+    "file": "smartfamily-mapa-infraestrutura.webp",
+    "mime": "image/webp",
+    "sha256": "655b925000db25b8243ceca211e6a45ac3b6c6afac6966f378bf6adb115e93b9",
+    "size": 1245124
+  },
+  {
+    "name": "smartfamily-criar-compromisso",
+    "file": "smartfamily-criar-compromisso.webp",
+    "mime": "image/webp",
+    "sha256": "f81ff5cd8253907b805b219dbdd809dd05f8b93974ab047b739afe6b3be2212b",
+    "size": 56086
+  },
+  {
+    "name": "smartfamily-consultar-agenda",
+    "file": "smartfamily-consultar-agenda.webp",
+    "mime": "image/webp",
+    "sha256": "860515bfdb7c1c7b8a2957dbcd95e14275f3eb57bfba4db82f73e4a4bb34b911",
+    "size": 130422
+  },
+  {
+    "name": "smartfamily-criar-tarefa",
+    "file": "smartfamily-criar-tarefa.webp",
+    "mime": "image/webp",
+    "sha256": "b8d52f9deb8655d654b1dc8f8ae2deb0d09bc68fcd38fad685e49ae381e32e15",
+    "size": 56138
+  },
+  {
+    "name": "smartfamily-listar-tarefas",
+    "file": "smartfamily-listar-tarefas.webp",
+    "mime": "image/webp",
+    "sha256": "bbc729cf8b6ca331091b02bdbfe7f5bbb81f6b9c2c052663f7958ec34af10ccf",
+    "size": 101404
+  },
+  {
+    "name": "smartfamily-consultar-despesas",
+    "file": "smartfamily-consultar-despesas.webp",
+    "mime": "image/webp",
+    "sha256": "fbd7eb7412aa55934043ebd1e478d8b50e84ac064bf333132359317d7b9de266",
+    "size": 52816
+  },
+  {
+    "name": "smartfamily-resumo-financeiro",
+    "file": "smartfamily-resumo-financeiro.webp",
+    "mime": "image/webp",
+    "sha256": "d235753ed872957b4a0ddb94fd7232a4f6a0a360076bc321b7dfad5d1c9d926b",
+    "size": 62574
+  },
+  {
+    "name": "smartfamily-sua-familia",
+    "file": "smartfamily-sua-familia.webp",
+    "mime": "image/webp",
+    "sha256": "3a4d17dfd8a78693263bd95463dd6168a5b2f0d3576e5820ab2a24b4aea079e5",
+    "size": 890516
+  },
+  {
+    "name": "smartfamily-agendamento-voz",
+    "file": "smartfamily-agendamento-voz.webp",
+    "mime": "image/webp",
+    "sha256": "02ed5a95adb5af6999986c08381466f54fa69d44c1e5bedd567631db171a1fd5",
+    "size": 65064
+  }
+]

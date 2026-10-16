@@ -1,0 +1,149 @@
+[
+  {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 3623,
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 79,
+        "height": 410
+      },
+      {
+        "id": "projetos",
+        "top": 515,
+        "height": 332.25
+      },
+      {
+        "id": "consultoria",
+        "top": 875.25,
+        "height": 175.25
+      },
+      {
+        "id": "experiencia",
+        "top": 1078.5,
+        "height": 372.640625
+      },
+      {
+        "id": "competencias",
+        "top": 1479.140625,
+        "height": 429.25
+      },
+      {
+        "id": "artigos",
+        "top": 1936.390625,
+        "height": 322.59375
+      },
+      {
+        "id": "videos",
+        "top": 2286.984375,
+        "height": 186.375
+      },
+      {
+        "id": "contato",
+        "top": 2503.359375,
+        "height": 1011.609375
+      }
+    ],
+    "checks": "passed",
+    "javascriptErrors": []
+  },
+  {
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 4773,
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 75,
+        "height": 448.15625
+      },
+      {
+        "id": "projetos",
+        "top": 549.15625,
+        "height": 624.859375
+      },
+      {
+        "id": "consultoria",
+        "top": 1202.015625,
+        "height": 330.859375
+      },
+      {
+        "id": "experiencia",
+        "top": 1560.875,
+        "height": 698.921875
+      },
+      {
+        "id": "competencias",
+        "top": 2287.796875,
+        "height": 684.546875
+      },
+      {
+        "id": "artigos",
+        "top": 3000.34375,
+        "height": 325.15625
+      },
+      {
+        "id": "videos",
+        "top": 3353.5,
+        "height": 158.140625
+      },
+      {
+        "id": "contato",
+        "top": 3541.640625,
+        "height": 1080.953125
+      }
+    ],
+    "checks": "passed",
+    "javascriptErrors": []
+  },
+  {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 9650,
+    "sections": [
+      {
+        "id": "inicio",
+        "top": 73,
+        "height": 816.96875
+      },
+      {
+        "id": "projetos",
+        "top": 916.96875,
+        "height": 1306.15625
+      },
+      {
+        "id": "consultoria",
+        "top": 2254.125,
+        "height": 720.265625
+      },
+      {
+        "id": "experiencia",
+        "top": 3005.390625,
+        "height": 1507.890625
+      },
+      {
+        "id": "competencias",
+        "top": 4544.28125,
+        "height": 1375.453125
+      },
+      {
+        "id": "artigos",
+        "top": 5950.734375,
+        "height": 967.5
+      },
+      {
+        "id": "videos",
+        "top": 6949.234375,
+        "height": 311.578125
+      },
+      {
+        "id": "contato",
+        "top": 7323.8125,
+        "height": 2154.296875
+      }
+    ],
+    "checks": "passed",
+    "javascriptErrors": []
+  }
+]

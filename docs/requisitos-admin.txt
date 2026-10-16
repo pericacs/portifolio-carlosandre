@@ -1,0 +1,319 @@
+# CODEX — IMPLEMENTAR PAINEL ADMINISTRATIVO DO PORTFÓLIO
+
+## OBJETIVO
+
+Implementar um CMS administrativo completo para o projeto **Carlos André | Technology & Ventures**, permitindo editar, cadastrar, excluir, organizar, pré-visualizar e publicar os conteúdos sem alterar código.
+
+**ATENÇÃO: O SITE PÚBLICO JÁ POSSUI UM DESIGN APROVADO. NÃO ALTERAR SEU LAYOUT, CORES, TIPOGRAFIA, IMAGENS, ESPAÇAMENTOS OU COMPOSIÇÃO VISUAL.**
+
+Implementar o painel administrativo e substituir gradualmente o conteúdo estático por dados persistidos no PostgreSQL, preservando a aparência atual.
+
+## FASE 1 — INSPEÇÃO E SEGURANÇA
+
+Antes de começar:
+
+1. Inspecionar toda a estrutura existente do repositório.
+2. Identificar frontend Next.js, API FastAPI, PostgreSQL, Docker e migrações existentes.
+3. Reaproveitar os componentes, serviços, bibliotecas e padrões já implementados.
+4. Identificar quais dados estão atualmente fixos no código.
+5. Criar um plano de migração do conteúdo estático para o banco de dados.
+6. Preservar todo o conteúdo e os arquivos originais.
+7. Não apagar nem recriar tabelas que já contenham informações.
+8. Não modificar a Home visualmente.
+
+Criar uma cópia de segurança antes de executar migrações que alterem estruturas existentes.
+
+## FASE 2 — ACESSO ADMINISTRATIVO
+
+Criar:
+
+`/admin/login`
+
+`/admin`
+
+Implementar autenticação segura com:
+
+- Usuário administrador.
+- Senha com hash Argon2id.
+- Sessão protegida por cookie HttpOnly, Secure em produção e SameSite.
+- Proteção CSRF.
+- Limitação de tentativas de login.
+- Logout.
+- Recuperação de senha por e-mail, quando SMTP estiver configurado.
+- Proteção das rotas administrativas no backend.
+- Registro de operações administrativas.
+
+Criar comando CLI para cadastrar o primeiro administrador, sem senhas fixas no código.
+
+Não disponibilizar cadastro público de administradores.
+
+## FASE 3 — DASHBOARD
+
+Criar uma interface profissional com menu lateral, dashboard e módulos administrativos.
+
+A tela principal deve mostrar:
+
+- Quantidade de projetos.
+- Artigos publicados e em rascunho.
+- Vídeos cadastrados.
+- Experiências profissionais.
+- Mensagens recebidas.
+- Últimos conteúdos alterados.
+- Publicações agendadas.
+- Visitas, somente quando houver integração real com analytics.
+
+Não utilizar métricas fictícias.
+
+## FASE 4 — GESTÃO DE CONTEÚDO
+
+### 4.1 Meu perfil
+
+Permitir editar:
+- Nome público.
+- Título profissional.
+- Biografia em português e inglês.
+- Foto profissional.
+- Textos do Hero.
+- Indicadores profissionais.
+- Links sociais.
+- E-mail comercial.
+- WhatsApp.
+- Frases de destaque.
+
+A substituição da foto deve refletir na Home sem alterar seu layout.
+
+### 4.2 Currículo e experiências
+
+Criar gerenciamento de experiências profissionais.
+
+Campos:
+- Empresa.
+- Logotipo.
+- Cargo.
+- Tipo de vínculo.
+- Início.
+- Término.
+- Indicador de trabalho atual.
+- Descrição.
+- Responsabilidades.
+- Resultados.
+- Tecnologias.
+- Links e anexos.
+- Visibilidade.
+- Destaque na Home.
+- Ordem de apresentação.
+
+Permitir experiências simultâneas.
+
+Permitir upload e substituição de currículo PDF e DOCX.
+
+O currículo fornecido deve servir como fonte inicial de conteúdo, com revisão das datas antes da publicação.
+
+### 4.3 Skills e conhecimentos
+
+Criar categorias editáveis para:
+
+- Engenharia de Dados.
+- Arquitetura de Software.
+- Cloud & DevOps.
+- Banking & Payments.
+- Inteligência Artificial.
+- Bancos de Dados.
+- Gestão e Liderança.
+
+Permitir cadastrar skills, associar ícones, editar descrições, reordenar e definir quais aparecem na Home.
+
+Não inventar níveis percentuais de conhecimento.
+
+### 4.4 Projetos
+
+Implementar CRUD para SmartFamily, Beloria, OnStar SCD, Orquestrador IA e futuros projetos.
+
+Permitir:
+- Cadastrar e editar projeto.
+- Alterar título e descrição.
+- Upload de imagem principal.
+- Galeria de imagens.
+- Tecnologias.
+- Arquitetura.
+- Estágio de desenvolvimento.
+- Indicadores e resultados.
+- Links externos.
+- Ordem de exibição.
+- Destaque na Home.
+- Rascunho, publicação e arquivamento.
+
+Cada projeto deve possuir uma página pública detalhada.
+
+### 4.5 Artigos
+
+Implementar editor visual de artigos, adequado a pessoas que não desejam escrever HTML.
+
+Recursos:
+- Editor rico com títulos, parágrafos, listas, tabelas, links e imagens.
+- Upload de diagramas 3D.
+- Imagem de capa.
+- Categorias e tags.
+- Slug automático editável.
+- Metadados SEO.
+- Artigos relacionados.
+- Pré-visualização.
+- Rascunho.
+- Publicação imediata.
+- Agendamento.
+- Histórico de versões.
+- Restauração de versões anteriores.
+- Tradução PT/EN.
+
+O editor deve permitir imagens em largura ampla sem distorções, respeitando sua proporção.
+
+O site público deve continuar utilizando o design editorial aprovado.
+
+### 4.6 Vídeos
+
+Criar gerenciamento de vídeos integrado ao YouTube por URL.
+
+Permitir:
+- Título.
+- Descrição.
+- URL do YouTube.
+- Miniatura própria.
+- Categoria.
+- Duração obtida de fonte real ou cadastrada manualmente.
+- Artigos relacionados.
+- Destaque na Home.
+- Ordem.
+- Rascunho e publicação.
+
+Validar URLs e utilizar incorporação segura do YouTube.
+
+Vídeos ainda não publicados devem permanecer em rascunho ou identificados como planejados.
+
+### 4.7 Cases de sucesso
+
+Permitir editar empresas, projetos, desafios, soluções, arquiteturas, resultados e indicadores.
+
+Criar cases independentes com URL própria.
+
+Não publicar informações confidenciais sem revisão.
+
+### 4.8 Mensagens e oportunidades
+
+Substituir o formulário demonstrativo por envio real ao backend.
+
+Armazenar:
+- Nome.
+- E-mail.
+- Empresa.
+- Cargo.
+- Assunto.
+- Mensagem.
+- Data.
+- Status do atendimento.
+- Observações internas.
+
+Enviar notificação para o e-mail configurado.
+
+Implementar validação, proteção antispam, retenção e exclusão de dados pessoais, consentimento e política de privacidade.
+
+### 4.9 Configurações gerais
+
+Permitir editar:
+- Logotipo.
+- Favicon.
+- SEO global.
+- Rodapé.
+- Contatos.
+- Redes sociais.
+- Links comerciais.
+- Imagens dos banners.
+- Ordem das seções da Home.
+- Textos institucionais.
+- Idiomas.
+- Integrações externas.
+
+## FASE 5 — BANCO DE DADOS
+
+Utilizar PostgreSQL e Alembic.
+
+Criar ou adaptar as tabelas necessárias para os módulos anteriores.
+
+Utilizar chaves estrangeiras, índices, validações e restrições.
+
+Preservar o conteúdo existente.
+
+Armazenar imagens e arquivos em volume persistente ou armazenamento de objetos, registrando metadados no PostgreSQL.
+
+## FASE 6 — PUBLICAÇÃO E PRÉ-VISUALIZAÇÃO
+
+Todo conteúdo editorial deverá possuir os estados:
+
+- Rascunho.
+- Agendado.
+- Publicado.
+- Arquivado.
+
+Implementar pré-visualização autenticada, sem publicar o conteúdo.
+
+O botão Publicar deverá atualizar o site público automaticamente, por consulta atualizada ou revalidação de cache do Next.js.
+
+Publicações futuras devem ser ativadas por processo agendado confiável.
+
+Manter histórico de revisões e auditoria.
+
+## FASE 7 — TESTES
+
+Criar testes para:
+
+1. Login e logout.
+2. Proteção das rotas.
+3. CRUD de experiências.
+4. Upload de currículo.
+5. Gestão de skills.
+6. Cadastro de projetos.
+7. Criação de artigos.
+8. Upload de imagens.
+9. Publicação e despublicação.
+10. Cadastro de vídeos.
+11. Envio de mensagens.
+12. Persistência PostgreSQL.
+13. Migrações.
+14. Responsividade administrativa.
+15. Preservação visual do site público.
+
+Executar testes com PostgreSQL real de desenvolvimento.
+
+Utilizar Playwright para capturar telas do painel administrativo e da Home antes e depois da integração.
+
+Comparar screenshots para confirmar que a implementação não modificou o design aprovado.
+
+## FASE 8 — ENTREGA
+
+Entregar:
+- Painel funcionando em `/admin`.
+- Migrações.
+- CRUDs completos.
+- Upload persistente.
+- Editor de artigos.
+- Gestão de vídeos.
+- Gestão de currículo.
+- Gestão de projetos.
+- Formulário de contato conectado.
+- Configuração segura.
+- Documentação.
+- Testes executados.
+- Roteiro de validação manual.
+
+**ORDEM OBRIGATÓRIA:**
+
+Primeiro inspecionar o projeto e implementar autenticação, layout administrativo e banco.
+
+Depois implementar os módulos de currículo, skills, projetos, artigos, vídeos e contato.
+
+Não reescrever o frontend público.
+
+Não declarar funcionalidades concluídas sem testá-las.
+
+Apresentar screenshots do `/admin` para validação.
+
+COMECE AGORA PELA INSPEÇÃO E IMPLEMENTAÇÃO DA BASE ADMINISTRATIVA.

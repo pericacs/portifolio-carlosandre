@@ -1,0 +1,14 @@
+'use client';
+import {useState} from 'react';
+import {usePathname} from 'next/navigation';
+import s from '@/app/admin/admin.module.css';
+export function AdminShell({email,children}:{email:string;children:React.ReactNode}){
+  const path=usePathname();const[open,setOpen]=useState(false),[busy,setBusy]=useState(false),[error,setError]=useState('');
+  async function logout(){setBusy(true);setError('');try{
+    const token=await fetch('/api/admin/auth/csrf',{cache:'no-store'}).then(r=>r.json());
+    const response=await fetch('/api/admin/auth/logout',{method:'POST',headers:{'X-CSRF-Token':token.csrfToken}});
+    if(!response.ok&&response.status!==401)throw Error();
+    window.location.assign('/admin/login');
+  }catch{setError('Não foi possível sair. Tente novamente.');setBusy(false);}}
+  return <div className={s.shell}><aside id="admin-navigation" className={`${s.sidebar} ${open?s.sidebarOpen:''}`}><a href="/admin" className={s.brand}><span className={s.brandMark}>CA</span><span>CARLOS ANDRÉ<small>Technology & Ventures</small></span></a><div><p className={s.navLabel}>Visão geral</p><nav className={s.nav} aria-label="Administração">{[['/admin','◫','Dashboard'],['/admin/auditoria','≡','Registro de operações'],['/admin/seguranca','◇','Acesso e segurança']].map(([href,icon,label])=><a key={href} href={href} aria-current={path===href?'page':undefined}><span className={s.navSymbol} aria-hidden="true">{icon}</span>{label}</a>)}</nav></div><div><p className={s.navLabel}>Gerenciar conteúdo</p><nav className={s.nav} aria-label="Conteúdo">{[['perfil','Meu perfil'],['experiencias','Currículo e experiências'],['skills','Skills e conhecimentos'],['projetos','Projetos'],['artigos','Artigos'],['videos','Vídeos'],['cases','Cases de sucesso'],['midia','Arquivos e mídia'],['mensagens','Mensagens'],['configuracoes','Configurações']].map(([key,label])=><a href={'/admin/'+key} key={key} aria-current={path.startsWith('/admin/'+key)?'page':undefined}><span aria-hidden="true">○</span>{label}</a>)}</nav></div><div className={s.sidebarFooter}>Gestão de conteúdo<br/>Ambiente do portfólio</div></aside><div className={s.workArea}><header className={s.topbar}><button className={s.mobileToggle} onClick={()=>setOpen(!open)} aria-controls="admin-navigation" aria-expanded={open}>☰ Menu</button><span className={s.topbarTitle}>Seu portfólio, em um só lugar</span><div className={s.topbarActions}><a className={s.secondary} href="/" target="_blank" rel="noopener noreferrer">Ver site <span aria-hidden="true">↗</span></a><div className={s.user}><span className={s.avatar}>CA</span><span>{email}</span></div><button className={s.logout} onClick={logout} disabled={busy}>{busy?'Saindo…':'Sair'}</button></div></header>{error&&<div role="alert" className={s.error}>{error}</div>}<main className={s.content}>{children}</main></div></div>;
+}

@@ -1,0 +1,23 @@
+{
+  "originalAssetsVerified": 11,
+  "transcriptsVerified": 8,
+  "ssr": true,
+  "report": [
+    {
+      "width": 1440,
+      "height": 6782,
+      "demos": 8,
+      "filters": true,
+      "keyboard": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 9977,
+      "demos": 8,
+      "filters": true,
+      "keyboard": true,
+      "errors": []
+    }
+  ]
+}

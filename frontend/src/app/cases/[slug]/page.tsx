@@ -1,0 +1,4 @@
+import {PublicDetail} from '@/components/cms/public-detail';
+import {publicData} from '@/lib/public-content';
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const {modules}=await publicData();const item=modules.cases?.find(x=>x.slug===slug);return {title:item?.seoTitle||item?.title,description:item?.metaDescription||item?.description};}
+export default async function Page({params,searchParams}:{params:Promise<{slug:string}>;searchParams:Promise<{lang?:string}>}){const {slug}=await params;const {lang}=await searchParams;return <PublicDetail module="cases" slug={slug} english={lang==='en'}/>;}

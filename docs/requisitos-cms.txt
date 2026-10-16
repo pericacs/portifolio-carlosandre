@@ -1,0 +1,433 @@
+# CODEX — IMPLEMENTAÇÃO DE TODAS AS TELAS ADMINISTRATIVAS
+
+## CONTEXTO
+
+O painel administrativo do projeto Carlos André | Technology & Ventures já possui:
+
+- Login administrativo.
+- Layout com menu lateral.
+- Dashboard inicial.
+- Registro de operações.
+- Acesso e segurança.
+- Backend FastAPI.
+- Banco PostgreSQL.
+- Frontend Next.js.
+
+Agora precisamos implementar TODOS os módulos restantes.
+
+**IMPORTANTE: NÃO ALTERAR O DESIGN DO SITE PÚBLICO.**
+
+Trabalhar exclusivamente no painel administrativo, APIs e persistência de conteúdo, realizando apenas as integrações necessárias para que as alterações publicadas sejam refletidas no site.
+
+Preservar a identidade atual do painel: menu lateral azul-marinho, fundo claro, cartões brancos, detalhes azuis e formulários organizados.
+
+## 1. DASHBOARD ADMINISTRATIVO
+
+Transformar o Dashboard em uma central operacional.
+
+Apresentar indicadores reais de:
+
+- Projetos cadastrados.
+- Artigos publicados.
+- Artigos em rascunho.
+- Vídeos cadastrados.
+- Experiências profissionais.
+- Mensagens novas.
+- Publicações agendadas.
+- Atividades administrativas recentes.
+
+Adicionar atalhos:
+
+- Novo artigo.
+- Novo projeto.
+- Adicionar vídeo.
+- Editar currículo.
+- Ver mensagens.
+- Visualizar site público.
+
+Não utilizar números fictícios.
+
+## 2. MEU PERFIL
+
+Criar a rota `/admin/perfil`.
+
+Permitir editar:
+
+- Nome de apresentação.
+- Título profissional.
+- Subtítulo.
+- Biografia em português.
+- Biografia em inglês.
+- Fotografia profissional.
+- Frase principal da Home.
+- Descrição do Hero.
+- Indicadores profissionais.
+- E-mail de contato.
+- WhatsApp.
+- LinkedIn.
+- YouTube.
+- GitHub.
+- Links complementares.
+
+A imagem enviada deverá ser armazenada de forma persistente.
+
+Implementar pré-visualização antes de publicar.
+
+Não modificar a estrutura visual do Hero público.
+
+## 3. CURRÍCULO E EXPERIÊNCIAS
+
+Criar a rota `/admin/experiencias`.
+
+Implementar CRUD completo de experiências profissionais.
+
+Campos:
+
+- Empresa.
+- Logotipo.
+- Cargo.
+- Tipo de vínculo.
+- Data inicial.
+- Data final.
+- Trabalho atual.
+- Descrição profissional.
+- Responsabilidades.
+- Resultados alcançados.
+- Tecnologias utilizadas.
+- Projetos relacionados.
+- Link externo.
+- Destaque na Home.
+- Ordem de apresentação.
+- Visibilidade.
+
+Permitir vínculos e datas sobrepostos.
+
+Criar gerenciamento de formação acadêmica, certificações e idiomas.
+
+Adicionar upload de currículo PDF/DOCX, com possibilidade de substituição e download.
+
+Utilizar o currículo original fornecido como referência de conteúdo.
+
+Não alterar datas nem inventar informações.
+
+## 4. SKILLS E CONHECIMENTOS
+
+Criar `/admin/skills`.
+
+Categorias:
+
+- Engenharia de Dados.
+- Inteligência Artificial.
+- Cloud & DevOps.
+- Arquitetura de Software.
+- Banking & Payments.
+- Bancos de Dados.
+- Gestão e Liderança.
+
+Permitir:
+
+- Criar categoria.
+- Adicionar skill.
+- Editar.
+- Excluir ou desativar.
+- Escolher ícone.
+- Definir descrição.
+- Ordenar.
+- Marcar como destaque.
+
+Não utilizar porcentagens artificiais de proficiência.
+
+## 5. PROJETOS
+
+Criar `/admin/projetos`.
+
+Cadastrar inicialmente:
+
+- SmartFamily.
+- Beloria.
+- OnStar SCD.
+- Orquestrador IA.
+
+Criar formulário completo com:
+
+- Título.
+- Slug.
+- Descrição resumida.
+- Descrição completa.
+- Problema resolvido.
+- Solução proposta.
+- Arquitetura.
+- Tecnologias.
+- Categoria.
+- Status do projeto.
+- Imagem principal.
+- Galeria de imagens.
+- Diagramas técnicos.
+- Resultados comprovados.
+- Links externos.
+- Destaque na Home.
+- Ordem.
+- Status de publicação.
+
+Implementar upload de múltiplas imagens e reordenação.
+
+Criar pré-visualização.
+
+## 6. ARTIGOS — CMS COMPLETO
+
+Criar `/admin/artigos`.
+
+Implementar:
+
+- Listagem com filtros.
+- Novo artigo.
+- Editor visual rico.
+- Upload de imagens.
+- Diagramas técnicos.
+- Imagem de capa.
+- Título e subtítulo.
+- Categoria.
+- Tags.
+- Tempo de leitura calculado.
+- Slug.
+- SEO title.
+- Meta description.
+- Conteúdo PT/EN.
+- Artigos relacionados.
+- Salvar rascunho.
+- Pré-visualizar.
+- Agendar.
+- Publicar.
+- Arquivar.
+- Histórico de versões.
+
+O editor deve permitir inserir imagens grandes sem distorção.
+
+Preservar o padrão didático 3D das imagens de artigos aprovado anteriormente.
+
+Sanitizar o conteúdo para prevenir XSS.
+
+## 7. VÍDEOS E YOUTUBE
+
+Criar `/admin/videos`.
+
+Permitir:
+
+- Cadastrar vídeo.
+- Inserir URL do YouTube.
+- Validar URL.
+- Definir título.
+- Descrição.
+- Categoria.
+- Miniatura personalizada.
+- Duração.
+- Artigos associados.
+- Destaque na Home.
+- Ordem de exibição.
+- Status de publicação.
+
+Não publicar vídeos sem URL válida como se estivessem disponíveis.
+
+Conteúdos planejados devem permanecer como rascunho ou possuir identificação de "Em breve".
+
+Preparar integração futura com a YouTube Data API.
+
+## 8. CASES DE SUCESSO
+
+Criar `/admin/cases`.
+
+Permitir cadastrar:
+
+- Empresa.
+- Nome do projeto.
+- Período.
+- Contexto.
+- Problema enfrentado.
+- Solução implementada.
+- Arquitetura.
+- Tecnologias.
+- Resultados.
+- Indicadores.
+- Galeria de imagens.
+- Diagramas.
+- Links.
+- Publicação.
+
+Permitir relacionar cases a experiências profissionais e projetos.
+
+Exigir revisão de informações confidenciais antes da publicação.
+
+## 9. MENSAGENS E OPORTUNIDADES
+
+Criar `/admin/mensagens`.
+
+O formulário do site público deverá enviar mensagens ao backend.
+
+Exibir:
+
+- Nome.
+- E-mail.
+- Empresa.
+- Cargo.
+- Assunto.
+- Mensagem.
+- Data de recebimento.
+- Status do atendimento.
+- Observações internas.
+
+Status:
+
+- Novo.
+- Em análise.
+- Respondido.
+- Arquivado.
+
+Adicionar filtros, pesquisa, visualização detalhada e exportação CSV.
+
+Integrar notificação por e-mail quando SMTP estiver configurado.
+
+## 10. CONFIGURAÇÕES
+
+Criar `/admin/configuracoes`.
+
+Permitir atualizar:
+
+- Nome do site.
+- Logotipo.
+- Favicon.
+- Foto principal.
+- Banners.
+- Redes sociais.
+- Informações de contato.
+- SEO global.
+- Textos institucionais.
+- Informações do rodapé.
+- Categorias de conteúdo.
+- Ordem das seções.
+- Integrações externas.
+
+Não permitir alterações que destruam o design público aprovado.
+
+## 11. INTEGRAÇÃO COM O SITE PÚBLICO
+
+Cada módulo deverá possuir dados persistidos no PostgreSQL.
+
+O site público deve consumir somente conteúdos publicados.
+
+Implementar:
+
+- Rascunho.
+- Pré-visualização.
+- Publicação.
+- Agendamento.
+- Arquivamento.
+- Revalidação de cache.
+- Histórico de versões.
+
+Não substituir conteúdos existentes por listas vazias durante a migração.
+
+Criar scripts idempotentes de importação dos dados já existentes.
+
+Separar claramente edição administrativa e conteúdo publicado.
+
+## 12. REQUISITOS DE INTERFACE
+
+Todos os módulos administrativos deverão utilizar os mesmos componentes de interface:
+
+- Cabeçalho da página.
+- Barra de pesquisa.
+- Filtros.
+- Tabelas responsivas.
+- Botão "Novo".
+- Formulários organizados.
+- Validação de campos.
+- Botões Salvar, Cancelar e Publicar.
+- Confirmação de exclusão.
+- Feedback de sucesso e erro.
+- Indicador de alterações não salvas.
+- Estados de carregamento.
+- Estados vazios.
+- Paginação.
+
+Evitar formulários excessivamente longos.
+
+Dividir formulários complexos em abas:
+
+**Informações gerais | Conteúdo | Mídia | SEO | Publicação**
+
+## 13. SEGURANÇA E AUDITORIA
+
+Reutilizar a autenticação existente.
+
+Garantir:
+
+- Proteção de todas as APIs administrativas.
+- Controle de permissões no backend.
+- CSRF.
+- Validação de entradas.
+- Rate limiting.
+- Upload seguro.
+- Arquivos persistentes.
+- Logs de auditoria.
+- Transações PostgreSQL.
+- Backup antes de migrações destrutivas.
+- Nenhuma senha ou token no código-fonte.
+
+## 14. TESTES
+
+Criar testes automatizados para cada módulo.
+
+Testar:
+
+- Criação.
+- Edição.
+- Persistência.
+- Publicação.
+- Arquivamento.
+- Exclusão segura.
+- Upload.
+- Permissões.
+- Erros de validação.
+- Integração com o site público.
+
+Executar testes no PostgreSQL real de desenvolvimento.
+
+Usar Playwright para testar os fluxos administrativos.
+
+Capturar screenshots de todas as telas administrativas em desktop e mobile.
+
+## 15. ORDEM DE EXECUÇÃO
+
+Implementar por grupos:
+
+**Grupo 1 — Identidade profissional**
+Meu perfil, currículo, experiências e skills.
+
+**Grupo 2 — Portfólio**
+Projetos e cases de sucesso.
+
+**Grupo 3 — Conteúdo**
+Artigos, vídeos e arquivos de mídia.
+
+**Grupo 4 — Negócios**
+Mensagens, oportunidades e contatos.
+
+**Grupo 5 — Plataforma**
+Configurações, dashboard completo, publicação e integração pública.
+
+Para cada grupo:
+
+1. Criar/adaptar tabelas e migrações.
+2. Criar endpoints.
+3. Implementar interface administrativa.
+4. Integrar PostgreSQL.
+5. Implementar validações.
+6. Criar testes.
+7. Executar testes.
+8. Verificar a publicação no site.
+
+Não interromper a implementação após criar apenas menus ou formulários estáticos.
+
+**RESULTADO ESPERADO: TODOS OS MÓDULOS FUNCIONAIS, PERSISTIDOS E CONECTADOS AO SITE PÚBLICO.**
+
+Comece pelo Grupo 1 e prossiga sequencialmente. Se houver algum bloqueio real, descreva o problema e preserve as funcionalidades já implementadas.

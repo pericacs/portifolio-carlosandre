@@ -1,0 +1,605 @@
+# PROJETO: CARLOS ANDRÉ | TECHNOLOGY & VENTURES
+
+## INSTRUÇÕES PARA O CODEX — IMPLEMENTAÇÃO COMPLETA
+
+Atue como um time de desenvolvimento sênior composto por:
+
+- Principal Software Architect
+- Senior Full Stack Developer
+- Senior UI/UX Designer
+- Especialista em PostgreSQL
+- Especialista em Segurança e DevOps
+- Especialista em SEO e Performance
+- QA Automation Engineer
+
+## 1. OBJETIVO
+
+Desenvolver meu portfólio profissional e empresarial completo, com website público e painel administrativo integrado.
+
+**DOMÍNIO:** `carlosandre.tech`
+
+**PAINEL ADMINISTRATIVO:** `carlosandre.tech/admin`
+
+**MARCA:** Carlos André | Technology & Ventures
+
+O site deve funcionar como portfólio profissional, vitrine de produtos, plataforma de conteúdo técnico e canal de captação de clientes, consultorias, parceiros e investidores.
+
+### REGRA OBRIGATÓRIA DE DESIGN
+
+UTILIZAR A IMAGEM DE REFERÊNCIA APROVADA PELO PROPRIETÁRIO.
+
+Não redesenhar, simplificar, alterar a disposição dos componentes ou substituir o design por templates genéricos.
+
+O design deve manter:
+
+- Fundo branco com detalhes azul-claro.
+- Títulos azul-marinho.
+- Gradientes azul, violeta e verde.
+- Cards sofisticados com bordas suaves.
+- Imagens grandes, profissionais e didáticas.
+- Tipografia confortável e legível.
+- Espaçamento generoso entre elementos.
+- Fotografia real do proprietário no destaque principal.
+- Responsividade para desktop, tablet e smartphone.
+
+NÃO limitar a altura da página.
+
+NÃO comprimir seções.
+
+NÃO reduzir textos artificialmente.
+
+NÃO transformar a página em uma única imagem.
+
+A referência visual serve para definir a composição; o resultado deve ser HTML semântico e componentes reais, responsivos e acessíveis.
+
+Testar visualmente o resultado contra a imagem aprovada em resoluções desktop, tablet e mobile.
+
+---
+
+## 2. STACK TECNOLÓGICA
+
+**Frontend**
+- Next.js com TypeScript
+- Tailwind CSS
+- Componentes reutilizáveis
+- Animações suaves
+- Layout responsivo
+
+**Backend**
+- FastAPI
+- Python 3.11+
+- SQLAlchemy
+- Alembic
+- Pydantic
+
+**Banco de dados**
+- PostgreSQL 16+
+
+**Infraestrutura**
+- Docker e Docker Compose
+- Nginx
+- Cloudflare
+- HTTPS
+- Armazenamento persistente de imagens e documentos
+- Backup automatizado
+
+Separar frontend, backend e banco de dados, permitindo implantação independente.
+
+---
+
+# 3. WEBSITE PÚBLICO
+
+Criar as páginas:
+
+| Rota | Página |
+|---|---|
+| `/` | Página inicial |
+| `/sobre` | Sobre mim |
+| `/projetos` | Projetos e produtos |
+| `/projetos/[slug]` | Detalhes de cada projeto |
+| `/experiencia` | Currículo profissional |
+| `/cases` | Cases corporativos |
+| `/cases/[slug]` | Detalhes dos cases |
+| `/artigos` | Artigos e Insights |
+| `/artigos/[slug]` | Leitura completa |
+| `/videos` | Vídeos e YouTube |
+| `/consultoria` | Serviços de consultoria |
+| `/contato` | Contato e oportunidades |
+| `/en` | Versão internacional |
+
+### 3.1. Página inicial
+
+Reproduzir a composição da referência aprovada.
+
+Organização:
+
+1. Menu superior.
+2. Hero com fotografia real.
+3. Indicadores profissionais.
+4. Projetos em destaque.
+5. Como posso ajudar.
+6. Minha trajetória profissional.
+7. Skills e conhecimentos.
+8. Artigos em destaque.
+9. Vídeos em destaque.
+10. Banner de contato.
+11. Rodapé.
+
+As seções devem possuir altura natural, sem cortes e sem sobreposição.
+
+### 3.2. Projetos em destaque
+
+Inicialmente cadastrar:
+
+**SmartFamily**
+- Gestão familiar com IA.
+- Integração com WhatsApp.
+- Calendário inteligente.
+- FastAPI, React e PostgreSQL.
+
+**Beloria**
+- Plataforma SaaS para salões e barbearias.
+- Gestão de atendimentos, comissões e financeiro.
+- Planos e assinaturas.
+- Arquitetura multi-tenant.
+
+**OnStar SCD**
+- Estudo de plataforma fintech.
+- Análise de consumo de energia.
+- Modelagem de crédito e integração financeira.
+
+**Orquestrador IA**
+- Plataforma de orquestração de agentes inteligentes.
+- Coordenação de ferramentas, integrações e workflows.
+- Automação de processos empresariais.
+
+Cada projeto deve conter:
+- Nome, descrição e categoria.
+- Imagem principal e galeria.
+- Problema que resolve.
+- Arquitetura.
+- Tecnologias.
+- Status real de desenvolvimento.
+- Resultados, quando comprovados.
+- Links externos e demonstrações.
+- Opção de marcar como destaque.
+
+### 3.3. Currículo e experiências
+
+Cadastrar as experiências conforme o currículo fornecido, incluindo:
+
+- Compass UOL / Caixa Econômica Federal.
+- RPE.tech / Fiabilité Tech.
+- Alibin.
+- Fastconnect.
+- Manager Systems.
+- Cetil Sistemas de Informação.
+- SENAI/SC.
+- Unimed.
+- Someday.
+
+Manter cargos, datas e vínculos conforme documentação validada pelo proprietário.
+
+Permitir períodos simultâneos, sem forçar uma cronologia artificial.
+
+A experiência como fundador e CTO deve receber destaque, assim como os resultados dos projetos corporativos.
+
+Incluir:
+- Formação acadêmica.
+- Certificações.
+- Idiomas.
+- Competências.
+- Tecnologias.
+- Histórico profissional.
+- Currículo para download em PDF.
+
+Não inventar resultados profissionais.
+
+### 3.4. Artigos
+
+Manter o padrão visual aprovado, com imagens 3D didáticas, arquiteturas ilustradas e cards editoriais.
+
+Categorias:
+- Engenharia de Dados.
+- Inteligência Artificial.
+- Fintech & Payments.
+- Arquitetura de Software.
+- SaaS e Produtos.
+- Cloud Computing.
+- Segurança e Fraudes.
+
+Cada artigo terá página exclusiva com imagens em alta resolução, sumário navegável, compartilhamento, artigos relacionados e CTA para consultoria.
+
+### 3.5. Vídeos
+
+Manter uma página separada, com:
+- Vídeo principal.
+- Miniaturas personalizadas.
+- Filtros por categoria.
+- Player incorporado do YouTube.
+- Vídeos relacionados.
+- Artigos relacionados.
+- Link para o canal.
+
+Não exibir vídeos inexistentes como publicados.
+
+### 3.6. Contato
+
+Reproduzir o design aprovado:
+
+- Banner amplo com paisagem de montanhas.
+- Frase: "Grandes ideias começam com uma conversa."
+- Formulário principal à esquerda.
+- Canais de contato à direita.
+- Opção de WhatsApp.
+- LinkedIn.
+- E-mail.
+- YouTube.
+- Agendamento, quando configurado.
+- Banner inferior azul com chamada comercial.
+
+O formulário deve enviar mensagens para o backend, armazenar os contatos e notificar o administrador por e-mail.
+
+Campos:
+- Nome.
+- E-mail.
+- Empresa.
+- Cargo.
+- Assunto.
+- Mensagem.
+- Consentimento de privacidade.
+
+Validar campos, limitar tentativas, proteger contra spam e evitar exposição de dados pessoais.
+
+Não prometer prazo de resposta sem configuração explícita.
+
+---
+
+# 4. PAINEL ADMINISTRATIVO
+
+Criar uma aplicação administrativa completa, com design moderno e navegação lateral.
+
+Acesso em `/admin`.
+
+O administrador deve conseguir atualizar o conteúdo do website SEM ALTERAR CÓDIGO.
+
+## 4.1. Dashboard
+
+Exibir:
+- Visitas ao site.
+- Artigos publicados.
+- Vídeos publicados.
+- Projetos cadastrados.
+- Novas mensagens.
+- Contatos comerciais.
+- Conteúdos em rascunho.
+- Atividades recentes.
+
+Métricas de visitas devem vir de uma fonte real de analytics. Não inventar dados.
+
+## 4.2. Gestão de projetos
+
+CRUD completo.
+
+Permitir:
+- Criar projeto.
+- Editar projeto.
+- Excluir ou arquivar.
+- Enviar imagens.
+- Adicionar galerias.
+- Editar tecnologias.
+- Informar estágio do projeto.
+- Adicionar links.
+- Organizar a ordem de apresentação.
+- Ativar ou remover o destaque da Home.
+
+## 4.3. Gestão de currículo
+
+Criar um módulo chamado **Minha Trajetória**.
+
+O administrador poderá:
+- Adicionar novas experiências.
+- Editar empresas.
+- Alterar cargos.
+- Atualizar datas.
+- Descrever responsabilidades.
+- Registrar resultados.
+- Informar tecnologias utilizadas.
+- Adicionar logotipos.
+- Alterar ordem de apresentação.
+- Controlar o que aparece na Home.
+- Substituir o currículo em PDF.
+
+O sistema deve permitir vínculos simultâneos e não deve modificar datas automaticamente.
+
+## 4.4. Gestão de skills
+
+CRUD para competências profissionais.
+
+Campos:
+- Nome.
+- Categoria.
+- Descrição.
+- Ícone.
+- Ordem.
+- Destaque.
+- Visibilidade.
+
+Categorias iniciais:
+- Dados e Analytics.
+- Cloud e DevOps.
+- Arquitetura e Software.
+- Fintech e Payments.
+- Inteligência Artificial.
+- Gestão e Liderança.
+
+Permitir adicionar tecnologias livremente.
+
+## 4.5. Gestão de artigos
+
+Implementar um CMS completo.
+
+Recursos obrigatórios:
+- Criar artigo.
+- Editar artigo.
+- Editor visual de conteúdo.
+- Upload de imagens.
+- Inserção de diagramas.
+- Título e subtítulo.
+- Categoria.
+- Tags.
+- Imagem de capa.
+- Tempo estimado de leitura.
+- SEO title.
+- Meta description.
+- Slug.
+- Artigos relacionados.
+- Rascunho.
+- Pré-visualização.
+- Publicação.
+- Agendamento.
+- Arquivamento.
+
+Incluir suporte a português e inglês, com versões de conteúdo independentes.
+
+Manter histórico de revisões e permitir restaurar versões anteriores.
+
+Sanitizar conteúdo HTML para prevenir XSS.
+
+## 4.6. Gestão de vídeos
+
+Criar módulo **Vídeos & YouTube**.
+
+Permitir:
+- Cadastrar título.
+- Colar URL do YouTube.
+- Extrair e validar o ID do vídeo.
+- Definir miniatura personalizada.
+- Adicionar descrição.
+- Definir categoria.
+- Associar artigos.
+- Marcar como destaque.
+- Alterar ordem.
+- Publicar ou ocultar.
+
+O player deve carregar vídeos reais.
+
+Não gerar números de visualizações ou duração fictícios.
+
+Preparar integração futura com a YouTube Data API, sem exigir essa integração para o funcionamento inicial.
+
+## 4.7. Gestão de cases
+
+Permitir cadastrar:
+- Empresa.
+- Projeto.
+- Período.
+- Problema.
+- Solução.
+- Arquitetura.
+- Tecnologias.
+- Resultados.
+- Diagramas.
+- Imagens.
+- Indicadores.
+- Links relacionados.
+
+Permitir ocultar informações confidenciais antes da publicação.
+
+## 4.8. Gestão de mensagens
+
+Criar uma caixa de entrada administrativa.
+
+Campos:
+- Nome.
+- E-mail.
+- Empresa.
+- Tipo de interesse.
+- Mensagem.
+- Data de recebimento.
+- Status.
+- Observações internas.
+
+Status:
+- Novo.
+- Em análise.
+- Respondido.
+- Arquivado.
+
+Permitir filtros, pesquisa e exportação CSV.
+
+A exportação deve estar protegida por autenticação e conter somente dados necessários.
+
+## 4.9. Configurações do website
+
+Permitir editar:
+- Nome e identidade do site.
+- Logotipo.
+- Foto de perfil.
+- Textos do Hero.
+- Banners.
+- Links sociais.
+- WhatsApp.
+- E-mail de contato.
+- Links do YouTube.
+- SEO.
+- Informações do rodapé.
+- Textos da Home.
+- Ordem de exibição das seções.
+- Informações de consultoria.
+
+Alterações de identidade visual devem preservar a composição aprovada por padrão.
+
+---
+
+# 5. BANCO DE DADOS
+
+Criar migrações para as entidades:
+
+- admin_users
+- admin_sessions
+- site_settings
+- pages
+- page_sections
+- projects
+- project_images
+- experiences
+- experience_results
+- skills
+- skill_categories
+- articles
+- article_translations
+- article_categories
+- article_tags
+- article_revisions
+- videos
+- cases
+- case_metrics
+- media_assets
+- contact_messages
+- audit_logs
+
+Criar relacionamentos, índices, constraints e exclusão segura.
+
+Utilizar armazenamento de imagens separado do banco, persistindo referências e metadados.
+
+Não implementar exclusões em cascata que possam apagar conteúdo publicado acidentalmente.
+
+---
+
+# 6. SEGURANÇA
+
+Requisitos obrigatórios:
+
+- Autenticação administrativa com senha criptografada usando Argon2id.
+- Sessões seguras em cookies HttpOnly, Secure e SameSite.
+- Proteção CSRF para ações autenticadas.
+- Controle de acesso administrativo.
+- Rate limiting.
+- Proteção contra brute force.
+- Validação de arquivos enviados.
+- Controle de tamanho e formato dos uploads.
+- Proteção contra XSS.
+- CORS restritivo.
+- Logs de auditoria.
+- Variáveis de ambiente para segredos.
+- HTTPS.
+- Nenhuma chave exposta no frontend.
+- Backup e procedimento de restauração.
+
+Não criar contas administrativas com senhas fixas no repositório.
+
+Fornecer procedimento seguro para criação do primeiro administrador via terminal.
+
+---
+
+# 7. SEO E PERFORMANCE
+
+Implementar:
+- URLs amigáveis.
+- Sitemap XML.
+- Robots.txt.
+- Metadados dinâmicos.
+- Open Graph.
+- Canonical URLs.
+- Dados estruturados Schema.org.
+- Alternância PT/EN com hreflang.
+- Carregamento otimizado de imagens.
+- Lazy loading nas seções secundárias.
+- Acessibilidade.
+- Core Web Vitals.
+
+A versão em inglês deve possuir conteúdo traduzido de verdade, não textos em português com seletor visual.
+
+---
+
+# 8. TESTES E VALIDAÇÃO
+
+Criar testes automatizados para:
+- Autenticação.
+- Permissões.
+- CRUD administrativo.
+- Publicação de artigos.
+- Upload de imagens.
+- Gestão de experiências.
+- Gestão de vídeos.
+- Envio de contato.
+- Persistência no PostgreSQL.
+- Segurança.
+- Responsividade.
+
+Utilizar Playwright para testar o site público e o painel administrativo em desktop e mobile.
+
+Validar visualmente, com screenshots reais, as páginas:
+- Home.
+- Projetos.
+- Experiência.
+- Artigos.
+- Vídeos.
+- Consultoria.
+- Contato.
+- Dashboard administrativo.
+
+Comparar o resultado com as referências enviadas pelo proprietário.
+
+Não declarar os testes aprovados sem realmente executá-los.
+
+---
+
+# 9. ENTREGA E EXECUÇÃO
+
+Entregar:
+
+1. Código-fonte completo.
+2. Frontend e backend.
+3. Migrações PostgreSQL.
+4. Docker Compose para desenvolvimento.
+5. Configuração de produção.
+6. Arquivo `.env.example`.
+7. Documentação de instalação.
+8. Comandos para inicialização.
+9. Procedimento de criação do administrador.
+10. Testes automatizados.
+11. Instruções de implantação em `carlosandre.tech`.
+
+Não publicar automaticamente nem modificar infraestrutura de outros projetos.
+
+## ORDEM DE EXECUÇÃO
+
+**FASE 1:** Inspecionar repositório e imagens de referência. Criar estrutura do projeto, banco e ambiente local.
+
+**FASE 2:** Implementar a Home fiel ao design aprovado. Gerar screenshots para comparação visual.
+
+**FASE 3:** Implementar todas as páginas públicas com conteúdo real e imagens apropriadas.
+
+**FASE 4:** Desenvolver o painel administrativo e os CRUDs.
+
+**FASE 5:** Integrar frontend, backend, imagens, artigos, vídeos e formulário.
+
+**FASE 6:** Executar testes, corrigir problemas e entregar documentação.
+
+É proibido substituir conteúdo real por dados demonstrativos sem identificação.
+
+Ao final de cada fase, informar os arquivos modificados, funcionalidades implementadas, testes executados e pendências.
+
+**COMECE PELA FASE 1. PRESERVE INTEGRALMENTE AS REFERÊNCIAS VISUAIS APROVADAS.**

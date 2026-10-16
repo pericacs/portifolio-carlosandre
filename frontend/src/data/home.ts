@@ -1,0 +1,23 @@
+import type { IconName } from '@/components/icon';
+import type { Crop } from '@/components/artwork';
+import curriculum from './curriculum.json';
+export const projects: {name:string; description:string; detail:string; tags:string[]; technologies:string[]; crop:Crop; imageAlt:string; icon:IconName; color:string}[] = [
+ {name:'SmartFamily',description:'Organização familiar com inteligência artificial, WhatsApp e calendário inteligente.',detail:'Gestão familiar com IA, integração com WhatsApp e calendário inteligente para apoiar a organização da família.',tags:['IA','Produtividade','Família'],technologies:['FastAPI','React','PostgreSQL'],crop:[45,271,192,67],imageAlt:'Família reunida em torno de um computador',icon:'people',color:'blue'},
+ {name:'Beloria',description:'Gestão de salões e barbearias com atendimentos, comissões, financeiro e planos SaaS.',detail:'Plataforma SaaS para salões e barbearias. Gestão de atendimentos, comissões e financeiro, planos e assinaturas, com arquitetura multi-tenant.',tags:['SaaS','Gestão','Beleza'],technologies:[],crop:[251,271,185,67],imageAlt:'Profissional atendendo uma cliente em um salão',icon:'network',color:'violet'},
+ {name:'OnStar SCD',description:'Estudo de plataforma fintech: energia, modelagem de crédito e integração financeira.',detail:'Estudo de plataforma fintech para análise de consumo de energia, modelagem de crédito e integração financeira. Não representa oferta de serviços financeiros em operação.',tags:['Fintech','Dados','Energia'],technologies:[],crop:[451,271,186,67],imageAlt:'Cidade iluminada à noite',icon:'bolt',color:'cyan'},
+ {name:'Orquestrador IA',description:'Agentes inteligentes, ferramentas e integrações para automatizar processos empresariais.',detail:'Plataforma de orquestração de agentes inteligentes para coordenar ferramentas, integrações e workflows em processos empresariais.',tags:['IA','Automação','Integrações'],technologies:[],crop:[651,271,190,67],imageAlt:'Cérebro digital conectado a ferramentas',icon:'brain',color:'violet'},
+];
+export const services: {title:string; shortTitle:string; tagline:string; description:string; icon:IconName; color:string}[] = [
+ {title:'Desenvolvimento de Produtos',shortTitle:'Produtos Digitais',tagline:'Ideias que viram valor',description:'Da concepção ao lançamento, com foco em experiência do usuário, escalabilidade e resultado.',icon:'cube',color:'blue'},
+ {title:'Dados & Inteligência Artificial',shortTitle:'Dados & IA',tagline:'Inteligência para decidir melhor',description:'Arquitetura de dados, analytics e soluções com IA para apoiar a tomada de decisão.',icon:'database',color:'green'},
+ {title:'Consultoria Estratégica',shortTitle:'Consultoria Estratégica',tagline:'Experiência que acelera',description:'Tecnologia, produtos e inovação para empresas que querem crescer de forma sustentável.',icon:'chart',color:'violet'},
+ {title:'Arquitetura de Soluções',shortTitle:'Parcerias & Investimentos',tagline:'Vamos construir juntos',description:'Soluções escaláveis com cloud, integrações, segurança e alta disponibilidade.',icon:'rocket',color:'cyan'},
+];
+export const experiences = curriculum.experiences.slice(0,4);
+export const skills: {title:string; description:string; icon:IconName; color:string}[] = curriculum.skills.map((group,index)=>({...group,description:group.items.join(', ')+'.',icon:(['database','cloud','code','card','brain','database','people'] as IconName[])[index],color:['violet','cyan','violet','blue','violet','cyan','blue'][index]}));
+export const articles: {title:string; description:string; tags:string[]; crop:Crop; imageAlt:string}[] = [
+ {title:'Engenharia de Dados: da origem à arquitetura Medallion',description:'Uma visão sobre bronze, silver e gold e a organização dos dados em camadas.',tags:['Dados','Arquitetura','Databricks'],crop:[46,853,257,53],imageAlt:'Camadas de dados em blocos tridimensionais'},
+ {title:'Fraudes em cartões: como os criminosos exploram o ecossistema de pagamentos',description:'Modalidades, padrões e mecanismos de prevenção no universo dos pagamentos.',tags:['Fintech','Segurança','Pagamentos'],crop:[317,853,253,53],imageAlt:'Cartões, pagamentos digitais e segurança'},
+ {title:'Orquestrador IA: além de um simples chatbot',description:'Agentes, modelos de linguagem e ferramentas conectados em fluxos inteligentes.',tags:['IA','Automação','Arquitetura'],crop:[585,853,255,53],imageAlt:'Inteligência artificial conectada a múltiplas ferramentas'},
+];
+export const videos: {title:string; crop:Crop}[] = [{title:'Engenharia de Dados na prática',crop:[70,853,170,53]},{title:'Orquestrador IA em ação',crop:[624,853,170,53]},{title:'O ecossistema de pagamentos',crop:[350,853,170,53]},{title:'Do problema ao SaaS',crop:[660,278,170,53]}];

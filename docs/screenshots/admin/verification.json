@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-14",
+  "schema": "0002",
+  "backupSha256": "12c2407c2929162de2cf0f87422c92f50107a76ea7a3d8938e3b9f48b2295afc",
+  "restoredTablesCompared": 25,
+  "existingRowsPreserved": true,
+  "isolatedUpgradeDowngradeUpgrade": "passed",
+  "pytestPassed": 27,
+  "smtpDelivery": "mocked; real SMTP not configured",
+  "playwrightWidths": [
+    1440,
+    390
+  ],
+  "homePixelDifferences": 0,
+  "ephemeralBrowserAdminRemoved": true,
+  "scope": "administrative foundation; editorial modules pending"
+}
