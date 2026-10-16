@@ -35,6 +35,8 @@ class Settings(BaseSettings):
                 raise ValueError("SMTP em produção exige STARTTLS")
             if not self.cookie_secure or not self.site_url.startswith("https://"):
                 raise ValueError("Produção exige HTTPS e cookies Secure")
+            if self.cors_origins != [self.site_url.rstrip("/")]:
+                raise ValueError("Production CORS must match the canonical site origin")
             if any(not origin.startswith("https://") for origin in self.cors_origins):
                 raise ValueError("Produção exige origens HTTPS explícitas")
         return self

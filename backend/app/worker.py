@@ -1,6 +1,7 @@
 """Worker reiniciável: locks PostgreSQL evitam publicação/notificação duplicada."""
 import logging
 import time
+from pathlib import Path
 from datetime import timedelta
 import sqlalchemy as sa
 from sqlalchemy.orm import Session
@@ -60,5 +61,6 @@ if __name__=='__main__':
     while True:
         try:
             with Session(get_engine()) as db: tick(db)
+            Path("/tmp/worker-heartbeat").touch()
         except Exception: logger.error('Falha no ciclo do worker; nova tentativa em 15 segundos. Detalhes internos omitidos.')
         time.sleep(15)

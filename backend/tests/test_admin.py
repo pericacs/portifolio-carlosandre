@@ -111,10 +111,11 @@ def test_dashboard_counts_are_database_values(access):
     client, db, *_=access
     assert login(access).status_code==200
     result=client.get('/api/admin/dashboard').json()
-    assert result['counts']['projects']==db.scalar(sa.select(sa.func.count()).select_from(m.projects).where(m.projects.c.archived_at.is_(None)))
     if db.scalar(sa.select(m.site_settings.c.id).where(m.site_settings.c.key=='cms_initialized')):
+        assert result['counts']['projects']==db.scalar(sa.select(sa.func.count()).select_from(m.cms_entries).where(m.cms_entries.c.module=='projetos',m.cms_entries.c.deleted_at.is_(None)))
         assert result['counts']['experiences']==db.scalar(sa.select(sa.func.count()).select_from(m.cms_entries).where(m.cms_entries.c.module=='experiencias',m.cms_entries.c.deleted_at.is_(None)))
     else:
+        assert result['counts']['projects']==db.scalar(sa.select(sa.func.count()).select_from(m.projects).where(m.projects.c.archived_at.is_(None)))
         assert result['counts']['experiences']==db.scalar(sa.select(sa.func.count()).select_from(m.experiences).where(m.experiences.c.archived_at.is_(None)))
     assert result['analyticsConnected'] is False
     assert isinstance(client.get('/api/admin/audit').json(),list)

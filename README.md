@@ -75,6 +75,10 @@ O build de frontend verifica TypeScript. Para executar fora do Docker, use Node 
 
 ## Próximas fases e produção
 
+A preparação da VPS exclusiva está em [docs/producao.md](docs/producao.md), com `docker-compose.prod.yml`, TLS, Cloudflare, backups e procedimentos de deploy, atualização e rollback. Consulte também [o relatório de prontidão](docs/prontidao-producao.md). Nenhum deploy foi realizado nesta etapa; os arquivos Compose locais permanecem independentes.
+
+A preparação da VPS exclusiva está em [docs/producao.md](docs/producao.md), com `docker-compose.prod.yml`, TLS, Cloudflare, backups e procedimentos de deploy, atualização e rollback. Consulte também [o relatório de prontidão](docs/prontidao-producao.md). Nenhum deploy foi realizado nesta etapa; os arquivos Compose locais permanecem independentes.
+
 A Home, as páginas profissionais e os módulos CMS estão disponíveis localmente. Conteúdos editoriais planejados continuam identificados como tal. Traduções, URLs reais de vídeos e revisão de dados devem ser fornecidas pelo proprietário; o painel permite sua edição e publicação. SMTP, YouTube Data API e analytics dependem de configuração externa; nenhum número de visitas foi inventado.
 
 O Compose atual é **local**. TLS, Cloudflare, configuração para `carlosandre.tech`, backups automáticos, SMTP e analytics não foram ativados. A API rejeita uma configuração declarada como produção sem HTTPS e cookies Secure, mas essa validação isolada não torna a aplicação pronta para produção.
