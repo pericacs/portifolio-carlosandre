@@ -22,5 +22,4 @@ infra/tls/
 frontend/.wrangler/
 frontend/dist/
 frontend/.dev.vars*
-!frontend/.dev.vars.example
 frontend/.vinext/

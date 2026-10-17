@@ -1,5 +1,7 @@
 # Relatório de prontidão — 16/10/2026
 
+> Registro histórico da preparação para VPS exclusiva. Foi substituído pelo [relatório de recuperação Docker para Hostinger compartilhada](recuperacao-docker.md); não use os nomes de projeto ou portas deste registro para implantar.
+
 **Resultado: preparação concluída e validada localmente; liberação pública condicionada à homologação na VPS. Nenhum deploy executado.** Design, Compose local, credenciais e dados locais preservados. Nenhuma credencial real foi incluída nas alterações.
 
 ## Entregas

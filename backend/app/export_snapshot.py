@@ -1,4 +1,8 @@
-"""Read-only consistent PostgreSQL snapshot and verified media copy. Never prints data."""
+"""Optional read-only PostgreSQL audit snapshot; primary backup remains pg_dump + media tar.
+
+Output contains personal data and hashes: store only in a private ignored directory.
+This utility does not migrate data, restore SQL or contact Cloudflare.
+"""
 import argparse
 import hashlib
 import json

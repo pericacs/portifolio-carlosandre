@@ -17,9 +17,14 @@ def app(*command, volumes=()):
     return run("run", "--rm", "--network", prefix, *env, *volumes, backend, *command)
 try:
     config = json.loads(run("compose", "--env-file", ".env.production.example", "-f", "docker-compose.prod.yml", "config", "--format", "json", capture=True))
-    assert config["name"] == "carlosandre-production"
+    assert config["name"] == "carlosandre-portfolio-prod"
     assert all(not service.get("ports") for name, service in config["services"].items() if name != "nginx")
+    port = config["services"]["nginx"]["ports"]
+    assert len(port) == 1 and port[0]["host_ip"] == "127.0.0.1" and str(port[0]["published"]) == "8088" and port[0]["target"] == 80
     assert config["networks"]["private"]["internal"]
+    assert all(v["name"].startswith("carlosandre-portfolio-prod_") for v in config["volumes"].values())
+    assert all(v["name"].startswith("carlosandre-portfolio-prod_") for v in config["networks"].values())
+    assert all(service.get("mem_limit") for name,service in config["services"].items())
     run("network", "create", "--internal", prefix)
     run("volume", "create", prefix+"-db")
     run("volume", "create", prefix+"-media")
@@ -52,7 +57,7 @@ try:
     revision = run("exec",prefix+"-db","psql","-U","portfolio","-d","recovery","-Atc","SELECT version_num FROM alembic_version",capture=True)
     assert revision == "0003"
     run("run","-d","--name",prefix+"-web","--network",prefix,"--network-alias","frontend","-e","API_INTERNAL_URL=http://"+prefix+"-api:8000",frontend)
-    run("run","-d","--name",prefix+"-api","--network",prefix,"--network-alias","backend",*env,*prod,backend)
+    run("run","-d","--name",prefix+"-api","--network",prefix,"--network-alias","backend",*env,*prod,"-v",prefix+"-media:/app/uploads",backend)
     time.sleep(3)
     run("exec",prefix+"-web","node","-e","fetch('http://127.0.0.1:3000').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))")
     archive = subprocess.run(["docker","run","--rm","--network","none","-v",prefix+"-media:/app/uploads:ro",backend,"tar","-C","/app/uploads","-czf","-","."],capture_output=True,check=True).stdout
@@ -62,15 +67,45 @@ try:
     run("volume","create",prefix+"-tls")
     run("run","--rm","--user","0","--network","none","-v",prefix+"-tls:/tls",backend,"openssl","req","-x509","-newkey","rsa:2048","-nodes","-keyout","/tls/privkey.pem","-out","/tls/fullchain.pem","-days","1","-subj","/CN=carlosandre.tech")
     run("run","--rm","--network",prefix,"-v",prefix+"-tls:/etc/nginx/tls:ro","-v",str(root/"infra/nginx/production.conf")+":/etc/nginx/conf.d/default.conf:ro","nginx:stable-alpine","nginx","-t")
-    run("run","-d","--name",prefix+"-proxy","--network",prefix,"--network-alias","carlosandre.tech","-v",prefix+"-tls:/etc/nginx/tls:ro","-v",str(root/"infra/nginx/production.conf")+":/etc/nginx/conf.d/default.conf:ro","nginx:stable-alpine")
+    run("run","-d","--name",prefix+"-proxy","--network",prefix,"--network-alias","portfolio-proxy","-v",str(root/"infra/nginx/production.conf")+":/etc/nginx/conf.d/default.conf:ro","nginx:stable-alpine")
     run("run","-d","--name",prefix+"-worker","--network",prefix,*env,*prod,backend,"python","-m","app.worker")
     time.sleep(3)
-    run("run","--rm","--network",prefix,*env,"-v",prefix+"-tls:/tls:ro",backend,"python","-c","import ssl,urllib.request; c=ssl.create_default_context(cafile='/tls/fullchain.pem'); assert urllib.request.urlopen('https://carlosandre.tech/api/health/ready',context=c,timeout=10).status==200; assert urllib.request.urlopen('https://carlosandre.tech/',context=c,timeout=10).status==200; print('HTTPS reverse proxy passed')")
+    temp = root / ".private" / prefix
+    temp.mkdir(parents=True, exist_ok=True)
+    host_config = (root/"infra/nginx/host-portfolio.conf.example").read_text().replace("http://127.0.0.1:8088", "http://portfolio-proxy:80").replace("/etc/letsencrypt/live/carlosandre.tech", "/etc/nginx/tls")
+    (temp/"host.conf").write_text(host_config, encoding="utf-8")
+    run("run","-d","--name",prefix+"-host","--network",prefix,"--network-alias","carlosandre.tech","-v",prefix+"-tls:/etc/nginx/tls:ro","-v",str(temp/"host.conf")+":/etc/nginx/conf.d/default.conf:ro","nginx:stable-alpine")
+    run("exec",prefix+"-host","nginx","-t")
+    run("run","--rm","--network",prefix,*env,"-v",prefix+"-tls:/tls:ro",backend,"python","-c","import ssl,urllib.request; c=ssl.create_default_context(cafile='/tls/fullchain.pem'); assert urllib.request.urlopen('https://carlosandre.tech/api/health/ready',context=c,timeout=10).status==200; assert urllib.request.urlopen('https://carlosandre.tech/',context=c,timeout=10).status==200; print('Existing-host Nginx -> internal Nginx HTTPS proxy passed')")
     run("exec",prefix+"-worker","python","-c","import time,pathlib; assert time.time()-pathlib.Path('/tmp/worker-heartbeat').stat().st_mtime < 90")
     run("run","--rm","--network","none","-v",str(root/"scripts/production")+":/scripts:ro","bash:5.2","bash","-c","for f in /scripts/*.sh; do bash -n \"$f\" || exit; done")
+    if "--visual" in __import__("sys").argv:
+        # Read-only clone of approved local state; restore only into the disposable database.
+        run("stop",prefix+"-api",prefix+"-worker")
+        source_dump = subprocess.run(["docker","exec","carlos-andre-portfolio-db-1","sh","-c",'pg_dump -U "$POSTGRES_USER" -d "$POSTGRES_DB" -Fc'],capture_output=True,check=True).stdout
+        subprocess.run(["docker","exec","-i",prefix+"-db","pg_restore","-U","portfolio","-d","portfolio","--clean","--if-exists","--no-owner","--no-privileges","--exit-on-error","--single-transaction"],input=source_dump,check=True)
+        run("run","--rm","--user","0","--network","none","--volumes-from","carlos-andre-portfolio-backend-1:ro","-v",prefix+"-media:/restore",backend,"sh","-c","cp -r /app/uploads/. /restore/ && chown -R 10001:10001 /restore")
+        run("network","create",prefix+"-edge")
+        run("run","-d","--name",prefix+"-browser-proxy","--network",prefix+"-edge","-p","127.0.0.1::80","-v",str(root/"infra/nginx/production.conf")+":/etc/nginx/conf.d/default.conf:ro","nginx:stable-alpine")
+        run("network","connect",prefix,prefix+"-browser-proxy")
+        binding = json.loads(run("inspect",prefix+"-browser-proxy",capture=True))[0]["NetworkSettings"]["Ports"]["80/tcp"][0]
+        base="http://127.0.0.1:"+binding["HostPort"]
+        run("rm","-f",prefix+"-api")
+        run("run","-d","--name",prefix+"-api","--network",prefix,"--network-alias","backend",*env,"-e","SITE_URL="+base,"-e",'CORS_ORIGINS=["'+base+'"]',"-v",prefix+"-media:/app/uploads",backend)
+        setup = "import json,secrets; from app.db import get_engine; from app.admin import hasher; from app import models as m; password=secrets.token_urlsafe(32); email='recovery-'+secrets.token_hex(6)+'@example.com'; db=get_engine().connect(); db.execute(m.admin_users.insert().values(email=email,password_hash=hasher.hash(password))); db.commit(); print(json.dumps({'email':email,'password':password})); db.close()"
+        credentials = run("run","--rm","--network",prefix,*env,backend,"python","-c",setup,capture=True)
+        fixture = temp/"browser-fixture.json"
+        fixture.write_text(credentials,encoding="utf-8")
+        child_env=os.environ.copy()
+        child_env.update(RECOVERY_BASE_URL=base,RECOVERY_REFERENCE_URL="http://localhost:8080",RECOVERY_FIXTURE=str(fixture),RECOVERY_OUTPUT=str(temp/"visual"))
+        try:
+            subprocess.run(["node",str(root/"frontend/tests/docker-recovery.spec.cjs")],cwd=root,env=child_env,check=True)
+        finally:
+            fixture.unlink(missing_ok=True)
+        print("Visual report:",temp/"visual/report.json")
     print("PASS: isolated migrations, backend suite, production security and volume persistence")
 finally:
-    subprocess.run(["docker","rm","-f",prefix+"-db",prefix+"-web",prefix+"-api",prefix+"-proxy",prefix+"-worker"],capture_output=True)
+    subprocess.run(["docker","rm","-f",prefix+"-db",prefix+"-web",prefix+"-api",prefix+"-proxy",prefix+"-worker",prefix+"-host",prefix+"-browser-proxy"],capture_output=True)
     for suffix in ("-db","-media","-tls","-restored-media"):
         subprocess.run(["docker","volume","rm",prefix+suffix],capture_output=True)
-    subprocess.run(["docker","network","rm",prefix],capture_output=True)
+    subprocess.run(["docker","network","rm",prefix,prefix+"-edge"],capture_output=True)

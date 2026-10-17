@@ -1,1 +1,0 @@
-CREATE TABLE write_guards (id TEXT PRIMARY KEY, valid INTEGER NOT NULL CHECK(valid=1));
