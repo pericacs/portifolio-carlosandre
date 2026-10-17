@@ -3,12 +3,13 @@ import {cache} from 'react';
 import initial from '@/data/cms-initial.json';
 import originalCv from '@/data/curriculum.json';
 import * as originalHome from '@/data/home';
+import {apiFetch} from '@/lib/runtime-api';
 
 // Approved static content is an immutable published baseline during migration.
 // Drafts never reach this reader. Only explicit publication/withdrawal overrides it.
 export const publicContent=cache(async()=>{
  let remote:any={modules:{},hidden:[],legacyMap:{}};
- try{const response=await fetch(`${process.env.API_INTERNAL_URL||'http://localhost:8000'}/api/content`,{cache:'no-store',signal:AbortSignal.timeout(5000)});if(response.ok)remote=await response.json();else if(response.status!==404)throw Error('Conteúdo indisponível');}catch(error){if(process.env.API_INTERNAL_URL)throw error;}
+ try{const response=await apiFetch('/api/content',{cache:'no-store',signal:AbortSignal.timeout(5000)});if(response.ok)remote=await response.json();else if(response.status!==404)throw Error('Conteúdo indisponível');}catch(error){if(process.env.API_INTERNAL_URL)throw error;}
  const modules:Record<string,any[]>={};
  for(const item of initial as any[]){
   if(item.module==='artigos')continue; // Articles come exclusively from CMS publications; preserve legacy drafts in admin.

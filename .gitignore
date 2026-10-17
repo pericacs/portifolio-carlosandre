@@ -18,3 +18,9 @@ docs/private/
 !.env.production.example
 infra/tls/
 *.pem
+.private/
+frontend/.wrangler/
+frontend/dist/
+frontend/.dev.vars*
+!frontend/.dev.vars.example
+frontend/.vinext/

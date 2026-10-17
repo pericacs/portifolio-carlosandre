@@ -1,0 +1,4 @@
+# Local simulation only. Never set this bypass on a remote hostname.
+SITE_URL=http://localhost:3001
+ACCESS_REQUIRED=false
+EMAIL_ENABLED=false

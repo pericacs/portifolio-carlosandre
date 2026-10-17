@@ -1,0 +1,1605 @@
+{
+  "perfil": {
+    "label": "Meu perfil",
+    "singleton": true,
+    "fields": [
+      {
+        "key": "title",
+        "label": "Nome de apresentação",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "professionalTitle",
+        "label": "Título profissional",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "subtitle",
+        "label": "Subtítulo",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "heroPrefix",
+        "label": "Frase do Hero — início",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "heroHighlight",
+        "label": "Frase do Hero — destaque",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "heroDescription",
+        "label": "Descrição do Hero",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "biographyPt",
+        "label": "Biografia em português",
+        "kind": "lines",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "biographyEn",
+        "label": "Biografia em inglês",
+        "kind": "lines",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "objective",
+        "label": "Próximos desafios",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "quote",
+        "label": "Frase de destaque",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "signature",
+        "label": "Frase manuscrita",
+        "kind": "lines",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "metrics",
+        "label": "Indicadores profissionais",
+        "kind": "metrics",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "photo",
+        "label": "Fotografia profissional",
+        "kind": "media",
+        "tab": "Mídia"
+      },
+      {
+        "key": "email",
+        "label": "E-mail de contato",
+        "kind": "email",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "whatsapp",
+        "label": "WhatsApp (país + DDD + número)",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "linkedin",
+        "label": "LinkedIn",
+        "kind": "url",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "youtube",
+        "label": "YouTube",
+        "kind": "url",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "github",
+        "label": "GitHub",
+        "kind": "url",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "links",
+        "label": "Links complementares",
+        "kind": "links",
+        "tab": "Conteúdo"
+      }
+    ]
+  },
+  "experiencias": {
+    "label": "Currículo e experiências",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Título / nome",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "slug",
+        "label": "Endereço (slug)",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "featured",
+        "label": "Destacar na Home",
+        "kind": "boolean",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "visible",
+        "label": "Visível",
+        "kind": "boolean",
+        "tab": "SEO e publicação",
+        "default": true
+      },
+      {
+        "key": "sortOrder",
+        "label": "Ordem",
+        "kind": "number",
+        "tab": "SEO e publicação",
+        "default": 0
+      },
+      {
+        "key": "company",
+        "label": "Empresa",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "role",
+        "label": "Cargo",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "displayRole",
+        "label": "Cargo resumido (Home)",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "relationshipType",
+        "label": "Tipo de vínculo",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "startMonth",
+        "label": "Início",
+        "kind": "month",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "endMonth",
+        "label": "Término",
+        "kind": "month",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "current",
+        "label": "Trabalho atual",
+        "kind": "boolean",
+        "tab": "Publicação"
+      },
+      {
+        "key": "endDateValidationRequired",
+        "label": "Término pendente de validação",
+        "kind": "boolean",
+        "tab": "Publicação"
+      },
+      {
+        "key": "description",
+        "label": "Resumo profissional",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "narrative",
+        "label": "Descrição completa",
+        "kind": "lines",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "responsibilities",
+        "label": "Responsabilidades",
+        "kind": "lines",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "results",
+        "label": "Resultados alcançados",
+        "kind": "lines",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "technologies",
+        "label": "Tecnologias",
+        "kind": "lines",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "tags",
+        "label": "Tags da Home",
+        "kind": "lines",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "projectIds",
+        "label": "Projetos relacionados",
+        "kind": "references",
+        "tab": "Conteúdo",
+        "module": "projetos"
+      },
+      {
+        "key": "externalUrl",
+        "label": "Link externo",
+        "kind": "url",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "logo",
+        "label": "Logotipo",
+        "kind": "media",
+        "tab": "Mídia"
+      }
+    ]
+  },
+  "formacoes": {
+    "label": "Formação acadêmica",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Título / nome",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "slug",
+        "label": "Endereço (slug)",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "featured",
+        "label": "Destacar na Home",
+        "kind": "boolean",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "visible",
+        "label": "Visível",
+        "kind": "boolean",
+        "tab": "SEO e publicação",
+        "default": true
+      },
+      {
+        "key": "sortOrder",
+        "label": "Ordem",
+        "kind": "number",
+        "tab": "SEO e publicação",
+        "default": 0
+      },
+      {
+        "key": "institution",
+        "label": "Instituição",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "degree",
+        "label": "Curso / grau",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "period",
+        "label": "Período",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "description",
+        "label": "Descrição",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      }
+    ]
+  },
+  "certificacoes": {
+    "label": "Certificações",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Título / nome",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "slug",
+        "label": "Endereço (slug)",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "featured",
+        "label": "Destacar na Home",
+        "kind": "boolean",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "visible",
+        "label": "Visível",
+        "kind": "boolean",
+        "tab": "SEO e publicação",
+        "default": true
+      },
+      {
+        "key": "sortOrder",
+        "label": "Ordem",
+        "kind": "number",
+        "tab": "SEO e publicação",
+        "default": 0
+      },
+      {
+        "key": "issuer",
+        "label": "Instituição emissora",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "date",
+        "label": "Data",
+        "kind": "date",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "externalUrl",
+        "label": "Link de verificação",
+        "kind": "url",
+        "tab": "Informações gerais"
+      }
+    ]
+  },
+  "idiomas": {
+    "label": "Idiomas",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Título / nome",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "slug",
+        "label": "Endereço (slug)",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "featured",
+        "label": "Destacar na Home",
+        "kind": "boolean",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "visible",
+        "label": "Visível",
+        "kind": "boolean",
+        "tab": "SEO e publicação",
+        "default": true
+      },
+      {
+        "key": "sortOrder",
+        "label": "Ordem",
+        "kind": "number",
+        "tab": "SEO e publicação",
+        "default": 0
+      },
+      {
+        "key": "level",
+        "label": "Conhecimento declarado",
+        "kind": "text",
+        "tab": "Informações gerais"
+      }
+    ]
+  },
+  "curriculo": {
+    "label": "Arquivo do currículo",
+    "singleton": true,
+    "fields": [
+      {
+        "key": "title",
+        "label": "Nome do documento",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "file",
+        "label": "Currículo PDF ou DOCX",
+        "kind": "document",
+        "tab": "Mídia"
+      },
+      {
+        "key": "privacyReviewed",
+        "label": "Revisei os dados pessoais do arquivo antes de disponibilizar o download",
+        "kind": "boolean",
+        "tab": "Publicação"
+      }
+    ]
+  },
+  "categorias": {
+    "label": "Categorias de skills",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Título / nome",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "slug",
+        "label": "Endereço (slug)",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "featured",
+        "label": "Destacar na Home",
+        "kind": "boolean",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "visible",
+        "label": "Visível",
+        "kind": "boolean",
+        "tab": "SEO e publicação",
+        "default": true
+      },
+      {
+        "key": "sortOrder",
+        "label": "Ordem",
+        "kind": "number",
+        "tab": "SEO e publicação",
+        "default": 0
+      },
+      {
+        "key": "description",
+        "label": "Descrição",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "icon",
+        "label": "Ícone",
+        "kind": "select",
+        "tab": "Informações gerais",
+        "options": [
+          "database",
+          "brain",
+          "cloud",
+          "code",
+          "card",
+          "people",
+          "chart"
+        ]
+      },
+      {
+        "key": "color",
+        "label": "Cor do ícone",
+        "kind": "select",
+        "tab": "Informações gerais",
+        "options": [
+          "blue",
+          "violet",
+          "cyan",
+          "green"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "label": "Skills e conhecimentos",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Título / nome",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "slug",
+        "label": "Endereço (slug)",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "featured",
+        "label": "Destacar na Home",
+        "kind": "boolean",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "visible",
+        "label": "Visível",
+        "kind": "boolean",
+        "tab": "SEO e publicação",
+        "default": true
+      },
+      {
+        "key": "sortOrder",
+        "label": "Ordem",
+        "kind": "number",
+        "tab": "SEO e publicação",
+        "default": 0
+      },
+      {
+        "key": "categoryId",
+        "label": "Categoria",
+        "kind": "reference",
+        "tab": "Conteúdo",
+        "module": "categorias"
+      },
+      {
+        "key": "description",
+        "label": "Descrição",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "icon",
+        "label": "Ícone",
+        "kind": "select",
+        "tab": "Informações gerais",
+        "options": [
+          "database",
+          "brain",
+          "cloud",
+          "code",
+          "card",
+          "people",
+          "chart"
+        ]
+      }
+    ]
+  },
+  "projetos": {
+    "label": "Projetos",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Título / nome",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "slug",
+        "label": "Endereço (slug)",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "featured",
+        "label": "Destacar na Home",
+        "kind": "boolean",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "visible",
+        "label": "Visível",
+        "kind": "boolean",
+        "tab": "SEO e publicação",
+        "default": true
+      },
+      {
+        "key": "sortOrder",
+        "label": "Ordem",
+        "kind": "number",
+        "tab": "SEO e publicação",
+        "default": 0
+      },
+      {
+        "key": "description",
+        "label": "Descrição resumida",
+        "kind": "textarea",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "body",
+        "label": "Conteúdo completo",
+        "kind": "richtext",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "technologies",
+        "label": "Tecnologias",
+        "kind": "lines",
+        "tab": "Arquitetura e tecnologias"
+      },
+      {
+        "key": "links",
+        "label": "Links externos",
+        "kind": "links",
+        "tab": "Links e acessos"
+      },
+      {
+        "key": "problem",
+        "label": "Problema resolvido",
+        "kind": "textarea",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "solution",
+        "label": "Solução proposta",
+        "kind": "textarea",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "architecture",
+        "label": "Arquitetura",
+        "kind": "textarea",
+        "tab": "Arquitetura e tecnologias"
+      },
+      {
+        "key": "results",
+        "label": "Resultados comprovados",
+        "kind": "textarea",
+        "tab": "Resultados e roadmap"
+      },
+      {
+        "key": "category",
+        "label": "Categoria",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "developmentStage",
+        "label": "Estágio de desenvolvimento",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "tags",
+        "label": "Tags",
+        "kind": "lines",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "cover",
+        "label": "Imagem principal",
+        "kind": "media",
+        "tab": "Imagens e mídia"
+      },
+      {
+        "key": "gallery",
+        "label": "Galeria de imagens",
+        "kind": "gallery",
+        "tab": "Imagens e mídia"
+      },
+      {
+        "key": "diagrams",
+        "label": "Diagramas técnicos",
+        "kind": "gallery",
+        "tab": "Imagens e mídia"
+      },
+      {
+        "key": "seoTitle",
+        "label": "Título SEO",
+        "kind": "text",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "metaDescription",
+        "label": "Descrição SEO",
+        "kind": "textarea",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "desktopScreenshots",
+        "label": "Screenshots desktop",
+        "kind": "gallery",
+        "tab": "Imagens e mídia"
+      },
+      {
+        "key": "mobileScreenshots",
+        "label": "Screenshots mobile",
+        "kind": "gallery",
+        "tab": "Imagens e mídia"
+      },
+      {
+        "key": "videoLinks",
+        "label": "Vídeos demonstrativos",
+        "kind": "links",
+        "tab": "Imagens e mídia"
+      },
+      {
+        "key": "features",
+        "label": "Funcionalidades",
+        "kind": "lines",
+        "tab": "Funcionalidades"
+      },
+      {
+        "key": "integrations",
+        "label": "Integrações",
+        "kind": "lines",
+        "tab": "Arquitetura e tecnologias"
+      },
+      {
+        "key": "documentation",
+        "label": "Documentação PDF / DOCX",
+        "kind": "document",
+        "tab": "Links e acessos"
+      },
+      {
+        "key": "documentationLinks",
+        "label": "Documentação externa",
+        "kind": "links",
+        "tab": "Links e acessos"
+      },
+      {
+        "key": "privateNotes",
+        "label": "Anotações privadas (não armazene senhas)",
+        "kind": "textarea",
+        "tab": "Links e acessos"
+      },
+      {
+        "key": "roadmap",
+        "label": "Roadmap — planos, sem promessas de entrega",
+        "kind": "lines",
+        "tab": "Resultados e roadmap"
+      },
+      {
+        "key": "publicationReviewed",
+        "label": "Revisei o conteúdo e os arquivos públicos: sem segredos ou acessos internos",
+        "kind": "boolean",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "sfTagline",
+        "label": "Chamada do hero",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "smartOnly": true
+      },
+      {
+        "key": "sfOverview",
+        "label": "Visão geral",
+        "kind": "richtext",
+        "tab": "Visão geral e solução",
+        "smartOnly": true
+      },
+      {
+        "key": "sfProblem",
+        "label": "Problema de negócio",
+        "kind": "richtext",
+        "tab": "Visão geral e solução",
+        "smartOnly": true
+      },
+      {
+        "key": "sfSolution",
+        "label": "Solução proposta",
+        "kind": "richtext",
+        "tab": "Visão geral e solução",
+        "smartOnly": true
+      },
+      {
+        "key": "sfHow",
+        "label": "Como funciona",
+        "kind": "richtext",
+        "tab": "Como funciona",
+        "smartOnly": true
+      },
+      {
+        "key": "sfArchitecture",
+        "label": "Descrição da arquitetura",
+        "kind": "richtext",
+        "tab": "Arquitetura e tecnologias",
+        "smartOnly": true
+      },
+      {
+        "key": "sfChallenges",
+        "label": "Desafios técnicos",
+        "kind": "richtext",
+        "tab": "Desafios e decisões",
+        "smartOnly": true
+      },
+      {
+        "key": "sfStage",
+        "label": "Estágio de desenvolvimento",
+        "kind": "richtext",
+        "tab": "Resultados e roadmap",
+        "smartOnly": true
+      },
+      {
+        "key": "sfCtaTitle",
+        "label": "Título da chamada final",
+        "kind": "text",
+        "tab": "Links e acessos",
+        "smartOnly": true
+      },
+      {
+        "key": "sfCtaText",
+        "label": "Texto da chamada final",
+        "kind": "richtext",
+        "tab": "Links e acessos",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFeatures",
+        "label": "Blocos de funcionalidades",
+        "kind": "smartblocks",
+        "tab": "Funcionalidades",
+        "smartOnly": true
+      },
+      {
+        "key": "sfCommands",
+        "label": "Exemplos de comandos",
+        "kind": "smartblocks",
+        "tab": "Como funciona",
+        "smartOnly": true
+      },
+      {
+        "key": "sfTech",
+        "label": "Tecnologias e responsabilidades",
+        "kind": "smartblocks",
+        "tab": "Arquitetura e tecnologias",
+        "smartOnly": true
+      },
+      {
+        "key": "sfIntegrations",
+        "label": "Integrações externas",
+        "kind": "smartblocks",
+        "tab": "Integrações",
+        "smartOnly": true
+      },
+      {
+        "key": "sfDecisions",
+        "label": "Decisões de arquitetura",
+        "kind": "smartblocks",
+        "tab": "Desafios e decisões",
+        "smartOnly": true
+      },
+      {
+        "key": "sfRoadmap",
+        "label": "Etapas do roadmap",
+        "kind": "smartblocks",
+        "tab": "Resultados e roadmap",
+        "smartOnly": true
+      },
+      {
+        "key": "sfMedia",
+        "label": "Imagens, diagramas e vídeo",
+        "kind": "smartmedia",
+        "tab": "Imagens e mídia",
+        "smartOnly": true
+      },
+      {
+        "key": "sfMetrics",
+        "label": "Indicadores comprovados",
+        "kind": "metrics",
+        "tab": "Resultados e roadmap",
+        "smartOnly": true
+      },
+      {
+        "key": "sfApproved",
+        "label": "Usar a apresentação final aprovada",
+        "kind": "boolean",
+        "tab": "SEO e publicação",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFinalHero",
+        "label": "Apresentação",
+        "kind": "finalrich",
+        "tab": "Informações gerais",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFinalIntro",
+        "label": "Resumo da experiência",
+        "kind": "finalrich",
+        "tab": "Visão geral e solução",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFinalOverview",
+        "label": "Visão geral, problema e solução",
+        "kind": "finalrich",
+        "tab": "Visão geral e solução",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFinalFeatures",
+        "label": "Funcionalidades demonstradas",
+        "kind": "finalrich",
+        "tab": "Funcionalidades",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFinalChannels",
+        "label": "WhatsApp e painel web",
+        "kind": "finalrich",
+        "tab": "Como funciona",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFinalFlow",
+        "label": "Da mensagem à confirmação",
+        "kind": "finalrich",
+        "tab": "Como funciona",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFinalTechnology",
+        "label": "Arquitetura, integrações e decisões",
+        "kind": "finalrich",
+        "tab": "Arquitetura e tecnologias",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFinalFaq",
+        "label": "Perguntas frequentes",
+        "kind": "finalrich",
+        "tab": "Perguntas frequentes",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFinalEvolution",
+        "label": "Evolução do produto",
+        "kind": "finalrich",
+        "tab": "Resultados e roadmap",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFinalCta",
+        "label": "Chamada final",
+        "kind": "finalrich",
+        "tab": "Links e acessos",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFinalLogo",
+        "label": "Logo oficial",
+        "kind": "media",
+        "tab": "Imagens e mídia",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFinalDashboard",
+        "label": "Dashboard real",
+        "kind": "media",
+        "tab": "Imagens e mídia",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFinalMap",
+        "label": "Mapa ilustrado da infraestrutura",
+        "kind": "media",
+        "tab": "Imagens e mídia",
+        "smartOnly": true
+      },
+      {
+        "key": "sfFinalDemos",
+        "label": "Demonstrações e transcrições",
+        "kind": "finaldemos",
+        "tab": "Demonstrações",
+        "smartOnly": true
+      }
+    ],
+    "tabs": [
+      "Informações gerais",
+      "Visão geral e solução",
+      "Imagens e mídia",
+      "Funcionalidades",
+      "Como funciona",
+      "Arquitetura e tecnologias",
+      "Integrações",
+      "Desafios e decisões",
+      "Links e acessos",
+      "Resultados e roadmap",
+      "SEO e publicação",
+      "Demonstrações",
+      "Perguntas frequentes"
+    ]
+  },
+  "cases": {
+    "label": "Cases de sucesso",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Título / nome",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "slug",
+        "label": "Endereço (slug)",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "featured",
+        "label": "Destacar na Home",
+        "kind": "boolean",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "visible",
+        "label": "Visível",
+        "kind": "boolean",
+        "tab": "SEO e publicação",
+        "default": true
+      },
+      {
+        "key": "sortOrder",
+        "label": "Ordem",
+        "kind": "number",
+        "tab": "SEO e publicação",
+        "default": 0
+      },
+      {
+        "key": "description",
+        "label": "Descrição resumida",
+        "kind": "textarea",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "body",
+        "label": "Conteúdo completo",
+        "kind": "richtext",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "technologies",
+        "label": "Tecnologias",
+        "kind": "lines",
+        "tab": "Arquitetura e tecnologias"
+      },
+      {
+        "key": "links",
+        "label": "Links externos",
+        "kind": "links",
+        "tab": "Links e acessos"
+      },
+      {
+        "key": "company",
+        "label": "Empresa",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "period",
+        "label": "Período",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "context",
+        "label": "Contexto",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "problem",
+        "label": "Problema enfrentado",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "solution",
+        "label": "Solução implementada",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "architecture",
+        "label": "Arquitetura",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "results",
+        "label": "Resultados",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "metrics",
+        "label": "Indicadores",
+        "kind": "metrics",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "experienceIds",
+        "label": "Experiências relacionadas",
+        "kind": "references",
+        "tab": "Conteúdo",
+        "module": "experiencias"
+      },
+      {
+        "key": "projectIds",
+        "label": "Projetos relacionados",
+        "kind": "references",
+        "tab": "Conteúdo",
+        "module": "projetos"
+      },
+      {
+        "key": "confidentialityReviewed",
+        "label": "Revisei as informações confidenciais e autorizo sua publicação",
+        "kind": "boolean",
+        "tab": "Publicação"
+      },
+      {
+        "key": "cover",
+        "label": "Imagem principal",
+        "kind": "media",
+        "tab": "Imagens e mídia"
+      },
+      {
+        "key": "gallery",
+        "label": "Galeria de imagens",
+        "kind": "gallery",
+        "tab": "Imagens e mídia"
+      },
+      {
+        "key": "diagrams",
+        "label": "Diagramas técnicos",
+        "kind": "gallery",
+        "tab": "Imagens e mídia"
+      },
+      {
+        "key": "seoTitle",
+        "label": "Título SEO",
+        "kind": "text",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "metaDescription",
+        "label": "Descrição SEO",
+        "kind": "textarea",
+        "tab": "SEO e publicação"
+      }
+    ]
+  },
+  "artigos": {
+    "label": "Artigos",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Título / nome",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "slug",
+        "label": "Endereço (slug)",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "featured",
+        "label": "Destacar na Home",
+        "kind": "boolean",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "visible",
+        "label": "Visível",
+        "kind": "boolean",
+        "tab": "SEO e publicação",
+        "default": true
+      },
+      {
+        "key": "sortOrder",
+        "label": "Ordem",
+        "kind": "number",
+        "tab": "SEO e publicação",
+        "default": 0
+      },
+      {
+        "key": "subtitle",
+        "label": "Subtítulo",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "category",
+        "label": "Categoria",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "description",
+        "label": "Resumo",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "tags",
+        "label": "Tags",
+        "kind": "lines",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "body",
+        "label": "Artigo em português",
+        "kind": "richtext",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "titleEn",
+        "label": "Título em inglês",
+        "kind": "text",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "bodyEn",
+        "label": "Artigo em inglês",
+        "kind": "richtext",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "relatedIds",
+        "label": "Artigos relacionados",
+        "kind": "references",
+        "tab": "Conteúdo",
+        "module": "artigos"
+      },
+      {
+        "key": "planned",
+        "label": "Exibir somente como prévia em preparação",
+        "kind": "boolean",
+        "tab": "Publicação"
+      },
+      {
+        "key": "cover",
+        "label": "Imagem principal",
+        "kind": "media",
+        "tab": "Imagens e mídia"
+      },
+      {
+        "key": "gallery",
+        "label": "Galeria de imagens",
+        "kind": "gallery",
+        "tab": "Imagens e mídia"
+      },
+      {
+        "key": "diagrams",
+        "label": "Diagramas técnicos",
+        "kind": "gallery",
+        "tab": "Imagens e mídia"
+      },
+      {
+        "key": "seoTitle",
+        "label": "Título SEO",
+        "kind": "text",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "metaDescription",
+        "label": "Descrição SEO",
+        "kind": "textarea",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "contentType",
+        "label": "Tipo",
+        "kind": "select",
+        "tab": "Informações gerais",
+        "options": [
+          "Artigo",
+          "Insight"
+        ],
+        "default": "Artigo"
+      },
+      {
+        "key": "categories",
+        "label": "Assuntos",
+        "kind": "lines",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "publishedDate",
+        "label": "Data de publicação confirmada",
+        "kind": "date",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "author",
+        "label": "Autor",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "originalUrl",
+        "label": "URL original",
+        "kind": "url",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "readingMode",
+        "label": "Modo de leitura",
+        "kind": "select",
+        "tab": "Informações gerais",
+        "options": [
+          "Interno",
+          "Externo"
+        ],
+        "default": "Interno"
+      },
+      {
+        "key": "spotlight",
+        "label": "Destaque principal da listagem",
+        "kind": "boolean",
+        "tab": "Publicação"
+      }
+    ]
+  },
+  "videos": {
+    "label": "Vídeos e YouTube",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Título / nome",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "slug",
+        "label": "Endereço (slug)",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "featured",
+        "label": "Destacar na Home",
+        "kind": "boolean",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "visible",
+        "label": "Visível",
+        "kind": "boolean",
+        "tab": "SEO e publicação",
+        "default": true
+      },
+      {
+        "key": "sortOrder",
+        "label": "Ordem",
+        "kind": "number",
+        "tab": "SEO e publicação",
+        "default": 0
+      },
+      {
+        "key": "youtubeUrl",
+        "label": "URL do YouTube",
+        "kind": "youtube",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "description",
+        "label": "Descrição",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "category",
+        "label": "Categoria",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "duration",
+        "label": "Duração real (ex.: 12:34)",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "relatedIds",
+        "label": "Artigos associados",
+        "kind": "references",
+        "tab": "Conteúdo",
+        "module": "artigos"
+      },
+      {
+        "key": "planned",
+        "label": "Conteúdo planejado / em breve",
+        "kind": "boolean",
+        "tab": "Publicação"
+      },
+      {
+        "key": "cover",
+        "label": "Miniatura personalizada",
+        "kind": "media",
+        "tab": "Mídia"
+      },
+      {
+        "key": "seoTitle",
+        "label": "Título SEO",
+        "kind": "text",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "metaDescription",
+        "label": "Descrição SEO",
+        "kind": "textarea",
+        "tab": "SEO e publicação"
+      }
+    ]
+  },
+  "configuracoes": {
+    "label": "Configurações",
+    "singleton": true,
+    "fields": [
+      {
+        "key": "title",
+        "label": "Nome do site",
+        "kind": "text",
+        "tab": "Informações gerais",
+        "required": true
+      },
+      {
+        "key": "logo",
+        "label": "Logotipo",
+        "kind": "media",
+        "tab": "Mídia"
+      },
+      {
+        "key": "favicon",
+        "label": "Favicon (PNG)",
+        "kind": "media",
+        "tab": "Mídia"
+      },
+      {
+        "key": "photo",
+        "label": "Foto principal alternativa",
+        "kind": "media",
+        "tab": "Mídia"
+      },
+      {
+        "key": "banner",
+        "label": "Banner de contato",
+        "kind": "media",
+        "tab": "Mídia"
+      },
+      {
+        "key": "footer",
+        "label": "Texto do rodapé",
+        "kind": "lines",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "institutional",
+        "label": "Texto institucional",
+        "kind": "textarea",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "services",
+        "label": "Serviços e chamadas",
+        "kind": "services",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "sectionOrder",
+        "label": "Ordem das seções da Home",
+        "kind": "order",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "categories",
+        "label": "Categorias de conteúdo",
+        "kind": "lines",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "locales",
+        "label": "Idiomas habilitados",
+        "kind": "lines",
+        "tab": "Conteúdo"
+      },
+      {
+        "key": "email",
+        "label": "E-mail comercial",
+        "kind": "email",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "whatsapp",
+        "label": "WhatsApp",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "linkedin",
+        "label": "LinkedIn",
+        "kind": "url",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "youtube",
+        "label": "YouTube",
+        "kind": "url",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "github",
+        "label": "GitHub",
+        "kind": "url",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "scheduleUrl",
+        "label": "Link comercial / agenda",
+        "kind": "url",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "analyticsId",
+        "label": "Identificador da integração analytics (preparação)",
+        "kind": "text",
+        "tab": "Informações gerais"
+      },
+      {
+        "key": "retentionDays",
+        "label": "Retenção de mensagens em dias",
+        "kind": "number",
+        "tab": "Publicação",
+        "default": 180
+      },
+      {
+        "key": "seoTitle",
+        "label": "Título SEO",
+        "kind": "text",
+        "tab": "SEO e publicação"
+      },
+      {
+        "key": "metaDescription",
+        "label": "Descrição SEO",
+        "kind": "textarea",
+        "tab": "SEO e publicação"
+      }
+    ]
+  }
+}
