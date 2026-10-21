@@ -17,6 +17,8 @@ from app.cms import router as cms_router, public as public_router, messages as m
 app.include_router(cms_router)
 app.include_router(public_router)
 app.include_router(message_router)
+from app.docx_import import router as docx_router
+app.include_router(docx_router)
 
 
 @app.middleware("http")
