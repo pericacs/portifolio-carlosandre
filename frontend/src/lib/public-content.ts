@@ -3,6 +3,7 @@ import {cache} from 'react';
 import initial from '@/data/cms-initial.json';
 import originalCv from '@/data/curriculum.json';
 import * as originalHome from '@/data/home';
+import avallow from '@/data/avallow.json';
 
 // Approved static content is an immutable published baseline during migration.
 // Drafts never reach this reader. Only explicit publication/withdrawal overrides it.
@@ -14,7 +15,7 @@ export const publicContent=cache(async()=>{
   if(item.module==='artigos')continue; // Articles come exclusively from CMS publications; preserve legacy drafts in admin.
   modules[item.module]??=[];
   if(remote.hidden?.includes(item.source_key))continue;
-  const data={...item.data,id:remote.legacyMap?.[item.source_key]||item.source_key,sourceKey:item.source_key};
+  const data={...item.data,...(item.source_key==='initial:projetos:onstar-scd'?avallow:{}),id:remote.legacyMap?.[item.source_key]||item.source_key,sourceKey:item.source_key};
   for(const key in data)if(typeof data[key]==='string'&&data[key].startsWith('SOURCE:'))data[key]=remote.legacyMap?.[data[key].slice(7)]||data[key].slice(7);
   modules[item.module].push(data);
  }
