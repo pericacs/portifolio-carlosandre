@@ -39,7 +39,7 @@ MODULES['artigos']['fields'] += [text('contentType','Tipo','select',options=['Ar
 MODULES['artigos']['fields']=[dict(f) for f in MODULES['artigos']['fields']]
 for f in MODULES['artigos']['fields']:
     if f['key']=='featured':f['label']='Destaque na Home'
-    if f['key']=='sortOrder':f['label']='Ordem de exibição na Home'
+    if f['key']=='sortOrder':f['label']='Ordem da listagem de artigos'
 PROJECT_TABS=['Informações gerais','Imagens e mídia','Funcionalidades','Arquitetura e tecnologias','Links e acessos','Resultados e roadmap','SEO e publicação']
 project=MODULES['projetos']
 for f in project['fields']:

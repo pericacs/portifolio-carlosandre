@@ -11,8 +11,8 @@ A Home ainda limitava a seleção a três registros e incorporava metadados da l
 ## Correção
 
 - Cópias independentes dos campos de artigos impedem a alteração pela configuração de projetos. Outros módulos não foram modificados.
-- Aba Publicação: **Destaque na Home** (`featured`) e **Ordem de exibição na Home** (`sortOrder`, menor primeiro).
-- A Home mostra todos os artigos publicados, visíveis, destacados e não planejados, sem limite oculto de três e sem metadados fixos. Empates de ordem usam slug para resultado determinístico.
+- Aba Publicação: **Destaque na Home** (`featured`) e **Ordem da listagem de artigos** (`sortOrder`, utilizada apenas na listagem).
+- A Home mostra todos os artigos publicados, visíveis, destacados e não planejados, sem limite oculto de três e sem metadados fixos. A Home ordena por `publishedDate` do snapshot publicado, do mais recente ao mais antigo, independentemente da ordem manual ou das datas de criação/atualização. Datas iguais usam slug como desempate determinístico; artigos sem data ficam no final.
 - `spotlight` continua independente para o destaque principal em `/artigos`.
 - Card, CSS, imagem, resumo, assuntos, título e link existentes foram mantidos. Nenhuma mudança nas seções de projetos, currículo, vídeos ou competências.
 - Home explicitamente dinâmica; fetch do CMS e endpoint já usam `no-store`. Cada nova requisição lê o snapshot publicado, sem build/reinício ou invalidação manual de cache. Salvar rascunho não muda a versão pública: é necessário publicar a alteração revisada.
@@ -38,12 +38,14 @@ docker compose --env-file .env.production -f docker-compose.prod.yml exec -T bac
 
 Manter `RELEASE_TAG` conforme o procedimento de implantação já utilizado. Se houver edição concorrente, consultar novamente e revisar antes de repetir. Nenhum comando recria banco, volumes ou serviços do SmartFamily.
 
-Pelo painel, a operação normal é abrir o artigo, aba Publicação, marcar Destaque na Home, ajustar a ordem, revisar e publicar. Ao retirar o destaque e publicar, o artigo sai da Home e continua disponível em `/artigos`.
+Pelo painel, a operação normal é abrir o artigo, aba Publicação, marcar Destaque na Home, conferir a data de publicação, revisar e publicar. Ao retirar o destaque e publicar, o artigo sai da Home e continua disponível em `/artigos`.
 
 ## Verificação
 
 Build Docker e TypeScript aprovados. Suíte PostgreSQL descartável: 116 testes aprovados, 20 ignorados pelas condições do ambiente (aviso de depreciação preexistente do TestClient), incluindo controles acessíveis, isolamento do schema, atualização idempotente da flag, proteção de versão e preservação de publicações/rascunhos.
 
-Playwright em Docker usa o DOCX real (dez seções e quatro imagens), publica sem destaque, marca e ordena pelo painel, confirma que salvar rascunho não muda a Home e que publicar atualiza uma Home já visitada sem reinício. Testa cinco destacados, reordenação e retirada de destaque sem despublicar. Confere capa pública por SHA-256, título, descrição, assuntos e link; compara projetos, experiências, competências e vídeos.
+Playwright em Docker usa o DOCX real (dez seções e quatro imagens), publica sem destaque, marca pelo painel e confirma a ordem cronológica, confirma que salvar rascunho não muda a Home e que publicar atualiza uma Home já visitada sem reinício. Testa cinco destacados por data de publicação, confirma que a ordem manual da listagem não altera a Home e retira destaque sem despublicar. Confere capa pública por SHA-256, título, descrição, assuntos e link; compara projetos, experiências, competências e vídeos.
 
 Relatórios e capturas 1440/390 ficam em `.private`, fora do Git. Reprodução: construir as imagens de teste e executar `scripts/verify-production.py --home-articles`. Nenhum dado ou arquivo privado foi versionado.
+
+Regressão de cronologia: `node frontend/tests/home-article-order.spec.cjs` executa o leitor real do CMS e valida 19/10/2026 → 13/10/2026 → 07/10/2026, desempate por slug, datas ausentes ao final e preservação dos registros e demais módulos.
