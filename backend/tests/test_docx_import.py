@@ -263,3 +263,36 @@ def test_stage_is_session_bound_and_bad_upload_writes_nothing(client):
         other.get('/api/admin/auth/csrf');headers={'Origin':'http://localhost:8080','X-CSRF-Token':other.cookies['portfolio_csrf']}
         assert other.post('/api/admin/auth/login',json={'email':email,'password':'synthetic-password-32-characters'},headers=headers).status_code==200
         assert other.get('/api/admin/docx/staging/'+p['token']).status_code==403
+
+
+def test_commit_receipt_recovery_and_archived_article(client):
+    c,h,root=client;p=stage(client,document(4,'Receipt '+uuid4().hex));url='/api/admin/docx/staging/'+p['token']
+    assert c.get(url+'/result').json()['status']=='not_committed'
+    result=confirm(client,p).json();row=result['entry'];assert result['entryId']==row['id']
+    assert c.get(url+'/result').json()['entryId']==row['id']
+    archived=c.post('/api/admin/cms/artigos/'+row['id']+'/archive',headers=h,json={'version':row['version']}).json()
+    assert confirm(client,p).json()['entry']['status']=='archived'
+    assert c.post(url+'/recover',headers=h,json={'entryId':row['id'],'version':row['version']}).status_code==409
+    recovered=c.post(url+'/recover',headers=h,json={'entryId':row['id'],'version':archived['version']})
+    assert recovered.status_code==200,recovered.text
+    restored=recovered.json()['entry'];assert restored['id']==row['id'] and restored['status']=='draft'
+    assert restored['data']==row['data'] and len(list(root.glob('*.png')))==4
+    assert len(c.get('/api/admin/docx/history/'+row['id']).json())==1
+    assert c.post(url+'/recover',json={'entryId':row['id'],'version':restored['version']}).status_code==403
+    import shutil
+    shutil.rmtree(root/'.docx-staging')
+    assert c.get(url+'/result').json()['entryId']==row['id']
+    archived_again=c.post('/api/admin/cms/artigos/'+row['id']+'/archive',headers=h,json={'version':restored['version']}).json()
+    assert c.post(url+'/recover',headers=h,json={'entryId':row['id'],'version':archived_again['version']}).json()['entry']['status']=='draft'
+    from app.main import app
+    with TestClient(app) as anonymous:assert anonymous.get(url+'/result').status_code==401
+
+
+def test_receipt_is_bound_to_original_session(client):
+    c,h,_=client;p=stage(client,document(0,'Private receipt '+uuid4().hex));entry=confirm(client,p).json()['entry']
+    with get_engine().connect() as db:email=db.scalar(sa.select(m.admin_users.c.email).where(m.admin_users.c.id==__import__('uuid').UUID(entry['editor_id'])))
+    from app.main import app
+    with TestClient(app) as other:
+        other.get('/api/admin/auth/csrf');headers={'Origin':'http://localhost:8080','X-CSRF-Token':other.cookies['portfolio_csrf']}
+        assert other.post('/api/admin/auth/login',headers=headers,json={'email':email,'password':'synthetic-password-32-characters'}).status_code==200
+        assert other.get('/api/admin/docx/staging/'+p['token']+'/result').status_code==403

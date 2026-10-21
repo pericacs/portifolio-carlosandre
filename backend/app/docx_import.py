@@ -79,7 +79,7 @@ def write_manifest(directory,manifest):
     finally:temporary.unlink(missing_ok=True)
 
 def collision_info(db,data):
-    row=db.execute(sa.select(m.cms_entries.c.id,m.cms_entries.c.version,m.cms_entries.c.title,m.cms_entries.c.deleted_at).where(m.cms_entries.c.module=='artigos',m.cms_entries.c.slug==data['slug'])).mappings().first()
+    row=db.execute(sa.select(m.cms_entries.c.id,m.cms_entries.c.version,m.cms_entries.c.title,m.cms_entries.c.status,m.cms_entries.c.deleted_at).where(m.cms_entries.c.module=='artigos',m.cms_entries.c.slug==data['slug'])).mappings().first()
     candidate=data['slug']
     if row:
         for n in range(2,1002):
@@ -91,7 +91,43 @@ def collision_info(db,data):
 def view(db,token,manifest):
     collision,new_slug=collision_info(db,manifest['data'])
     previous=db.scalar(sa.select(m.site_settings.c.value).where(m.site_settings.c.key=='docx_source:'+manifest['source_hash']))
-    return {'token':token,'data':manifest['data'],'warnings':manifest['warnings'],'images':[{**x,'previewUrl':f'/api/admin/docx/staging/{token}/media/{x["id"]}','url':'/api/media/'+x['id']} for x in manifest['images']],'sections':manifest['sections'],'collision':collision,'suggestedSlug':new_slug,'previousImport':previous,'expiresAt':manifest['expires']}
+    return {'token':token,'data':manifest['data'],'warnings':manifest['warnings'],'images':[{**x,'previewUrl':f'/api/admin/docx/staging/{token}/media/{x["id"]}','url':'/api/media/'+x['id']} for x in manifest['images']],'sections':manifest['sections'],'collision':collision,'suggestedSlug':new_slug,'previousImport':{k:v for k,v in previous.items() if k not in {'owner','session'}} if previous else None,'expiresAt':manifest['expires']}
+
+def commit_result(row,status='already_imported'):
+    return {'entry':dict(row),'entryId':str(row['id']),'status':status}
+
+@router.get('/staging/{token}/result')
+def saved_result(token:str,user=Depends(authenticated),db=Depends(get_db)):
+    if not re.fullmatch(r'[A-Za-z0-9_-]{43}',token):raise HTTPException(404,'Importação não encontrada.')
+    key='docx_stage:'+hashlib.sha256(token.encode()).hexdigest()
+    receipt=db.scalar(sa.select(m.site_settings.c.value).where(m.site_settings.c.key==key))
+    if receipt and receipt.get('owner'):
+        if receipt['owner']!=str(user['admin_id']) or receipt['session']!=str(user['id']):raise HTTPException(403,'Importação pertence a outra sessão.')
+    else:
+        _,manifest=load_stage(token,user)
+        if not receipt:receipt=db.scalar(sa.select(m.site_settings.c.value).where(m.site_settings.c.key=='docx_source:'+manifest['source_hash']))
+    if not receipt:return {'entry':None,'entryId':None,'status':'not_committed'}
+    return commit_result(cms.get_entry(db,'artigos',UUID(receipt['entry_id'])))
+
+class Recover(BaseModel):
+    entryId:UUID
+    version:int=Field(ge=1)
+
+@router.post('/staging/{token}/recover')
+def recover_archived(token:str,body:Recover,user=Depends(authenticated),db=Depends(get_db)):
+    try:_,manifest=load_stage(token,user)
+    except HTTPException as error:
+        if error.status_code not in {404,410}:raise
+        receipt=saved_result(token,user,db)
+        if receipt['entryId']!=str(body.entryId):raise HTTPException(409,'Artigo não corresponde ao recibo.')
+        manifest={'data':{'slug':receipt['entry']['slug']},'source_hash':''}
+    row=cms.get_entry(db,'artigos',body.entryId,True);cms.version_check(row,body.version)
+    previous=db.scalar(sa.select(m.site_settings.c.value).where(m.site_settings.c.key=='docx_source:'+manifest['source_hash']))
+    if row['slug']!=manifest['data']['slug'] and (not previous or previous['entry_id']!=str(row['id'])):raise HTTPException(409,'Artigo não corresponde à importação.')
+    if row['status']!='archived':raise HTTPException(409,'O estado do artigo mudou. Abra o registro existente.')
+    result=db.execute(m.cms_entries.update().where(m.cms_entries.c.id==row['id']).values(status='draft',version=row['version']+1,editor_id=user['admin_id']).returning(m.cms_entries)).mappings().one()
+    cms.revision(db,result,'recover_docx',user['admin_id']);db.commit()
+    return commit_result(result,'draft_recovered')
 
 @router.post('/preview',status_code=201)
 async def preview(file:UploadFile=File(...),user=Depends(authenticated),db=Depends(get_db)):
@@ -163,7 +199,7 @@ def commit_import(token:str,body:Confirm,user=Depends(authenticated),db=Depends(
     receipt=db.scalar(sa.select(m.site_settings.c.value).where(m.site_settings.c.key==stage_key))
     previous=db.scalar(sa.select(m.site_settings.c.value).where(m.site_settings.c.key=='docx_source:'+source))
     if receipt or previous and body.decision=='auto':
-        entry_id=UUID((receipt or previous)['entry_id']);return {'entry':dict(cms.get_entry(db,'artigos',entry_id)),'status':'already_imported'}
+        entry_id=UUID((receipt or previous)['entry_id']);return commit_result(cms.get_entry(db,'artigos',entry_id))
     data=cms.validate('artigos',body.data);data['docxImported']=True
     existing=db.execute(sa.select(m.cms_entries).where(m.cms_entries.c.module=='artigos',m.cms_entries.c.slug==data['slug']).with_for_update()).mappings().first()
     row=None
@@ -186,7 +222,7 @@ def commit_import(token:str,body:Confirm,user=Depends(authenticated),db=Depends(
         if row:record=db.execute(m.cms_entries.update().where(m.cms_entries.c.id==entry_id).values(**values,version=row['version']+1).returning(m.cms_entries)).mappings().one()
         else:record=db.execute(m.cms_entries.insert().values(id=entry_id,module='artigos',**values).returning(m.cms_entries)).mappings().one()
         cms.refs(db,entry_id,'artigos',data,'draft');cms.revision(db,record,'import_docx',user['admin_id'])
-        info={'entry_id':str(entry_id),'source_sha256':source,'imported_at':now().isoformat(),'media_ids':[a['id'] for a in assets],'warnings':manifest['warnings'],'sections':manifest['sections']}
+        info={'owner':str(user['admin_id']),'session':str(user['id']),'entry_id':str(entry_id),'source_sha256':source,'imported_at':now().isoformat(),'media_ids':[a['id'] for a in assets],'warnings':manifest['warnings'],'sections':manifest['sections']}
         db.execute(m.site_settings.insert().values(key=stage_key,value=info))
         if previous:db.execute(m.site_settings.update().where(m.site_settings.c.key=='docx_source:'+source).values(value=info))
         else:db.execute(m.site_settings.insert().values(key='docx_source:'+source,value=info))
@@ -206,7 +242,7 @@ def commit_import(token:str,body:Confirm,user=Depends(authenticated),db=Depends(
         raise HTTPException(503,'Não foi possível confirmar a importação. Tente novamente; o recibo impede duplicação.') from None
     # Retain private staging until TTL for safe idempotent HTTP retries. The worker
     # removes it later, preserving every file registered in committed media_assets.
-    return {'entry':result,'status':'draft_created','warnings':manifest['warnings']}
+    return {**commit_result(result,'draft_created'),'warnings':manifest['warnings']}
 
 @router.delete('/staging/{token}')
 def cancel_stage(token:str,user=Depends(authenticated),db=Depends(get_db)):
@@ -218,4 +254,4 @@ def cancel_stage(token:str,user=Depends(authenticated),db=Depends(get_db)):
 def import_history(entry_id:UUID,user=Depends(authenticated),db=Depends(get_db)):
     cms.get_entry(db,'artigos',entry_id)
     records=db.scalars(sa.select(m.site_settings.c.value).where(m.site_settings.c.key.like('docx_stage:%'),m.site_settings.c.value['entry_id'].astext==str(entry_id)).order_by(m.site_settings.c.created_at.desc()).limit(50))
-    return list(records)
+    return [{k:v for k,v in record.items() if k not in {'owner','session'}} for record in records]
