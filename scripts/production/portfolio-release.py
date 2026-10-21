@@ -1,5 +1,5 @@
 """Root-only release maintenance; no new endpoint, users, or schema changes."""
-import hashlib,io,json,re,secrets,sys
+import hashlib,io,json,os,re,secrets,sys,zipfile
 from datetime import datetime,timedelta
 from pathlib import Path
 from uuid import UUID
@@ -98,6 +98,12 @@ def probe(base,connect=None):
             if i in {1,3,6,9}:
                 picture=io.BytesIO();Image.new('RGB',(480,240),(i*20,80,160)).save(picture,'PNG');picture.seek(0);doc.add_picture(picture);doc.add_paragraph('Figura '+str(i)+' — legenda de teste',style='Caption')
         raw=io.BytesIO();doc.save(raw)
+        # Probe the real upper bound, not only a tiny DOCX that misses proxy caps.
+        original=raw.getvalue();sized=io.BytesIO(original)
+        with zipfile.ZipFile(sized,'a',zipfile.ZIP_STORED) as archive:archive.writestr('customXml/size-probe.dat',b'')
+        padding=8*1024*1024-len(sized.getvalue());raw=io.BytesIO(original)
+        with zipfile.ZipFile(raw,'a',zipfile.ZIP_STORED) as archive:archive.writestr('customXml/size-probe.dat',os.urandom(padding))
+        assert len(raw.getvalue())==8*1024*1024
         with httpx.Client(base_url=connect or base,timeout=45,follow_redirects=False) as client:
             client.cookies.set(SESSION_COOKIE,token);client.cookies.set(CSRF_COOKIE,csrf)
             headers={'Origin':base,'X-CSRF-Token':csrf}

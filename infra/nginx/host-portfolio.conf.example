@@ -12,6 +12,8 @@ server {
     ssl_certificate_key /etc/letsencrypt/live/carlosandre.tech/privkey.pem;
     ssl_protocols TLSv1.2 TLSv1.3;
     client_max_body_size 10m;
+    # Install the repository snippet first; affects only this portfolio HTTPS host.
+    include /etc/nginx/snippets/carlosandre-docx-upload.conf;
     add_header Strict-Transport-Security "max-age=31536000" always;
     location / {
         proxy_pass http://127.0.0.1:8088;

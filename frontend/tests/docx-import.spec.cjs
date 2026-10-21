@@ -31,6 +31,14 @@ assert(base&&new URL(base).hostname==='127.0.0.1');
   for(const route of routes){await page.goto(base+route,{waitUntil:'networkidle'});for(const width of [1440,390])baseline.set(route+width,await screenshot('before-'+route.replaceAll('/','_'),width));}
   await page.goto(base+'/admin/artigos');await page.getByRole('link',{name:'Importar artigo do Word'}).click();
   assert(await page.getByRole('button',{name:'Confirmar e salvar rascunho'}).count()===0);
+  let uploads=0;
+  await page.route('**/api/admin/docx/preview',route=>{uploads++;return route.fulfill({status:413,contentType:'text/html',body:'<html><h1>413 Request Entity Too Large</h1></html>'});});
+  await page.getByLabel('Documento DOCX').setInputFiles({name:'too-large.docx',mimeType:'application/vnd.openxmlformats-officedocument.wordprocessingml.document',buffer:Buffer.alloc(8*1024*1024+1)});
+  await page.getByRole('alert').filter({hasText:'8.388.608 bytes'}).waitFor();assert.equal(uploads,0);
+  await page.getByLabel('Documento DOCX').setInputFiles(source);
+  const uploadError=page.getByRole('alert').filter({hasText:'HTTP 413'});
+  await uploadError.waitFor();assert(!(await uploadError.textContent()).includes('Unexpected token'));assert.equal(uploads,1);
+  await page.unroute('**/api/admin/docx/preview');
   await page.getByLabel('Documento DOCX').setInputFiles(source);
   await page.getByLabel('Título',{exact:true}).waitFor();
   assert.equal(await page.getByLabel('Título',{exact:true}).inputValue(),'O SPLIT DO MAL');

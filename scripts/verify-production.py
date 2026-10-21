@@ -77,9 +77,24 @@ try:
     temp.mkdir(parents=True, exist_ok=True)
     host_config = (root/"infra/nginx/host-portfolio.conf.example").read_text().replace("http://127.0.0.1:8088", "http://portfolio-proxy:80").replace("/etc/letsencrypt/live/carlosandre.tech", "/etc/nginx/tls")
     (temp/"host.conf").write_text(host_config, encoding="utf-8")
-    run("run","-d","--name",prefix+"-host","--network",prefix,"--network-alias","carlosandre.tech","-v",prefix+"-tls:/etc/nginx/tls:ro","-v",str(temp/"host.conf")+":/etc/nginx/conf.d/default.conf:ro","nginx:stable-alpine")
+    (temp/'host-docx-upload.conf').write_text((root/'infra/nginx/host-docx-upload.conf').read_text().replace('http://127.0.0.1:8088','http://portfolio-proxy:80'),encoding='utf8')
+    run("run","-d","--name",prefix+"-host","--network",prefix,"--network-alias","carlosandre.tech","-v",prefix+"-tls:/etc/nginx/tls:ro","-v",str(temp/'host-docx-upload.conf')+":/etc/nginx/snippets/carlosandre-docx-upload.conf:ro","-v",str(temp/"host.conf")+":/etc/nginx/conf.d/default.conf:ro","nginx:stable-alpine")
     run("exec",prefix+"-host","nginx","-t")
     run("run","--rm","--network",prefix,*env,"-v",prefix+"-tls:/tls:ro",backend,"python","-c","import ssl,urllib.request; c=ssl.create_default_context(cafile='/tls/fullchain.pem'); assert urllib.request.urlopen('https://carlosandre.tech/api/health/ready',context=c,timeout=10).status==200; assert urllib.request.urlopen('https://carlosandre.tech/',context=c,timeout=10).status==200; print('Existing-host Nginx -> internal Nginx HTTPS proxy passed')")
+    limit_check="""import json,ssl,urllib.request,urllib.error
+c=ssl.create_default_context(cafile='/tls/fullchain.pem')
+for base in ['http://portfolio-proxy','https://carlosandre.tech']:
+    for size,expected in [(8*1024*1024,401),(9*1024*1024,413)]:
+        data=b'--limit-check\\r\\nContent-Disposition: form-data; name="file"; filename="synthetic.docx"\\r\\n\\r\\n'+b'X'*size+b'\\r\\n--limit-check--\\r\\n'
+        req=urllib.request.Request(base+'/api/admin/docx/preview',data=data,headers={'Content-Type':'multipart/form-data; boundary=limit-check'})
+        try:r=urllib.request.urlopen(req,context=c,timeout=30)
+        except urllib.error.HTTPError as error:r=error
+        assert r.status==expected,(base,size,r.status)
+        assert 'application/json' in r.headers['content-type']
+        assert 'detail' in json.loads(r.read())
+print('PASS: both Nginx layers admit 8 MiB + multipart to auth; reject >9 MiB transport with JSON 413')
+"""
+    run('run','--rm','--network',prefix,'-v',prefix+'-tls:/tls:ro',backend,'python','-c',limit_check)
     run("exec",prefix+"-worker","python","-c","import time,pathlib; assert time.time()-pathlib.Path('/tmp/worker-heartbeat').stat().st_mtime < 90")
     run("run","--rm","--network","none","-v",str(root/"scripts/production")+":/scripts:ro","bash:5.2","bash","-c","for f in /scripts/*.sh; do bash -n \"$f\" || exit; done")
     if any(flag in __import__("sys").argv for flag in ("--visual","--docx","--combined")):

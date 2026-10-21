@@ -127,6 +127,27 @@ def stage(client,blob=None):
 def confirm(client,preview,**changes):
     c,h,_=client;return c.post('/api/admin/docx/staging/'+preview['token']+'/commit',json={'data':preview['data'],'reviewed':True,**changes},headers=h)
 
+def test_docx_eight_mib_boundary_and_excess_rejection(client):
+    base=document(4)
+    def padded(size):
+        out=io.BytesIO(base)
+        with zipfile.ZipFile(out,'a',zipfile.ZIP_STORED) as archive:archive.writestr('customXml/size-test.dat',b'')
+        padding=size-len(out.getvalue());out=io.BytesIO(base)
+        with zipfile.ZipFile(out,'a',zipfile.ZIP_STORED) as archive:archive.writestr('customXml/size-test.dat',os.urandom(padding))
+        assert len(out.getvalue())==size
+        return out.getvalue()
+    blob=padded(MAX_UPLOAD);preview=stage(client,blob);assert len(preview['images'])==4
+    c,h,root=client;before=set((root/'.docx-staging').iterdir())
+    response=c.post('/api/admin/docx/preview',files={'file':('large.docx',blob+b'X')},headers=h)
+    assert response.status_code==413 and response.headers['content-type'].startswith('application/json')
+    assert set((root/'.docx-staging').iterdir())==before
+
+def test_reference_real_upload_if_provided(client):
+    source=os.environ.get('DOCX_REFERENCE')
+    if not source:pytest.skip('Private reference not mounted')
+    preview=stage(client,Path(source).read_bytes())
+    assert preview['data']['title']=='O SPLIT DO MAL' and preview['sections']==10 and len(preview['images'])==4
+
 def test_staging_draft_idempotency_and_media(client):
     from app.main import app
     c,h,root=client;p=stage(client,document(4,'Draft '+uuid4().hex));assert not list(root.glob('*.png'))
