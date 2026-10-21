@@ -99,10 +99,10 @@ print('PASS: both Nginx layers admit 8 MiB + multipart to auth; reject >9 MiB tr
     run('run','--rm','--network',prefix,'-v',prefix+'-tls:/tls:ro',backend,'python','-c',limit_check)
     run("exec",prefix+"-worker","python","-c","import time,pathlib; assert time.time()-pathlib.Path('/tmp/worker-heartbeat').stat().st_mtime < 90")
     run("run","--rm","--network","none","-v",str(root/"scripts/production")+":/scripts:ro","bash:5.2","bash","-c","for f in /scripts/*.sh; do bash -n \"$f\" || exit; done")
-    if any(flag in __import__("sys").argv for flag in ("--visual","--docx","--combined")):
+    if any(flag in __import__("sys").argv for flag in ("--visual","--docx","--combined","--home-articles")):
         # Read-only clone of approved local state; restore only into the disposable database.
         run("stop",prefix+"-api",prefix+"-worker")
-        if any(flag in __import__("sys").argv for flag in ("--docx","--combined")):
+        if any(flag in __import__("sys").argv for flag in ("--docx","--combined","--home-articles")):
             # Remove synthetic unit-test contents from this disposable database
             # before taking a visual baseline; no source database is accessed.
             run("exec",prefix+"-db","dropdb","-U","portfolio","portfolio")
@@ -128,7 +128,7 @@ print('PASS: both Nginx layers admit 8 MiB + multipart to auth; reject >9 MiB tr
         child_env=os.environ.copy()
         child_env.update(DOCX_TEST_BACKEND=prefix+"-api",DOCX_TEST_WORKER=prefix+"-worker",RECOVERY_BASE_URL=base,RECOVERY_REFERENCE_URL="http://localhost:8080",RECOVERY_FIXTURE=str(fixture),RECOVERY_OUTPUT=str(temp/"visual"))
         try:
-            spec="docx-import.spec.cjs" if any(flag in __import__("sys").argv for flag in ("--docx","--combined")) else "docker-recovery.spec.cjs"
+            spec="home-articles.spec.cjs" if "--home-articles" in __import__("sys").argv else "docx-import.spec.cjs" if any(flag in __import__("sys").argv for flag in ("--docx","--combined","--home-articles")) else "docker-recovery.spec.cjs"
             subprocess.run(["node",str(root/"frontend/tests"/spec)],cwd=root,env=child_env,check=True)
         finally:
             fixture.unlink(missing_ok=True)

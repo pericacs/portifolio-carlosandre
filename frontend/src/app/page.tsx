@@ -7,6 +7,9 @@ import { Header, DetailButton, ContactForm } from '@/components/home-interaction
 import { publicData } from '@/lib/public-content';
 import { OrderedSections } from '@/components/cms/ordered-sections';
 
+// Always read the latest published CMS snapshot; no static Home snapshot.
+export const dynamic='force-dynamic';
+
 function SectionHeading({ id, title, description, children }: { id: string; title: string; description: string; children?: React.ReactNode }) {
   return <div className="section-heading"><div><h2 id={id}>{title}</h2><p>{description}</p></div>{children}</div>;
 }

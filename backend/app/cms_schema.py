@@ -35,6 +35,11 @@ MODULES={
  "configuracoes":{"label":"Configurações","singleton":True,"fields":[text("title","Nome do site",required=True),media("logo","Logotipo"),media("favicon","Favicon (PNG)"),media("photo","Foto principal alternativa"),media("banner","Banner de contato"),content("footer","Texto do rodapé","lines"),content("institutional","Texto institucional"),content("services","Serviços e chamadas","services"),content("sectionOrder","Ordem das seções da Home","order"),content("categories","Categorias de conteúdo","lines"),content("locales","Idiomas habilitados","lines"),text("email","E-mail comercial","email"),text("whatsapp","WhatsApp"),text("linkedin","LinkedIn","url"),text("youtube","YouTube","url"),text("github","GitHub","url"),text("scheduleUrl","Link comercial / agenda","url"),text("analyticsId","Identificador da integração analytics (preparação)"),pub("retentionDays","Retenção de mensagens em dias","number",default=180)]+SEO},
 }
 MODULES['artigos']['fields'] += [text('contentType','Tipo','select',options=['Artigo','Insight'],default='Artigo'),content('categories','Assuntos','lines'),text('publishedDate','Data de publicação confirmada','date'),text('author','Autor'),text('originalUrl','URL original','url'),text('readingMode','Modo de leitura','select',options=['Interno','Externo'],default='Interno'),pub('spotlight','Destaque principal da listagem')]
+# Article controls must not inherit the project-only tab remapping below.
+MODULES['artigos']['fields']=[dict(f) for f in MODULES['artigos']['fields']]
+for f in MODULES['artigos']['fields']:
+    if f['key']=='featured':f['label']='Destaque na Home'
+    if f['key']=='sortOrder':f['label']='Ordem de exibição na Home'
 PROJECT_TABS=['Informações gerais','Imagens e mídia','Funcionalidades','Arquitetura e tecnologias','Links e acessos','Resultados e roadmap','SEO e publicação']
 project=MODULES['projetos']
 for f in project['fields']:
