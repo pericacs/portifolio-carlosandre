@@ -8,7 +8,10 @@ from pathlib import Path
 root = Path(__file__).resolve().parents[1]
 prefix = "carlosandre-check-" + uuid.uuid4().hex[:10]
 def run(*args, capture=False):
-    result = subprocess.run(["docker", *args], cwd=root, text=True, capture_output=capture, check=True)
+    result = subprocess.run(["docker", *args], cwd=root, text=True, capture_output=capture)
+    if result.returncode:
+        if capture: print(result.stderr)
+        result.check_returncode()
     return result.stdout.strip() if capture else None
 backend = "carlosandre-production-check-backend"
 frontend = "carlosandre-production-check-frontend"
@@ -79,10 +82,10 @@ try:
     run("run","--rm","--network",prefix,*env,"-v",prefix+"-tls:/tls:ro",backend,"python","-c","import ssl,urllib.request; c=ssl.create_default_context(cafile='/tls/fullchain.pem'); assert urllib.request.urlopen('https://carlosandre.tech/api/health/ready',context=c,timeout=10).status==200; assert urllib.request.urlopen('https://carlosandre.tech/',context=c,timeout=10).status==200; print('Existing-host Nginx -> internal Nginx HTTPS proxy passed')")
     run("exec",prefix+"-worker","python","-c","import time,pathlib; assert time.time()-pathlib.Path('/tmp/worker-heartbeat').stat().st_mtime < 90")
     run("run","--rm","--network","none","-v",str(root/"scripts/production")+":/scripts:ro","bash:5.2","bash","-c","for f in /scripts/*.sh; do bash -n \"$f\" || exit; done")
-    if any(flag in __import__("sys").argv for flag in ("--visual","--docx")):
+    if any(flag in __import__("sys").argv for flag in ("--visual","--docx","--combined")):
         # Read-only clone of approved local state; restore only into the disposable database.
         run("stop",prefix+"-api",prefix+"-worker")
-        if "--docx" in __import__("sys").argv:
+        if any(flag in __import__("sys").argv for flag in ("--docx","--combined")):
             # Remove synthetic unit-test contents from this disposable database
             # before taking a visual baseline; no source database is accessed.
             run("exec",prefix+"-db","dropdb","-U","portfolio","portfolio")
@@ -107,11 +110,25 @@ try:
         child_env=os.environ.copy()
         child_env.update(RECOVERY_BASE_URL=base,RECOVERY_REFERENCE_URL="http://localhost:8080",RECOVERY_FIXTURE=str(fixture),RECOVERY_OUTPUT=str(temp/"visual"))
         try:
-            spec="docx-import.spec.cjs" if "--docx" in __import__("sys").argv else "docker-recovery.spec.cjs"
+            spec="docx-import.spec.cjs" if any(flag in __import__("sys").argv for flag in ("--docx","--combined")) else "docker-recovery.spec.cjs"
             subprocess.run(["node",str(root/"frontend/tests"/spec)],cwd=root,env=child_env,check=True)
         finally:
             fixture.unlink(missing_ok=True)
         print("Visual report:",temp/"visual/report.json")
+        if "--combined" in __import__("sys").argv:
+            helper='/tmp/portfolio-release.py'
+            run('cp',str(root/'scripts/production/portfolio-release.py'),prefix+'-api:'+helper)
+            snapshot=run('exec',prefix+'-api','python',helper,'snapshot','test-combined',capture=True)
+            def maintenance(mode,payload=None):
+                return subprocess.run(['docker','exec','-i',prefix+'-api','python',helper,mode,'test-combined'],input=payload,text=True,capture_output=True,check=True).stdout
+            maintenance('apply',snapshot)
+            run('exec',prefix+'-api','python',helper,'probe',base,'http://portfolio-proxy')
+            maintenance('verify',snapshot)
+            maintenance('rollback',snapshot)
+            after=json.loads(run('exec',prefix+'-api','python',helper,'snapshot','test-combined',capture=True))
+            before=json.loads(snapshot)
+            assert after['target']['data']==before['target']['data'] and after['target']['published_data']==before['target']['published_data'] and after['others_hash']==before['others_hash']
+            print('PASS: combined release helper, real HTTP staging upload, targeted data rollback and unchanged other CMS entries')
     print("PASS: isolated migrations, backend suite, production security and volume persistence")
 finally:
     subprocess.run(["docker","rm","-f",prefix+"-db",prefix+"-web",prefix+"-api",prefix+"-proxy",prefix+"-worker",prefix+"-host",prefix+"-browser-proxy"],capture_output=True)

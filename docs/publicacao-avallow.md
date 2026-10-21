@@ -1,5 +1,7 @@
 # Publicação manual do AVALLOW
 
+> Histórico da etapa AVALLOW isolada. Para publicar AVALLOW **e DOCX**, utilizar a entrega conjunta descrita em `publicacao-portfolio-conjunta.md` e o script único dessa entrega. O procedimento frontend-only abaixo não instala DOCX.
+
 Preparação local em 21/10/2026. **Nenhum comando deste procedimento foi executado na VPS.**
 
 ## Versão e dependências
