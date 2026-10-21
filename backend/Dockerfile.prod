@@ -11,6 +11,12 @@ RUN pip install --no-cache-dir --no-index --find-links=/wheels -r requirements.t
 COPY app ./app
 COPY alembic ./alembic
 COPY alembic.ini .
-RUN mkdir uploads && chown appuser:appuser uploads
+# Context permissions may be 0600/0700 (for example, a restrictive host umask).
+# Keep code root-owned and immutable to appuser, but readable/traversable.
+RUN find /app/app /app/alembic -type d -exec chmod 0755 {} + \
+    && find /app/app /app/alembic -type f -exec chmod 0644 {} + \
+    && chmod 0755 /app \
+    && chmod 0644 /app/alembic.ini /app/requirements.txt \
+    && install -d -o appuser -g appuser -m 0750 /app/uploads
 USER appuser
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--no-proxy-headers"]
