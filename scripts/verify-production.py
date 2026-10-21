@@ -25,6 +25,8 @@ try:
     port = config["services"]["nginx"]["ports"]
     assert len(port) == 1 and port[0]["host_ip"] == "127.0.0.1" and str(port[0]["published"]) == "8088" and port[0]["target"] == 80
     assert config["networks"]["private"]["internal"]
+    mounts={service:[v for v in config['services'][service]['volumes'] if v['target']=='/app/uploads'] for service in ('backend','worker')}
+    assert all(len(v)==1 and v[0]['type']=='volume' and v[0]['source']=='media_data' for v in mounts.values())
     assert all(v["name"].startswith("carlosandre-portfolio-prod_") for v in config["volumes"].values())
     assert all(v["name"].startswith("carlosandre-portfolio-prod_") for v in config["networks"].values())
     assert all(service.get("mem_limit") for name,service in config["services"].items())
@@ -71,7 +73,7 @@ try:
     run("run","--rm","--user","0","--network","none","-v",prefix+"-tls:/tls",backend,"openssl","req","-x509","-newkey","rsa:2048","-nodes","-keyout","/tls/privkey.pem","-out","/tls/fullchain.pem","-days","1","-subj","/CN=carlosandre.tech")
     run("run","--rm","--network",prefix,"-v",prefix+"-tls:/etc/nginx/tls:ro","-v",str(root/"infra/nginx/production.conf")+":/etc/nginx/conf.d/default.conf:ro","nginx:stable-alpine","nginx","-t")
     run("run","-d","--name",prefix+"-proxy","--network",prefix,"--network-alias","portfolio-proxy","-v",str(root/"infra/nginx/production.conf")+":/etc/nginx/conf.d/default.conf:ro","nginx:stable-alpine")
-    run("run","-d","--name",prefix+"-worker","--network",prefix,*env,*prod,backend,"python","-m","app.worker")
+    run("run","-d","--name",prefix+"-worker","--network",prefix,*env,*prod,"-v",prefix+"-media:/app/uploads",backend,"python","-m","app.worker")
     time.sleep(3)
     temp = root / ".private" / prefix
     temp.mkdir(parents=True, exist_ok=True)
@@ -118,12 +120,13 @@ print('PASS: both Nginx layers admit 8 MiB + multipart to auth; reject >9 MiB tr
         base="http://127.0.0.1:"+binding["HostPort"]
         run("rm","-f",prefix+"-api")
         run("run","-d","--name",prefix+"-api","--network",prefix,"--network-alias","backend",*env,"-e","SITE_URL="+base,"-e",'CORS_ORIGINS=["'+base+'"]',"-v",prefix+"-media:/app/uploads",backend)
+        run("start",prefix+"-worker")
         setup = "import json,secrets; from app.db import get_engine; from app.admin import hasher; from app import models as m; password=secrets.token_urlsafe(32); email='recovery-'+secrets.token_hex(6)+'@example.com'; db=get_engine().connect(); db.execute(m.admin_users.insert().values(email=email,password_hash=hasher.hash(password))); db.commit(); print(json.dumps({'email':email,'password':password})); db.close()"
         credentials = run("run","--rm","--network",prefix,*env,backend,"python","-c",setup,capture=True)
         fixture = temp/"browser-fixture.json"
         fixture.write_text(credentials,encoding="utf-8")
         child_env=os.environ.copy()
-        child_env.update(RECOVERY_BASE_URL=base,RECOVERY_REFERENCE_URL="http://localhost:8080",RECOVERY_FIXTURE=str(fixture),RECOVERY_OUTPUT=str(temp/"visual"))
+        child_env.update(DOCX_TEST_BACKEND=prefix+"-api",DOCX_TEST_WORKER=prefix+"-worker",RECOVERY_BASE_URL=base,RECOVERY_REFERENCE_URL="http://localhost:8080",RECOVERY_FIXTURE=str(fixture),RECOVERY_OUTPUT=str(temp/"visual"))
         try:
             spec="docx-import.spec.cjs" if any(flag in __import__("sys").argv for flag in ("--docx","--combined")) else "docker-recovery.spec.cjs"
             subprocess.run(["node",str(root/"frontend/tests"/spec)],cwd=root,env=child_env,check=True)

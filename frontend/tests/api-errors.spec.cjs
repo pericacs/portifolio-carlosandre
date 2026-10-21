@@ -22,5 +22,6 @@ const json=(value,status=200)=>new Response(JSON.stringify(value),{status,header
  c=client([json({csrfToken:'synthetic-csrf'}),json({ok:true},201)]);const form=new FormData();await c.api('/docx/preview','POST',form);assert.equal(c.calls[1][1].headers['X-CSRF-Token'],'synthetic-csrf');assert.equal(c.calls[1][1].headers['Content-Type'],undefined);assert.equal(c.calls[1][1].body,form);
  c=client([json({})]);await assert.rejects(c.api('/test','POST',{}),/validar a sessão/);assert.equal(c.calls.length,1);
  c=client([new Response(null,{status:204})]);assert.equal(await c.api('/test'),null);
- console.log('PASS: 10 API response/CSRF cases (413 HTML/JSON, non-JSON, invalid JSON, login, multipart, 204)');
+ c=client([json({detail:{code:'docx_staging_expired',message:'Revisão expirada; retome.'}},410)]);await assert.rejects(c.api('/docx/staging/test/commit'),e=>e.status===410&&e.code==='docx_staging_expired'&&e.message==='Revisão expirada; retome.');
+ console.log('PASS: 11 API response/CSRF cases (413 HTML/JSON, non-JSON, invalid JSON, login, multipart, 204)');
 })().catch(e=>{console.error(e);process.exit(1)});

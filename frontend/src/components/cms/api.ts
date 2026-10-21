@@ -1,3 +1,4 @@
+export class ApiError extends Error {constructor(message:string,public status:number,public code=''){super(message);}}
 async function readResponse(response:Response){
  if(response.status===401){window.location.assign('/admin/login');throw Error('Sessão expirada.');}
  if(response.status===413)throw Error('O servidor recusou o upload (HTTP 413). O limite do arquivo é 8 MB; se ele já está dentro desse limite, o proxy precisa ser revisado pelo administrador.');
@@ -5,7 +6,7 @@ async function readResponse(response:Response){
  const type=response.headers.get('content-type')||'';
  if(!/application\/(?:[\w.-]+\+)?json\b/i.test(type))throw Error(`O servidor retornou uma resposta inesperada (HTTP ${response.status}). Tente novamente; se persistir, contate o administrador.`);
  let data:any;try{data=await response.json();}catch{throw Error(`O servidor retornou uma resposta inválida (HTTP ${response.status}). Tente novamente.`);}
- if(!response.ok)throw Error(typeof data?.detail==='string'?data.detail:'Verifique os campos e tente novamente.');
+ if(!response.ok)throw new ApiError(typeof data?.detail==='string'?data.detail:typeof data?.detail?.message==='string'?data.detail.message:'Verifique os campos e tente novamente.',response.status,typeof data?.detail?.code==='string'?data.detail.code:'');
  return data;
 }
 export async function api(path:string,method='GET',body?:unknown){

@@ -24,13 +24,21 @@ def stage_root():return cms.UPLOAD_ROOT/'.docx-staging'
 def checksum(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def lock_key(source):return int(source[:15],16)
 
-def load_stage(token,user):
-    if not re.fullmatch(r'[A-Za-z0-9_-]{43}',token):raise HTTPException(404,'Importação não encontrada.')
+def recovery_deadline(manifest):
+    # A bounded private grace period; the authenticated session still expires normally.
+    return manifest.get('recover_until',manifest['expires']+86400)
+
+def stage_error(code,message,status=410):
+    return HTTPException(status,{'code':code,'message':message})
+
+def load_stage(token,user,allow_expired=False):
+    if not re.fullmatch(r'[A-Za-z0-9_-]{43}',token):raise stage_error('docx_staging_missing','Importação temporária não encontrada no armazenamento. Consulte o resultado ou reanexe o mesmo DOCX para recuperar a revisão aberta.',404)
     directory=stage_root()/hashlib.sha256(token.encode()).hexdigest();manifest=directory/'manifest.json'
-    if directory.is_symlink() or manifest.is_symlink() or not manifest.is_file():raise HTTPException(404,'Importação não encontrada.')
+    if directory.is_symlink() or manifest.is_symlink() or not manifest.is_file():raise stage_error('docx_staging_missing','Importação temporária não encontrada no armazenamento. Consulte o resultado ou reanexe o mesmo DOCX para recuperar a revisão aberta.',404)
     data=json.loads(manifest.read_text(encoding='utf8'))
     if data['owner']!=str(user['admin_id']) or data['session']!=str(user['id']):raise HTTPException(403,'Importação pertence a outra sessão.')
-    if data['expires']<time.time():raise HTTPException(410,'Importação temporária expirada. Envie o documento novamente.')
+    if recovery_deadline(data)<time.time():raise stage_error('docx_staging_gone','O prazo de recuperação da importação terminou. Reanexe o mesmo DOCX; mantenha esta página aberta para preservar suas edições.')
+    if not allow_expired and data['expires']<time.time():raise stage_error('docx_staging_expired','A importação temporária expirou. Use Retomar revisão para recuperar o conteúdo e as imagens sem reenviar o DOCX.')
     return directory,data
 
 def reconcile_stage(db,directory,manifest):
@@ -53,9 +61,15 @@ def cleanup_expired(db):
             continue
         try:data=json.loads(manifest.read_text(encoding='utf8'))
         except (ValueError,OSError):continue
-        if data['expires']>=time.time():continue
+        committed=db.scalar(sa.select(m.site_settings.c.id).where(m.site_settings.c.key=='docx_stage:'+directory.name))
+        if (data['expires'] if committed else recovery_deadline(data))>=time.time():continue
         if db.scalar(sa.text('SELECT pg_try_advisory_xact_lock(:key)'),{'key':lock_key(data['source_hash'])}):
-            reconcile_stage(db,directory,data);shutil.rmtree(directory)
+            # Re-read under the same lock as resume/render/commit: an active review
+            # may have renewed its lease while cleanup was checking it.
+            if not manifest.is_file():continue
+            data=json.loads(manifest.read_text(encoding='utf8'))
+            if (data['expires'] if committed else recovery_deadline(data))<time.time():
+                reconcile_stage(db,directory,data);shutil.rmtree(directory)
         db.commit()
 
 def prepare(parsed,filename,user):
@@ -66,7 +80,7 @@ def prepare(parsed,filename,user):
         for item in parsed.images:
             with (directory/item['key']).open('xb') as f:f.write(item['blob']);f.flush();os.fsync(f.fileno())
             images.append({k:v for k,v in item.items() if k!='blob'})
-        manifest={'owner':str(user['admin_id']),'session':str(user['id']),'expires':time.time()+get_settings().docx_staging_minutes*60,'source_hash':parsed.source_hash,'filename':Path(filename.replace('\\','/')).name[:200],'data':parsed.data,'images':images,'warnings':parsed.warnings,'sections':parsed.sections}
+        manifest={'owner':str(user['admin_id']),'session':str(user['id']),'expires':time.time()+get_settings().docx_staging_minutes*60,'recover_until':time.time()+get_settings().docx_staging_minutes*60+86400,'source_hash':parsed.source_hash,'filename':Path(filename.replace('\\','/')).name[:200],'data':parsed.data,'images':images,'warnings':parsed.warnings,'sections':parsed.sections}
         write_manifest(directory,manifest)
     except Exception:shutil.rmtree(directory);raise
     return token,manifest
@@ -91,23 +105,32 @@ def collision_info(db,data):
 def view(db,token,manifest):
     collision,new_slug=collision_info(db,manifest['data'])
     previous=db.scalar(sa.select(m.site_settings.c.value).where(m.site_settings.c.key=='docx_source:'+manifest['source_hash']))
-    return {'token':token,'data':manifest['data'],'warnings':manifest['warnings'],'images':[{**x,'previewUrl':f'/api/admin/docx/staging/{token}/media/{x["id"]}','url':'/api/media/'+x['id']} for x in manifest['images']],'sections':manifest['sections'],'collision':collision,'suggestedSlug':new_slug,'previousImport':{k:v for k,v in previous.items() if k not in {'owner','session'}} if previous else None,'expiresAt':manifest['expires']}
+    return {'token':token,'data':manifest.get('review_data',manifest['data']),'sourceSha256':manifest['source_hash'],'warnings':manifest['warnings'],'images':[{**x,'previewUrl':f'/api/admin/docx/staging/{token}/media/{x["id"]}','url':'/api/media/'+x['id']} for x in manifest['images']],'sections':manifest['sections'],'collision':collision,'suggestedSlug':new_slug,'previousImport':{k:v for k,v in previous.items() if k not in {'owner','session'}} if previous else None,'expiresAt':manifest['expires']}
+
+def imported_entry(db,entry_id,lock=False):
+    # A receipt may point to an intentionally soft-deleted article. Return that
+    # state for explicit recovery instead of misreporting a missing staging file.
+    query=sa.select(m.cms_entries).where(m.cms_entries.c.id==entry_id,m.cms_entries.c.module=='artigos')
+    if lock:query=query.with_for_update()
+    row=db.execute(query).mappings().first()
+    if not row:raise HTTPException(409,'O artigo do recibo não está disponível. Nenhuma duplicata foi criada; consulte o histórico do CMS.')
+    return row
 
 def commit_result(row,status='already_imported'):
     return {'entry':dict(row),'entryId':str(row['id']),'status':status}
 
 @router.get('/staging/{token}/result')
 def saved_result(token:str,user=Depends(authenticated),db=Depends(get_db)):
-    if not re.fullmatch(r'[A-Za-z0-9_-]{43}',token):raise HTTPException(404,'Importação não encontrada.')
+    if not re.fullmatch(r'[A-Za-z0-9_-]{43}',token):raise stage_error('docx_staging_missing','Importação temporária não encontrada no armazenamento. Consulte o resultado ou reanexe o mesmo DOCX para recuperar a revisão aberta.',404)
     key='docx_stage:'+hashlib.sha256(token.encode()).hexdigest()
     receipt=db.scalar(sa.select(m.site_settings.c.value).where(m.site_settings.c.key==key))
     if receipt and receipt.get('owner'):
         if receipt['owner']!=str(user['admin_id']) or receipt['session']!=str(user['id']):raise HTTPException(403,'Importação pertence a outra sessão.')
     else:
-        _,manifest=load_stage(token,user)
+        _,manifest=load_stage(token,user,allow_expired=True)
         if not receipt:receipt=db.scalar(sa.select(m.site_settings.c.value).where(m.site_settings.c.key=='docx_source:'+manifest['source_hash']))
     if not receipt:return {'entry':None,'entryId':None,'status':'not_committed'}
-    return commit_result(cms.get_entry(db,'artigos',UUID(receipt['entry_id'])))
+    return commit_result(imported_entry(db,UUID(receipt['entry_id'])))
 
 class Recover(BaseModel):
     entryId:UUID
@@ -121,11 +144,12 @@ def recover_archived(token:str,body:Recover,user=Depends(authenticated),db=Depen
         receipt=saved_result(token,user,db)
         if receipt['entryId']!=str(body.entryId):raise HTTPException(409,'Artigo não corresponde ao recibo.')
         manifest={'data':{'slug':receipt['entry']['slug']},'source_hash':''}
-    row=cms.get_entry(db,'artigos',body.entryId,True);cms.version_check(row,body.version)
+    row=imported_entry(db,body.entryId,True);cms.version_check(row,body.version)
     previous=db.scalar(sa.select(m.site_settings.c.value).where(m.site_settings.c.key=='docx_source:'+manifest['source_hash']))
     if row['slug']!=manifest['data']['slug'] and (not previous or previous['entry_id']!=str(row['id'])):raise HTTPException(409,'Artigo não corresponde à importação.')
     if row['status']!='archived':raise HTTPException(409,'O estado do artigo mudou. Abra o registro existente.')
-    result=db.execute(m.cms_entries.update().where(m.cms_entries.c.id==row['id']).values(status='draft',version=row['version']+1,editor_id=user['admin_id']).returning(m.cms_entries)).mappings().one()
+    result=db.execute(m.cms_entries.update().where(m.cms_entries.c.id==row['id']).values(status='draft',deleted_at=None,version=row['version']+1,editor_id=user['admin_id']).returning(m.cms_entries)).mappings().one()
+    if row['deleted_at'] is not None:cms.refs(db,row['id'],'artigos',row['data'],'draft')
     cms.revision(db,result,'recover_docx',user['admin_id']);db.commit()
     return commit_result(result,'draft_recovered')
 
@@ -185,13 +209,39 @@ class Confirm(BaseModel):
     version:int|None=Field(default=None,ge=1)
 
 @router.post('/staging/{token}/render')
-def render_review(token:str,body:cms.Save,user=Depends(authenticated)):
-    load_stage(token,user)
-    return {'data':cms.validate('artigos',body.data)}
+def render_review(token:str,body:cms.Save,user=Depends(authenticated),db=Depends(get_db)):
+    directory,manifest=load_stage(token,user)
+    db.execute(sa.text('SELECT pg_advisory_xact_lock(:key)'),{'key':lock_key(manifest['source_hash'])})
+    directory,manifest=load_stage(token,user)
+    data=cms.validate('artigos',body.data)
+    manifest['review_data']=data
+    manifest['expires']=min(time.time()+get_settings().docx_staging_minutes*60,recovery_deadline(manifest))
+    write_manifest(directory,manifest);db.commit()
+    return {'data':data}
+
+@router.post('/staging/{token}/resume')
+def resume_review(token:str,body:cms.Save|None=None,user=Depends(authenticated),db=Depends(get_db)):
+    directory,manifest=load_stage(token,user,allow_expired=True)
+    rate_limit(db,'docx-resume:'+str(user['admin_id']),20)
+    db.execute(sa.text('SELECT pg_advisory_xact_lock(:key)'),{'key':lock_key(manifest['source_hash'])})
+    directory,manifest=load_stage(token,user,allow_expired=True)
+    for image in manifest['images']:
+        file=directory/image['key']
+        if file.is_symlink() or not file.is_file() or checksum(file)!=image['sha256']:
+            raise stage_error('docx_staging_missing','A mídia temporária está indisponível. Reanexe o mesmo DOCX para recuperar sua revisão aberta.',404)
+    if body is not None:manifest['review_data']=cms.validate('artigos',body.data)
+    manifest['expires']=min(time.time()+get_settings().docx_staging_minutes*60,recovery_deadline(manifest))
+    write_manifest(directory,manifest);db.commit()
+    return view(db,token,manifest)
 
 @router.post('/staging/{token}/commit')
 def commit_import(token:str,body:Confirm,user=Depends(authenticated),db=Depends(get_db)):
-    directory,manifest=load_stage(token,user)
+    try:directory,manifest=load_stage(token,user)
+    except HTTPException as error:
+        if error.status_code not in {404,410}:raise
+        result=saved_result(token,user,db)
+        if result['entryId']:return result
+        raise error
     if not body.reviewed:raise HTTPException(422,'Confirme a revisão do conteúdo, das imagens e da capa.')
     rate_limit(db,'docx-commit:'+str(user['admin_id']),20)
     source=manifest['source_hash'];stage_key='docx_stage:'+directory.name
@@ -199,7 +249,7 @@ def commit_import(token:str,body:Confirm,user=Depends(authenticated),db=Depends(
     receipt=db.scalar(sa.select(m.site_settings.c.value).where(m.site_settings.c.key==stage_key))
     previous=db.scalar(sa.select(m.site_settings.c.value).where(m.site_settings.c.key=='docx_source:'+source))
     if receipt or previous and body.decision=='auto':
-        entry_id=UUID((receipt or previous)['entry_id']);return commit_result(cms.get_entry(db,'artigos',entry_id))
+        entry_id=UUID((receipt or previous)['entry_id']);return commit_result(imported_entry(db,entry_id))
     data=cms.validate('artigos',body.data);data['docxImported']=True
     existing=db.execute(sa.select(m.cms_entries).where(m.cms_entries.c.module=='artigos',m.cms_entries.c.slug==data['slug']).with_for_update()).mappings().first()
     row=None
@@ -213,7 +263,8 @@ def commit_import(token:str,body:Confirm,user=Depends(authenticated),db=Depends(
     try:
         for image in assets:
             staged=directory/image['key'];final=cms.UPLOAD_ROOT/image['key']
-            if staged.is_symlink() or checksum(staged)!=image['sha256'] or final.exists() or final.is_symlink():raise HTTPException(409,'Conflito ou alteração de mídia; nenhuma imagem foi substituída.')
+            if not staged.is_file() or staged.is_symlink():raise stage_error('docx_staging_missing','Uma imagem temporária não está disponível. Reanexe o mesmo DOCX para recuperar a revisão aberta.',404)
+            if checksum(staged)!=image['sha256'] or final.exists() or final.is_symlink():raise HTTPException(409,'Conflito ou alteração de mídia; nenhuma imagem foi substituída.')
             db.execute(m.media_assets.insert().values(id=UUID(image['id']),storage_key=image['key'],original_name=image['name'],mime_type=image['mime'],size_bytes=staged.stat().st_size,width=image['width'],height=image['height'],sha256=image['sha256'],uploaded_by=user['admin_id']))
         if row and '_legacy' in row['data']:data['_legacy']=row['data']['_legacy']
         values={'data':data,'title':data['title'],'slug':data['slug'],'editor_id':user['admin_id'],'status':'draft','scheduled_data':None,'scheduled_at':None}

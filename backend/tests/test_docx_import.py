@@ -243,7 +243,7 @@ def test_crash_orphan_cleanup_deletes_only_owned_hard_links(client):
     c,h,root=client;p=stage(client,document(1,'Crash '+uuid4().hex));directory=root/'.docx-staging'/hashlib.sha256(p['token'].encode()).hexdigest()
     manifest=json.loads((directory/'manifest.json').read_text());item=manifest['images'][0]
     service.os.link(directory/item['key'],root/item['key']);unrelated=root/'unrelated.png';unrelated.write_bytes(b'preserve')
-    manifest['expires']=0;service.write_manifest(directory,manifest)
+    manifest['expires']=0;manifest['recover_until']=0;service.write_manifest(directory,manifest)
     with Session(get_engine()) as db:service.cleanup_expired(db)
     assert not (root/item['key']).exists() and unrelated.read_bytes()==b'preserve'
 
@@ -296,3 +296,71 @@ def test_receipt_is_bound_to_original_session(client):
         other.get('/api/admin/auth/csrf');headers={'Origin':'http://localhost:8080','X-CSRF-Token':other.cookies['portfolio_csrf']}
         assert other.post('/api/admin/auth/login',headers=headers,json={'email':email,'password':'synthetic-password-32-characters'}).status_code==200
         assert other.get('/api/admin/docx/staging/'+p['token']+'/result').status_code==403
+
+
+def test_expired_staging_survives_cleanup_for_explicit_resume(client):
+    import hashlib,json,time
+    from sqlalchemy.orm import Session
+    from app import docx_import as service
+    c,h,root=client;p=stage(client,document(4,'Expiration '+uuid4().hex));url='/api/admin/docx/staging/'+p['token']
+    edited={**p['data'],'description':'Editorial review must survive expiration'}
+    assert c.post(url+'/render',headers=h,json={'data':edited}).status_code==200
+    directory=root/'.docx-staging'/hashlib.sha256(p['token'].encode()).hexdigest()
+    manifest=json.loads((directory/'manifest.json').read_text());manifest['expires']=time.time()-1;service.write_manifest(directory,manifest)
+    assert confirm(client,p).status_code==410
+    with Session(get_engine()) as db:service.cleanup_expired(db)
+    assert directory.exists(),'cleanup erased a recoverable editorial review'
+    resumed=c.post(url+'/resume',headers=h);assert resumed.status_code==200,resumed.text
+    assert resumed.json()['data']['description']==edited['description'] and len(resumed.json()['images'])==4
+    p['data']=resumed.json()['data'];assert confirm(client,p).status_code==200
+
+
+def test_repeat_commit_after_staging_removed_returns_saved_article(client):
+    import hashlib,shutil
+    c,h,root=client;p=stage(client,document(4,'Repeat after removal '+uuid4().hex));entry=confirm(client,p).json()['entry']
+    shutil.rmtree(root/'.docx-staging'/hashlib.sha256(p['token'].encode()).hexdigest())
+    repeated=confirm(client,p);assert repeated.status_code==200,repeated.text
+    assert repeated.json()['entryId']==entry['id'] and len(list(root.glob('*.png')))==4
+
+
+def test_resume_requires_session_csrf_and_obeys_hard_deadline(client):
+    import hashlib,json,time
+    from app import docx_import as service
+    from app.main import app
+    c,h,root=client;p=stage(client,document(1,'Bounded recovery '+uuid4().hex));url='/api/admin/docx/staging/'+p['token']
+    assert c.post(url+'/resume').status_code==403
+    with TestClient(app) as anonymous:assert anonymous.post(url+'/resume',headers=h).status_code==401
+    email=c.get('/api/admin/auth/me').json()['email']
+    with TestClient(app) as other:
+        other.get('/api/admin/auth/csrf');headers={'Origin':'http://localhost:8080','X-CSRF-Token':other.cookies['portfolio_csrf']}
+        assert other.post('/api/admin/auth/login',json={'email':email,'password':'synthetic-password-32-characters'},headers=headers).status_code==200
+        headers['X-CSRF-Token']=other.cookies['portfolio_csrf']
+        assert other.post(url+'/resume',headers=headers).status_code==403
+    directory=root/'.docx-staging'/hashlib.sha256(p['token'].encode()).hexdigest()
+    manifest=json.loads((directory/'manifest.json').read_text());manifest['expires']=time.time()-1;manifest['recover_until']=time.time()-1;service.write_manifest(directory,manifest)
+    response=c.post(url+'/resume',headers=h);assert response.status_code==410
+    assert response.json()['detail']['code']=='docx_staging_gone'
+    assert c.get(p['images'][0]['previewUrl']).status_code==410
+
+
+def test_missing_staged_image_has_recoverable_error_not_generic_failure(client):
+    import hashlib,json
+    c,h,root=client;p=stage(client,document(1,'Missing image '+uuid4().hex))
+    directory=root/'.docx-staging'/hashlib.sha256(p['token'].encode()).hexdigest()
+    manifest=json.loads((directory/'manifest.json').read_text());(directory/manifest['images'][0]['key']).unlink()
+    result=confirm(client,p);assert result.status_code==404
+    assert result.json()['detail']['code']=='docx_staging_missing'
+    with get_engine().connect() as db:assert not db.scalar(sa.select(m.cms_entries.c.id).where(m.cms_entries.c.slug==p['data']['slug']))
+
+
+def test_receipt_for_soft_deleted_article_requires_explicit_recovery(client):
+    c,h,root=client;p=stage(client,document(4,'Deleted receipt '+uuid4().hex));first=confirm(client,p).json()['entry']
+    assert c.delete('/api/admin/cms/artigos/'+first['id'],params={'version':first['version']},headers=h).status_code==200
+    repeated=confirm(client,p);assert repeated.status_code==200,repeated.text
+    row=repeated.json()['entry'];assert row['id']==first['id'] and row['deleted_at'] and row['status']=='archived'
+    assert c.get('/api/admin/cms/artigos/'+first['id']).status_code==404
+    restored=c.post('/api/admin/docx/staging/'+p['token']+'/recover',headers=h,json={'entryId':row['id'],'version':row['version']})
+    assert restored.status_code==200,restored.text
+    assert restored.json()['entry']['deleted_at'] is None and restored.json()['entry']['data']==first['data']
+    assert c.get('/api/admin/cms/artigos/'+first['id']).json()['status']=='draft'
+    assert len(list(root.glob('*.png')))==4 and len(c.get('/api/admin/docx/history/'+first['id']).json())==1
