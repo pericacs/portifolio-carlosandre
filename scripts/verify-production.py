@@ -79,12 +79,20 @@ try:
     run("run","--rm","--network",prefix,*env,"-v",prefix+"-tls:/tls:ro",backend,"python","-c","import ssl,urllib.request; c=ssl.create_default_context(cafile='/tls/fullchain.pem'); assert urllib.request.urlopen('https://carlosandre.tech/api/health/ready',context=c,timeout=10).status==200; assert urllib.request.urlopen('https://carlosandre.tech/',context=c,timeout=10).status==200; print('Existing-host Nginx -> internal Nginx HTTPS proxy passed')")
     run("exec",prefix+"-worker","python","-c","import time,pathlib; assert time.time()-pathlib.Path('/tmp/worker-heartbeat').stat().st_mtime < 90")
     run("run","--rm","--network","none","-v",str(root/"scripts/production")+":/scripts:ro","bash:5.2","bash","-c","for f in /scripts/*.sh; do bash -n \"$f\" || exit; done")
-    if "--visual" in __import__("sys").argv:
+    if any(flag in __import__("sys").argv for flag in ("--visual","--docx")):
         # Read-only clone of approved local state; restore only into the disposable database.
         run("stop",prefix+"-api",prefix+"-worker")
-        source_dump = subprocess.run(["docker","exec","carlos-andre-portfolio-db-1","sh","-c",'pg_dump -U "$POSTGRES_USER" -d "$POSTGRES_DB" -Fc'],capture_output=True,check=True).stdout
-        subprocess.run(["docker","exec","-i",prefix+"-db","pg_restore","-U","portfolio","-d","portfolio","--clean","--if-exists","--no-owner","--no-privileges","--exit-on-error","--single-transaction"],input=source_dump,check=True)
-        run("run","--rm","--user","0","--network","none","--volumes-from","carlos-andre-portfolio-backend-1:ro","-v",prefix+"-media:/restore",backend,"sh","-c","cp -r /app/uploads/. /restore/ && chown -R 10001:10001 /restore")
+        if "--docx" in __import__("sys").argv:
+            # Remove synthetic unit-test contents from this disposable database
+            # before taking a visual baseline; no source database is accessed.
+            run("exec",prefix+"-db","dropdb","-U","portfolio","portfolio")
+            run("exec",prefix+"-db","createdb","-U","portfolio","portfolio")
+            app("alembic","upgrade","head")
+            app("python","-m","app.import_cms")
+        if "--visual" in __import__("sys").argv:
+            source_dump = subprocess.run(["docker","exec","carlos-andre-portfolio-db-1","sh","-c",'pg_dump -U "$POSTGRES_USER" -d "$POSTGRES_DB" -Fc'],capture_output=True,check=True).stdout
+            subprocess.run(["docker","exec","-i",prefix+"-db","pg_restore","-U","portfolio","-d","portfolio","--clean","--if-exists","--no-owner","--no-privileges","--exit-on-error","--single-transaction"],input=source_dump,check=True)
+            run("run","--rm","--user","0","--network","none","--volumes-from","carlos-andre-portfolio-backend-1:ro","-v",prefix+"-media:/restore",backend,"sh","-c","cp -r /app/uploads/. /restore/ && chown -R 10001:10001 /restore")
         run("network","create",prefix+"-edge")
         run("run","-d","--name",prefix+"-browser-proxy","--network",prefix+"-edge","-p","127.0.0.1::80","-v",str(root/"infra/nginx/production.conf")+":/etc/nginx/conf.d/default.conf:ro","nginx:stable-alpine")
         run("network","connect",prefix,prefix+"-browser-proxy")
@@ -99,7 +107,8 @@ try:
         child_env=os.environ.copy()
         child_env.update(RECOVERY_BASE_URL=base,RECOVERY_REFERENCE_URL="http://localhost:8080",RECOVERY_FIXTURE=str(fixture),RECOVERY_OUTPUT=str(temp/"visual"))
         try:
-            subprocess.run(["node",str(root/"frontend/tests/docker-recovery.spec.cjs")],cwd=root,env=child_env,check=True)
+            spec="docx-import.spec.cjs" if "--docx" in __import__("sys").argv else "docker-recovery.spec.cjs"
+            subprocess.run(["node",str(root/"frontend/tests"/spec)],cwd=root,env=child_env,check=True)
         finally:
             fixture.unlink(missing_ok=True)
         print("Visual report:",temp/"visual/report.json")

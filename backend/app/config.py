@@ -23,6 +23,10 @@ class Settings(BaseSettings):
     smtp_from: str = Field("",validation_alias=AliasChoices("SMTP_FROM_EMAIL","SMTP_FROM","smtp_from"))
     smtp_starttls: bool = Field(True,validation_alias=AliasChoices("SMTP_USE_STARTTLS","SMTP_STARTTLS","smtp_starttls"))
     contact_notification_email: str = "pericacs@gmail.com"
+    docx_default_author: str = ""
+    docx_default_category: str = ""
+    docx_default_tags: list[str] = []
+    docx_staging_minutes: int = Field(default=60,ge=10,le=1440)
 
     @model_validator(mode="after")
     def validate_environment(self):
