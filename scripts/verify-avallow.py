@@ -3,7 +3,7 @@ import json,os,subprocess,time,uuid
 from pathlib import Path
 root=Path(__file__).resolve().parents[1];name='portfolio-avallow-'+uuid.uuid4().hex[:10]
 out=root/'.private'/name;out.mkdir(parents=True)
-backend='carlosandre-docx-check-backend'
+backend=os.environ.get('AVALLOW_BACKEND_IMAGE','carlosandre-docx-check-backend')
 env=['-e','POSTGRES_USER=stage','-e','POSTGRES_DB=stage','-e','POSTGRES_PASSWORD=synthetic-avallow-password-32','-e','DB_HOST=db']
 def run(*args):
     result=subprocess.run(['docker',*args],capture_output=True,text=True,encoding='utf8',check=True)
