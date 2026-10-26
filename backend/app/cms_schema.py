@@ -38,8 +38,8 @@ MODULES['artigos']['fields'] += [text('contentType','Tipo','select',options=['Ar
 # Article controls must not inherit the project-only tab remapping below.
 MODULES['artigos']['fields']=[dict(f) for f in MODULES['artigos']['fields']]
 for f in MODULES['artigos']['fields']:
-    if f['key']=='featured':f['label']='Destaque na Home'
-    if f['key']=='sortOrder':f['label']='Ordem da listagem de artigos'
+    if f['key']=='featured':f['label']='Marcação editorial'
+    if f['key']=='sortOrder':f['label']='Ordem manual (não altera a recência)'
 PROJECT_TABS=['Informações gerais','Imagens e mídia','Funcionalidades','Arquitetura e tecnologias','Links e acessos','Resultados e roadmap','SEO e publicação']
 project=MODULES['projetos']
 for f in project['fields']:

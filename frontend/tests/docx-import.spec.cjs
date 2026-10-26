@@ -109,8 +109,8 @@ assert(base&&new URL(base).hostname==='127.0.0.1');
   await page.getByRole('button',{name:'Fechar ×'}).click();
   assert(await page.locator('img').evaluateAll(imgs=>imgs.every(x=>x.naturalWidth>0&&Math.abs(x.width/x.height-x.naturalWidth/x.naturalHeight)<0.03)));
   for(const route of routes){await page.goto(base+route,{waitUntil:'networkidle'});for(const width of [1440,390]){
-   // The article index intentionally gains the explicitly published test article.
-   if(route==='/artigos')continue;
+   // Home and the article index intentionally gain the explicitly published article.
+   if(route==='/'||route==='/artigos')continue;
    const after=await screenshot('after-'+route.replaceAll('/','_'),width),prior=baseline.get(route+width);
    const a=await sharp(prior).ensureAlpha().raw().toBuffer({resolveWithObject:true}),b=await sharp(after).ensureAlpha().raw().toBuffer({resolveWithObject:true});
    assert.deepEqual(a.info,b.info);let changed=0;for(let i=0;i<a.data.length;i+=4)if([0,1,2].some(c=>Math.abs(a.data[i+c]-b.data[i+c])>12))changed++;

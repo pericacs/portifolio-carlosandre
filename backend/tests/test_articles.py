@@ -27,7 +27,7 @@ def test_article_home_controls_are_in_available_tabs_and_independent():
     from app.cms_schema import MODULES
     article={f['key']:f for f in MODULES['artigos']['fields']}
     project={f['key']:f for f in MODULES['projetos']['fields']}
-    assert article['featured']['tab']=='Publicação' and article['featured']['label']=='Destaque na Home'
+    assert article['featured']['tab']=='Publicação' and article['featured']['label']=='Marcação editorial'
     assert article['sortOrder']['tab']=='Publicação'
     assert article['featured'] is not project['featured']
     assert project['featured']['tab']=='SEO e publicação'

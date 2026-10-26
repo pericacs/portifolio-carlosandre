@@ -23,7 +23,8 @@ export const publicContent=cache(async()=>{
   modules[module]??=[];
   for(const row of rows){const index=modules[module].findIndex(x=>x.sourceKey&&x.sourceKey===row.sourceKey);if(index>=0)modules[module][index]=row;else modules[module].push(row);}
  }
- for(const key in modules)modules[key]=modules[key].filter(x=>x.visible!==false).sort((a,b)=>(a.sortOrder||0)-(b.sortOrder||0));
+ // The API supplies the authoritative, eligible article sequence before any limit.
+ for(const key in modules)if(key!=='artigos')modules[key]=modules[key].filter(x=>x.visible!==false).sort((a,b)=>(a.sortOrder||0)-(b.sortOrder||0));
  return modules;
 });
 
@@ -42,5 +43,5 @@ export const publicData=cache(async()=>{
  const project=(x:any,i:number)=>(x.slug==='smartfamily'?{...originalHome.projects[0],slug:x.slug}:{...originalHome.projects[i%4],...x._legacy,...x,name:x.title,detail:x._legacy?.detail||x.description,technologies:x.technologies||[],tags:x.tags||[],crop:x._legacy?.crop||[45,271,192,67],imageAlt:x.title});
  const video=(x:any,i:number)=>({...originalHome.videos[i%4],...x._legacy,...x,crop:x._legacy?.crop||[70,853,170,53]});
  const contacts={email:settings.email||profile.email||'',whatsapp:settings.whatsapp||profile.whatsapp||'',linkedin:settings.linkedin||profile.linkedin||'',youtube:settings.youtube||profile.youtube||'',github:settings.github||profile.github||''};
- return {modules,profile,settings,contacts,curriculum:cv,projects:(modules.projetos||[]).filter(x=>x.featured).map(project) as (typeof originalHome.projects[number]&Record<string,any>)[],articles:(modules.artigos||[]).filter(x=>x.featured&&!x.planned).sort((a,b)=>(b.publishedDate||'').localeCompare(a.publishedDate||'')||a.slug.localeCompare(b.slug,'pt-BR')),videos:(modules.videos||[]).filter(x=>x.featured).map(video) as (typeof originalHome.videos[number]&Record<string,any>)[],experiences:experiences.filter(x=>x.featured),skills:skills.filter(x=>x.featured).map((x:any,i:number)=>({...originalHome.skills[i%7],...x,description:x.description||(modules.skills||[]).filter(v=>v.categoryId===x.id&&v.featured).map(v=>v.title).join(', ')+'.'})) as typeof originalHome.skills,services:settings.services||[]};
+ return {modules,profile,settings,contacts,curriculum:cv,projects:(modules.projetos||[]).filter(x=>x.featured).map(project) as (typeof originalHome.projects[number]&Record<string,any>)[],articles:(modules.artigos||[]).slice(0,3),videos:(modules.videos||[]).filter(x=>x.featured).map(video) as (typeof originalHome.videos[number]&Record<string,any>)[],experiences:experiences.filter(x=>x.featured),skills:skills.filter(x=>x.featured).map((x:any,i:number)=>({...originalHome.skills[i%7],...x,description:x.description||(modules.skills||[]).filter(v=>v.categoryId===x.id&&v.featured).map(v=>v.title).join(', ')+'.'})) as typeof originalHome.skills,services:settings.services||[]};
 });
