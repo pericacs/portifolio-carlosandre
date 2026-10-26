@@ -29,16 +29,24 @@ const base=process.env.RECOVERY_BASE_URL;assert(base&&new URL(base).hostname==='
   assert.equal((await publications()).length,3);assert.equal(await (await home()).filter({hasText:title}).count(),0);
   newest=await publish(newest);const date=newest.published_at.slice(0,10);
   let all=await publications();assert.deepEqual(all.map(x=>x.id),[newest.id,split.id,middle.id,old.id]);assert.equal(all[0].publishedDate,date);assert.equal(all[0].featured,false);
-  cards=await home();assert.equal(await cards.count(),3);assert.deepEqual(await cards.locator('h3').allTextContents(),[title,data.title,middle.title]);
+  cards=await home();assert.equal(await cards.count(),4);assert.deepEqual(await cards.locator('h3').allTextContents(),[title,data.title,middle.title,old.title]);
   assert.equal(await cards.first().locator('img').getAttribute('src'),newest.published_data.cover);assert.equal(await cards.first().locator('h3 a').getAttribute('href'),'/artigos/newest');
   assert.equal(await cards.first().locator('p').innerText(),newest.published_data.description);
-  for(const width of [1440,390])await screenshot('home-recent',width);
+  for(const [width,columns] of [[1440,4],[1001,4],[1000,2],[768,2],[651,2],[650,1],[390,1]]){
+   await page.setViewportSize({width,height:1000});
+   const layout=await page.locator('#artigos .projects-grid').evaluate(node=>({columns:getComputedStyle(node).gridTemplateColumns.split(' ').length,cards:[...node.children].map(x=>({left:x.getBoundingClientRect().left,top:x.getBoundingClientRect().top,width:x.getBoundingClientRect().width}))}));
+   assert.equal(layout.columns,columns,'Article columns at '+width);assert.equal(new Set(layout.cards.slice(0,columns).map(x=>x.top)).size,1);
+   if(width===1440){const video=await page.locator('#videos .videos-grid').evaluate(node=>[...node.children].map(x=>({left:x.getBoundingClientRect().left,width:x.getBoundingClientRect().width})));assert.deepEqual(layout.cards.map(({left,width})=>({left,width})),video);}
+   report.comparisons.push({viewport:width,articleColumns:columns});
+   if([1440,768,390].includes(width))await screenshot('home-recent',width);
+  }
   await page.setViewportSize({width:1440,height:1000});for(const id of sections){assert.deepEqual(await signature(page.locator('#'+id)),baseline[id]);report.comparisons.push({section:id,contentAndStyles:'unchanged'});}
   await page.goto(base+'/artigos',{waitUntil:'networkidle'});assert.equal(await page.getByRole('heading',{name:title,level:2,exact:true}).count(),1);assert.equal(await page.getByRole('heading',{name:title,level:3,exact:true}).count(),1);
   assert.deepEqual(await page.locator('main article h3').allTextContents(),[title,data.title,middle.title,old.title]);
   for(const width of [1440,390])await screenshot('listing-recent',width);
   // Backend pagination uses the exact sequence consumed by both pages.
   const a=await (await context.request.get(base+'/api/articles?limit=2&offset=0')).json(),b=await (await context.request.get(base+'/api/articles?limit=2&offset=2')).json();assert.equal(a.total,4);assert.deepEqual([...a.items,...b.items].map(x=>x.id),all.map(x=>x.id));
+  const fifth=await publish(await create('Artigo mais antigo de controle','fifth','2026-10-01',-10000));assert.equal((await publications()).length,5);assert.deepEqual(await (await home()).locator('h3').allTextContents(),[title,data.title,middle.title,old.title]);await api('/cms/artigos/'+fifth.id+'/unpublish','POST',{version:fifth.version});
   const anonymous=await browser.newContext();assert.equal((await anonymous.request.get(base+data.cover)).status(),200);await anonymous.close();
   // Save pending edits through the existing editor; keep the previous public snapshot.
   await page.goto(base+'/admin/artigos/'+newest.id);await page.getByRole('button',{name:'Conteúdo',exact:true}).click();await page.locator('#field-description').fill('Resumo revisado pelo painel.');await page.getByRole('button',{name:'Salvar rascunho',exact:true}).click();await page.getByRole('status').filter({hasText:'Rascunho salvo.'}).waitFor();
@@ -50,6 +58,6 @@ const base=process.env.RECOVERY_BASE_URL;assert(base&&new URL(base).hostname==='
   await api('/cms/artigos/'+newest.id+'/unpublish','POST',{version:current.version});assert.deepEqual(await (await home()).locator('h3').allTextContents(),[data.title,middle.title,old.title]);
   await page.goto(base+'/artigos');assert.equal(await page.getByRole('heading',{name:title,exact:true}).count(),0);
   assert.deepEqual((await api('/cms/artigos/'+old.id)).published_data,old.published_data);assert.deepEqual((await api('/cms/artigos/'+middle.id)).published_data,middle.published_data);
-  assert.deepEqual(errors,[]);report.result='passed';report.checks=['shared chronology before pagination','Home always three newest without featured filter','spotlight also in normal grid','new publication automatically visible','draft edits preserve public snapshot','publish/edit/unpublish synchronization','flags/manual order do not affect recency','existing editor and other sections preserved'];await fs.writeFile(path.join(out,'report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));
+  assert.deepEqual(errors,[]);report.result='passed';report.checks=['shared chronology before pagination','Home always four newest without featured filter; fifth excluded','four/two/one columns at existing breakpoints; desktop aligned with videos','spotlight also in normal grid','new publication automatically visible','draft edits preserve public snapshot','publish/edit/unpublish synchronization','flags/manual order do not affect recency','existing editor and other sections preserved'];await fs.writeFile(path.join(out,'report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));
  }catch(error){await page.screenshot({path:path.join(out,'failure.png'),fullPage:true}).catch(()=>{});throw error;}finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exit(1)});

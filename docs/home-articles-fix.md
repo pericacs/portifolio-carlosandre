@@ -1,6 +1,6 @@
 # Artigos recentes na Home — regra atual
 
-A Home exibe automaticamente os **três artigos publicados mais recentes** da mesma fonte oficial de `/artigos`. Não exige marcação `featured` nem alteração manual de código. O artigo destacado na listagem continua também na grade cronológica.
+A Home exibe automaticamente os **quatro artigos publicados mais recentes** da mesma fonte oficial de `/artigos`. Não exige marcação `featured` nem alteração manual de código. O artigo destacado na listagem continua também na grade cronológica.
 
 A regra compartilhada usa a data editorial confirmada; quando ausente, utiliza o primeiro instante de publicação conhecido no CMS. Empates usam criação e ID, sem usar a última edição ou a prioridade manual. Registros sem data ficam ao final. Filtros e ordem são aplicados antes de limites/paginação.
 
