@@ -35,3 +35,4 @@
 #artigos .home-article-card .project-body>p{-webkit-line-clamp:3}
 #artigos .home-article-footer{flex-direction:column;align-items:stretch;gap:5px}
 #artigos .home-article-footer .text-link{align-self:flex-end}
+#projetos .project-status-image[data-avallow]{overflow:hidden}#projetos .project-status-image[data-avallow]>.artwork{height:100%!important;object-fit:cover}

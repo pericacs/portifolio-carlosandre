@@ -20,6 +20,7 @@ from app import models as m
 from app.db import get_db
 from app.admin import authenticated, audit, now, digest, rate_limit, require_origin
 from app.cms_schema import MODULES, validate, fail, public_project
+from app.article_publications import published_articles,publication_instant,eligibility
 
 router=APIRouter(prefix='/api/admin/cms',dependencies=[Depends(authenticated)])
 public=APIRouter(prefix='/api')
@@ -242,7 +243,7 @@ def publish_entry(db,row,actor,data=None):
     if row['module']=='projetos': payload=public_project(payload)
     refs(db,row['id'],row['module'],payload,'published')
     for table in (m.cms_links,m.cms_media_refs): db.execute(table.delete().where(table.c.entry_id==row['id'],table.c.scope=='scheduled'))
-    result=db.execute(m.cms_entries.update().where(m.cms_entries.c.id==row['id']).values(published_data=payload,published_at=now(),status='published',scheduled_at=None,scheduled_data=None,version=row['version']+1,editor_id=actor).returning(m.cms_entries)).mappings().one()
+    result=db.execute(m.cms_entries.update().where(m.cms_entries.c.id==row['id']).values(published_data=payload,published_at=publication_instant(db,row,now()) if row['module']=='artigos' else now(),status='published',scheduled_at=None,scheduled_data=None,version=row['version']+1,editor_id=actor).returning(m.cms_entries)).mappings().one()
     revision(db,result,'publish',actor);return dict(result)
 
 
@@ -302,14 +303,22 @@ def public_content(response:Response,db:Session=Depends(get_db)):
     response.headers['Cache-Control']='no-store'
     initialized=db.scalar(sa.select(m.site_settings.c.id).where(m.site_settings.c.key=='cms_initialized')) is not None
     result={module:[] for module in MODULES}
-    rows=db.execute(sa.select(m.cms_entries.c.id,m.cms_entries.c.module,m.cms_entries.c.source_key,m.cms_entries.c.published_data).where(m.cms_entries.c.published_data.is_not(None),m.cms_entries.c.deleted_at.is_(None))).mappings()
+    rows=db.execute(sa.select(m.cms_entries.c.id,m.cms_entries.c.module,m.cms_entries.c.source_key,m.cms_entries.c.published_data).where(m.cms_entries.c.published_data.is_not(None),m.cms_entries.c.deleted_at.is_(None),m.cms_entries.c.module!='artigos')).mappings()
     for row in rows:
         data=public_project(row['published_data']) if row['module']=='projetos' else row['published_data']
         result[row['module']].append({**data,'id':str(row['id']),'sourceKey':row['source_key']})
     for values in result.values(): values.sort(key=lambda x:x.get('sortOrder',0))
+    result['artigos']=published_articles(db)
     mapping=dict(db.execute(sa.select(m.cms_entries.c.source_key,m.cms_entries.c.id).where(m.cms_entries.c.source_key.is_not(None))).all())
     hidden=list(db.scalars(sa.select(m.cms_entries.c.source_key).where(m.cms_entries.c.source_key.is_not(None),sa.or_(m.cms_entries.c.deleted_at.is_not(None),m.cms_entries.c.status=='archived',sa.and_(m.cms_entries.c.published_at.is_not(None),m.cms_entries.c.published_data.is_(None))))))
     return {'initialized':initialized,'modules':result,'legacyMap':mapping,'hidden':hidden}
+
+
+@public.get('/articles')
+def article_page(response:Response,limit:int=Query(default=20,ge=1,le=100),offset:int=Query(default=0,ge=0),db:Session=Depends(get_db)):
+    response.headers['Cache-Control']='no-store'
+    total=db.scalar(sa.select(sa.func.count()).select_from(m.cms_entries).where(*eligibility()))
+    return {'items':published_articles(db,limit,offset),'total':total,'limit':limit,'offset':offset}
 
 
 class Contact(BaseModel):

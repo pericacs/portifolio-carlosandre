@@ -1,0 +1,97 @@
+{
+  "visual": [
+    {
+      "route": "/",
+      "width": 1440,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/sobre",
+      "width": 1440,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/experiencia",
+      "width": 1440,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/cases",
+      "width": 1440,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/artigos",
+      "width": 1440,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/privacidade",
+      "width": 1440,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/projetos/smartfamily",
+      "width": 1440,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/artigos/engenharia-de-dados-aplicada-ao-split-payment-do-bem",
+      "width": 1440,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/sobre",
+      "width": 390,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/experiencia",
+      "width": 390,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/cases",
+      "width": 390,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/artigos",
+      "width": 390,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/privacidade",
+      "width": 390,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/projetos/smartfamily",
+      "width": 390,
+      "changedPixelRatio": 0
+    },
+    {
+      "route": "/artigos/engenharia-de-dados-aplicada-ao-split-payment-do-bem",
+      "width": 390,
+      "changedPixelRatio": 0
+    }
+  ],
+  "flows": [
+    "Public CMS parity",
+    "Responsive public routes",
+    "Login and SSR admin",
+    "CSRF rejection",
+    "CRUD and publish",
+    "Optimistic concurrency",
+    "Private upload authorization",
+    "Curriculum download",
+    "Contact durability",
+    "Pending email retry without duplicate contacts",
+    "Logout"
+  ]
+}

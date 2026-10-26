@@ -35,6 +35,11 @@ MODULES={
  "configuracoes":{"label":"Configurações","singleton":True,"fields":[text("title","Nome do site",required=True),media("logo","Logotipo"),media("favicon","Favicon (PNG)"),media("photo","Foto principal alternativa"),media("banner","Banner de contato"),content("footer","Texto do rodapé","lines"),content("institutional","Texto institucional"),content("services","Serviços e chamadas","services"),content("sectionOrder","Ordem das seções da Home","order"),content("categories","Categorias de conteúdo","lines"),content("locales","Idiomas habilitados","lines"),text("email","E-mail comercial","email"),text("whatsapp","WhatsApp"),text("linkedin","LinkedIn","url"),text("youtube","YouTube","url"),text("github","GitHub","url"),text("scheduleUrl","Link comercial / agenda","url"),text("analyticsId","Identificador da integração analytics (preparação)"),pub("retentionDays","Retenção de mensagens em dias","number",default=180)]+SEO},
 }
 MODULES['artigos']['fields'] += [text('contentType','Tipo','select',options=['Artigo','Insight'],default='Artigo'),content('categories','Assuntos','lines'),text('publishedDate','Data de publicação confirmada','date'),text('author','Autor'),text('originalUrl','URL original','url'),text('readingMode','Modo de leitura','select',options=['Interno','Externo'],default='Interno'),pub('spotlight','Destaque principal da listagem')]
+# Article controls must not inherit the project-only tab remapping below.
+MODULES['artigos']['fields']=[dict(f) for f in MODULES['artigos']['fields']]
+for f in MODULES['artigos']['fields']:
+    if f['key']=='featured':f['label']='Marcação editorial'
+    if f['key']=='sortOrder':f['label']='Ordem manual (não altera a recência)'
 PROJECT_TABS=['Informações gerais','Imagens e mídia','Funcionalidades','Arquitetura e tecnologias','Links e acessos','Resultados e roadmap','SEO e publicação']
 project=MODULES['projetos']
 for f in project['fields']:
@@ -96,10 +101,10 @@ def youtube_id(value):
 
 
 def clean_html(value):
-    return nh3.clean(value,tags={'figure','figcaption','b','i','p','br','h2','h3','h4','strong','em','u','s','ul','ol','li','blockquote','pre','code','a','img','table','thead','tbody','tr','th','td','hr'},
-        attributes={'a':{'href','title'},'img':{'src','alt'},'th':{'colspan','rowspan'},'td':{'colspan','rowspan'}},
+    return nh3.clean(value,tags={'figure','figcaption','b','i','p','br','h2','h3','h4','strong','em','u','s','sup','ul','ol','li','blockquote','pre','code','a','img','table','thead','tbody','tr','th','td','hr'},
+        attributes={'a':{'href','title'},'img':{'src','alt'},'ol':{'start','type'},'li':{'id'},'th':{'colspan','rowspan'},'td':{'colspan','rowspan'}},
         url_schemes={'https','http'},link_rel='noopener noreferrer',
-        attribute_filter=lambda tag,attr,val: val if not(tag=='img' and attr=='src' and not re.fullmatch(r'/api/media/[a-f0-9-]{36}',val)) else None)
+        attribute_filter=lambda tag,attr,val: None if (tag=='img' and attr=='src' and not re.fullmatch(r'/api/media/[a-f0-9-]{36}',val)) or (attr=='id' and not re.fullmatch(r'docx-note-\d+',val)) or (tag=='ol' and attr=='start' and not re.fullmatch(r'\d{1,5}',val)) or (tag=='ol' and attr=='type' and val not in {'1','a','A','i','I'}) else val)
 
 
 def validate(module,data,publishing=False):
@@ -170,6 +175,7 @@ def validate(module,data,publishing=False):
         if result['duration'] and not re.fullmatch(r'(?:(?:\d{1,2}):)?\d{1,2}:[0-5]\d',result['duration']): fail('Duração inválida. Use mm:ss ou hh:mm:ss.')
         if publishing and not result['planned'] and not result['youtubeId']: fail('Cadastre a URL antes de publicar o vídeo.')
     if module=='artigos':
+        if data.get('docxImported') is True:result['docxImported']=True
         words=len(re.sub('<[^>]+>',' ',result['body']).split())
         result['readingMinutes']=max(1,(words+199)//200)
         if publishing and not result['planned']:

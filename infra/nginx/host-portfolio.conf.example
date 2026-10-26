@@ -1,0 +1,27 @@
+# Dedicated virtual host ONLY. Review existing Hostinger Nginx and certificate paths first.
+# Do not replace nginx.conf or edit the SmartFamily virtual host.
+server {
+    listen 80;
+    server_name carlosandre.tech;
+    return 301 https://carlosandre.tech$request_uri;
+}
+server {
+    listen 443 ssl;
+    server_name carlosandre.tech;
+    ssl_certificate /etc/letsencrypt/live/carlosandre.tech/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/carlosandre.tech/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    client_max_body_size 10m;
+    # Install the repository snippet first; affects only this portfolio HTTPS host.
+    include /etc/nginx/snippets/carlosandre-docx-upload.conf;
+    add_header Strict-Transport-Security "max-age=31536000" always;
+    location / {
+        proxy_pass http://127.0.0.1:8088;
+        proxy_set_header Host carlosandre.tech;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header X-Forwarded-Proto https;
+        proxy_connect_timeout 5s;
+        proxy_read_timeout 60s;
+    }
+}

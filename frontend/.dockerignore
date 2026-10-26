@@ -2,3 +2,9 @@ node_modules
 .next
 *.tsbuildinfo
 .env*
+dist
+.wrangler
+.vinext
+.dev.vars*
+test-results
+playwright-report

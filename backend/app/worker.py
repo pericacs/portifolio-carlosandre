@@ -39,6 +39,11 @@ def tick(db):
             db.execute(m.cms_entries.update().where(m.cms_entries.c.id==row['id']).values(status='published' if row['published_data'] else 'draft',scheduled_at=None,scheduled_data=None))
             audit(db,'cms.schedule_failed',row['editor_id'],'cms_entries',row['id'])
     db.commit()
+
+    # Private DOCX staging lives on the portfolio's media volume only. Reconcile
+    # ambiguous file/DB commits before expiring temporary extracted assets.
+    from app.docx_import import cleanup_expired
+    cleanup_expired(db)
     config=db.scalar(sa.select(m.cms_entries.c.published_data).where(m.cms_entries.c.module=='configuracoes',m.cms_entries.c.published_data.is_not(None))) or {}
     settings=get_settings()
     if notification_ready(settings):

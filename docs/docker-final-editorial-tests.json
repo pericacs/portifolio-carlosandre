@@ -1,0 +1,65 @@
+{
+  "localOnly": true,
+  "baseCommit": "7eb4be7",
+  "cloudflarePreservedCommit": "39d187d",
+  "archiveSha256": "60812da2f38caa50b9a52fb04b07ab4a7689f78fde5538713b82fe848acd69c3",
+  "importerSha256": "5890d347619e70fc69425025738fb45a3f14cf15f1a3288af20eb2cfbf9077cc",
+  "contents": 122,
+  "states": {
+    "draft": 118,
+    "published": 4
+  },
+  "media": 28,
+  "builds": {
+    "backend": true,
+    "frontendStandalone": true,
+    "typeScriptInFrontendBuild": true
+  },
+  "offlineEditorialTests": {
+    "passed": 19
+  },
+  "generalSuite": {
+    "passed": 81,
+    "skippedPrivatePackageCases": 18
+  },
+  "staging": {
+    "checks": [
+      "revised archive SHA-256",
+      "stage_seed initial count",
+      "stage_seed planning is read only",
+      "stage_seed exact content, media, FK, states, exclusions",
+      "stage_seed idempotent apply",
+      "stage_seed rollback restores before hash",
+      "stage_seed idempotent rollback",
+      "stage_empty initial count",
+      "stage_empty planning is read only",
+      "stage_empty exact content, media, FK, states, exclusions",
+      "stage_empty idempotent apply",
+      "stage_empty rollback restores before hash",
+      "stage_empty idempotent rollback",
+      "forced SQL failure rolls back every editorial write and receipt",
+      "retry after transaction failure succeeds",
+      "later editorial changes block apply and rollback without overwrite",
+      "revised archive remains unchanged"
+    ],
+    "passed": 17,
+    "archive_sha256": "60812da2f38caa50b9a52fb04b07ab4a7689f78fde5538713b82fe848acd69c3",
+    "resources": "portfolio-editorial-stage-05d402aa6d"
+  },
+  "productionChecks": {
+    "isolatedCompose": true,
+    "alembicUpgradeAndCheck": true,
+    "postgresRestartPersistence": true,
+    "uploadsPersistence": true,
+    "databaseRestore": true,
+    "uploadsRestore": true,
+    "secureCookiesAndCsrf": true,
+    "hostNginxTlsProxy": true,
+    "gmailWorkerHeartbeat": true,
+    "bashSyntax": true
+  },
+  "vpsAccess": false,
+  "deploy": false,
+  "productionImport": false,
+  "designChanged": false
+}
