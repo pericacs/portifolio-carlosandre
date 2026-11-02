@@ -1,0 +1,33 @@
+{
+  "base": "875b689",
+  "date": "2026-11-02",
+  "build": "passed",
+  "typecheck": "passed",
+  "existingTests": {
+    "homeArticleOrder": "passed",
+    "typography": "passed",
+    "apiErrors": "11 cases passed"
+  },
+  "browser": {
+    "result": "passed",
+    "widths": [
+      1440,
+      768,
+      390
+    ],
+    "nativeZoom": [
+      100,
+      125,
+      150,
+      200
+    ],
+    "layoutChecks": 15,
+    "preservationChecks": 29,
+    "pageErrors": []
+  },
+  "originalPortrait": {
+    "portraitSha256": "52ab0b32e419dcdec6d46bc6da0fc1a16aa931c29a506b69f53d778c5ae6aea0",
+    "originalUnchanged": true
+  },
+  "scope": "presentation only; no dependencies, professional data, project pages, backend or production changes"
+}

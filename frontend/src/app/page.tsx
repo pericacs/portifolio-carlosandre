@@ -1,6 +1,7 @@
 import {HomeArticleCard} from '@/components/articles/home-card';
 import Link from 'next/link';
-import Image from 'next/image';
+import {HomeHero} from '@/components/home/hero';
+import {HomeTrajectory} from '@/components/home/trajectory';
 import { Icon } from '@/components/icon';
 import { Artwork } from '@/components/artwork';
 import { Header, DetailButton, ContactForm } from '@/components/home-interactions';
@@ -24,29 +25,12 @@ function projectStatus(project:Record<string,any>){
 function Tags({ items }: { items: readonly string[] }) { return <div className="tags">{items.map(item => <span key={item}>{item}</span>)}</div>; }
 
 export default async function Home() {
-  const {projects,services,experiences,skills,articles,videos,profile,settings,contacts,curriculum}=await publicData();
+  const {projects,services,skills,articles,videos,profile,settings,contacts,curriculum}=await publicData();
   return <>
     <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
     <Header profile={profile} settings={settings} contacts={contacts} />
     <main id="conteudo">
-      <section className="hero" id="inicio" aria-labelledby="hero-title">
-        <div className="container hero-inner">
-          <div className="hero-copy">
-            <p className="eyebrow">{profile.subtitle}</p>
-            <h1 id="hero-title">{(profile.heroPrefix||'').trim()} <span>{profile.heroHighlight}</span></h1>
-            <p className="hero-description">{(profile.heroDescription||'').split('\n').map((line:string,i:number)=><span key={i}>{i>0&&<br className="desktop-break"/>}{line}</span>)}</p>
-            <div className="hero-actions"><a className="button primary" href="#projetos">Conheça meus projetos <Icon name="arrow" /></a><a className="button secondary" href="#contato">Fale comigo</a><a className="video-link" href="#videos"><Icon name="play-circle" /> Explore os vídeos</a></div>
-            <div className="stats" aria-label="Indicadores do portfólio">
-              {(profile.metrics||[]).map((item:any,i:number)=><div key={i}><strong>{item.value}</strong><span>{item.label.split('\n').map((line:string,j:number)=><span key={j} style={{display:'contents'}}>{j>0&&<br/>}{line}</span>)}</span></div>)}
-            </div>
-          </div>
-          <div className="hero-visual">
-            <div className="portrait"><Image src={settings.photo||profile.photo||"/images/carlos-andre-executivo.png"} unoptimized={!!(settings.photo||profile.photo||'').startsWith('/api/media/')} alt="Carlos André sorrindo em um escritório moderno" width={1122} height={1402} priority sizes="(max-width: 600px) 85vw, (max-width: 1000px) 45vw, 370px" /></div>
-            <p className="handwritten hero-signature">{(profile.signature||[]).map((line:string,i:number)=><span key={i} style={{display:'contents',fontSize:'inherit'}}>{i>0&&<br/>}{line}</span>)}<span>{profile.title}</span></p>
-            <div className="hero-pillars">{services.map((service:any) => <a href="#consultoria" className="hero-pillar" key={service.shortTitle}><Icon name={service.icon} /><span><strong>{service.shortTitle}</strong><small>{service.tagline}</small></span></a>)}<blockquote>“{profile.quote}”<cite>{profile.title}</cite></blockquote></div>
-          </div>
-        </div>
-      </section>
+      <HomeHero profile={profile} settings={settings} services={services}/>
       <div className="container main-sections"><OrderedSections order={settings.sectionOrder||[]}>
         <section id="projetos" aria-labelledby="projects-title" className="home-section">
           <SectionHeading id="projects-title" title="Projetos em destaque" description="Soluções reais para problemas do dia a dia. Tecnologia que simplifica, conecta e gera oportunidades."><a className="text-link" href="#portfolio-detalhes">Explore as iniciativas <Icon name="arrow" /></a></SectionHeading>
@@ -58,7 +42,7 @@ export default async function Home() {
         </section>
         <section id="experiencia" aria-labelledby="experience-title" className="home-section">
           <SectionHeading id="experience-title" title="Minha trajetória profissional" description="Uma trajetória que conecta tecnologia, dados e negócios."><a href="/experiencia" className="text-link">Conheça minha trajetória <Icon name="arrow" /></a></SectionHeading>
-          <div className="experience-grid">{experiences.map((experience:any, index:number) => <article className={`card experience-card ${index === 0 ? 'featured-experience' : ''}`} key={experience.company}><div className={`company-wordmark company-${index}`}>{experience.logo?<img src={experience.logo} alt={experience.company} style={{maxWidth:'100%',height:38,objectFit:'contain'}}/>:experience.wordmark==='CAIXA'?<>CAI<span>X</span>A</>:experience.wordmark}</div><p className="experience-period">{experience.period}</p><h3>{experience.company}</h3><p className="experience-role">{experience.displayRole}</p><p>{experience.description}</p><Tags items={experience.tags} /></article>)}<article className="card experience-card earlier-experience"><h3>Outras experiências</h3><ul>{curriculum.experiences.filter(x=>!x.featured).map(x=><li key={x.id}>{x.company}</li>)}</ul></article></div>
+          <HomeTrajectory experiences={curriculum.experiences}/>
         </section>
         <section id="competencias" aria-labelledby="skills-title" className="home-section">
           <SectionHeading id="skills-title" title="Skills & Conhecimentos" description="Tecnologias, metodologias e domínios que conectam ideias a soluções."><a className="text-link" href="/experiencia#competencias">Ver todas as competências <Icon name="arrow" /></a></SectionHeading>

@@ -1,0 +1,406 @@
+{
+  "phase": "after",
+  "screens": [
+    "docs\\screenshots\\home-ux-02\\after\\home-1440.png",
+    "docs\\screenshots\\home-ux-02\\after\\home-768.png",
+    "docs\\screenshots\\home-ux-02\\after\\home-390.png"
+  ],
+  "layouts": [
+    {
+      "width": 1440,
+      "panels": [
+        {
+          "x": 80,
+          "y": 545.015625,
+          "height": 120
+        },
+        {
+          "x": 328.109375,
+          "y": 545.015625,
+          "height": 120
+        },
+        {
+          "x": 562.1875,
+          "y": 545.015625,
+          "height": 120
+        },
+        {
+          "x": 824.328125,
+          "y": 545.015625,
+          "height": 120
+        },
+        {
+          "x": 1077.125,
+          "y": 545.015625,
+          "height": 120
+        }
+      ],
+      "cards": [
+        {
+          "x": 80,
+          "y": 1558.3125
+        },
+        {
+          "x": 404.5,
+          "y": 1558.3125
+        },
+        {
+          "x": 729,
+          "y": 1558.3125
+        },
+        {
+          "x": 1053.5,
+          "y": 1558.3125
+        }
+      ],
+      "imageTop": 96.59375,
+      "titleTop": 152.1875,
+      "imageBottom": 524.59375,
+      "panelTop": 545.015625,
+      "loaded": true
+    },
+    {
+      "width": 768,
+      "panels": [
+        {
+          "x": 24,
+          "y": 1044.953125,
+          "height": 120
+        },
+        {
+          "x": 392,
+          "y": 1044.953125,
+          "height": 120
+        },
+        {
+          "x": 24,
+          "y": 1180.953125,
+          "height": 120
+        },
+        {
+          "x": 392,
+          "y": 1180.953125,
+          "height": 120
+        },
+        {
+          "x": 24,
+          "y": 1316.953125,
+          "height": 120
+        }
+      ],
+      "cards": [
+        {
+          "x": 24,
+          "y": 2854.640625
+        },
+        {
+          "x": 393,
+          "y": 2854.640625
+        },
+        {
+          "x": 24,
+          "y": 3376.8125
+        },
+        {
+          "x": 393,
+          "y": 3376.8125
+        }
+      ],
+      "imageTop": 592.953125,
+      "titleTop": 217.5625,
+      "imageBottom": 1024.953125,
+      "panelTop": 1044.953125,
+      "loaded": true
+    },
+    {
+      "width": 390,
+      "panels": [
+        {
+          "x": 18,
+          "y": 1362.546875,
+          "height": 131.59375
+        },
+        {
+          "x": 18,
+          "y": 1508.140625,
+          "height": 131.59375
+        },
+        {
+          "x": 18,
+          "y": 1653.734375,
+          "height": 131.59375
+        },
+        {
+          "x": 18,
+          "y": 1799.328125,
+          "height": 131.59375
+        },
+        {
+          "x": 18,
+          "y": 1944.921875,
+          "height": 131.59375
+        }
+      ],
+      "cards": [
+        {
+          "x": 18,
+          "y": 4810.3125
+        },
+        {
+          "x": 18,
+          "y": 5330.484375
+        },
+        {
+          "x": 18,
+          "y": 5794.265625
+        },
+        {
+          "x": 18,
+          "y": 6256.453125
+        }
+      ],
+      "imageTop": 803.953125,
+      "titleTop": 138.59375,
+      "imageBottom": 1203.953125,
+      "panelTop": 1362.546875,
+      "loaded": true
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "zoom": 1,
+      "cssWidth": 1440,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "route": "/experiencia",
+      "width": 1440,
+      "zoom": 1,
+      "cssWidth": 1440,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "zoom": 1.25,
+      "cssWidth": 1152,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "route": "/experiencia",
+      "width": 1440,
+      "zoom": 1.25,
+      "cssWidth": 1152,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "zoom": 1.5,
+      "cssWidth": 960,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "route": "/experiencia",
+      "width": 1440,
+      "zoom": 1.5,
+      "cssWidth": 960,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "zoom": 2,
+      "cssWidth": 720,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "route": "/experiencia",
+      "width": 1440,
+      "zoom": 2,
+      "cssWidth": 720,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "zoom": 1,
+      "cssWidth": 768,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "route": "/experiencia",
+      "width": 768,
+      "zoom": 1,
+      "cssWidth": 768,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "zoom": 1,
+      "cssWidth": 390,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "route": "/experiencia",
+      "width": 390,
+      "zoom": 1,
+      "cssWidth": 390,
+      "overflow": false,
+      "minFont": 16
+    }
+  ],
+  "regressions": [
+    {
+      "selector": ".site-header",
+      "width": 1440,
+      "unchanged": true
+    },
+    {
+      "selector": "#projetos",
+      "width": 1440,
+      "unchanged": true
+    },
+    {
+      "selector": "#consultoria",
+      "width": 1440,
+      "unchanged": true
+    },
+    {
+      "selector": "#competencias",
+      "width": 1440,
+      "unchanged": true
+    },
+    {
+      "selector": "#artigos",
+      "width": 1440,
+      "unchanged": true
+    },
+    {
+      "selector": "#videos",
+      "width": 1440,
+      "unchanged": true
+    },
+    {
+      "selector": "#contato",
+      "width": 1440,
+      "unchanged": true
+    },
+    {
+      "selector": ".footer",
+      "width": 1440,
+      "unchanged": true
+    },
+    {
+      "selector": ".site-header",
+      "width": 768,
+      "unchanged": true
+    },
+    {
+      "selector": "#projetos",
+      "width": 768,
+      "unchanged": true
+    },
+    {
+      "selector": "#consultoria",
+      "width": 768,
+      "unchanged": true
+    },
+    {
+      "selector": "#competencias",
+      "width": 768,
+      "unchanged": true
+    },
+    {
+      "selector": "#artigos",
+      "width": 768,
+      "unchanged": true
+    },
+    {
+      "selector": "#videos",
+      "width": 768,
+      "unchanged": true
+    },
+    {
+      "selector": "#contato",
+      "width": 768,
+      "unchanged": true
+    },
+    {
+      "selector": ".footer",
+      "width": 768,
+      "unchanged": true
+    },
+    {
+      "selector": ".site-header",
+      "width": 390,
+      "unchanged": true
+    },
+    {
+      "selector": "#projetos",
+      "width": 390,
+      "unchanged": true
+    },
+    {
+      "selector": "#consultoria",
+      "width": 390,
+      "unchanged": true
+    },
+    {
+      "selector": "#competencias",
+      "width": 390,
+      "unchanged": true
+    },
+    {
+      "selector": "#artigos",
+      "width": 390,
+      "unchanged": true
+    },
+    {
+      "selector": "#videos",
+      "width": 390,
+      "unchanged": true
+    },
+    {
+      "selector": "#contato",
+      "width": 390,
+      "unchanged": true
+    },
+    {
+      "selector": ".footer",
+      "width": 390,
+      "unchanged": true
+    },
+    {
+      "project": "smartfamily",
+      "unchanged": true
+    },
+    {
+      "project": "onstar-scd",
+      "unchanged": true
+    },
+    {
+      "project": "beloria",
+      "unchanged": true
+    },
+    {
+      "portraitSha256": "52ab0b32e419dcdec6d46bc6da0fc1a16aa931c29a506b69f53d778c5ae6aea0",
+      "originalUnchanged": true
+    },
+    "CMS snapshots, all nine experiences, navigation, CTAs, Fastconnect anchor, expandable results/technologies preserved"
+  ],
+  "errors": [],
+  "result": "passed"
+}
