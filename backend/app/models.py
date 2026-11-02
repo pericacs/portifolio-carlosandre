@@ -168,6 +168,10 @@ cms_entries = table("cms_entries", string("module",40,nullable=False,index=True)
     sa.UniqueConstraint("module","slug"),
     sa.CheckConstraint("status IN ('draft','scheduled','published','archived')",name="status"),
     sa.CheckConstraint("version > 0",name="version"))
+for _flag in ('featured','spotlight'):
+    sa.Index('uq_article_'+_flag+'_published',sa.literal_column('(1)'),unique=True,
+        postgresql_where=sa.text("module='artigos' AND deleted_at IS NULL AND published_data IS NOT NULL AND published_data->>'"+_flag+"'='true'"))._set_parent(cms_entries)
+
 cms_revisions = table("cms_revisions",ref("entry_id","cms_entries"),ref("editor_id","admin_users",True),
     sa.Column("version",sa.Integer,nullable=False),string("action",40,nullable=False),json("snapshot"),
     sa.UniqueConstraint("entry_id","version"))

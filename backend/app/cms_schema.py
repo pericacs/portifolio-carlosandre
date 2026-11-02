@@ -1,5 +1,6 @@
 """Contrato único de campos para validação e formulários do CMS."""
 import re
+import unicodedata
 from datetime import date
 from urllib.parse import urlparse, parse_qs
 import nh3
@@ -40,6 +41,8 @@ MODULES['artigos']['fields']=[dict(f) for f in MODULES['artigos']['fields']]
 for f in MODULES['artigos']['fields']:
     if f['key']=='featured':f['label']='Marcação editorial'
     if f['key']=='sortOrder':f['label']='Ordem manual (não altera a recência)'
+    if f['key']=='tags':f.update(tab='Informações gerais',kind='tags')
+MODULES['artigos']['fields'] += [media('coverPosition','Alinhamento da capa (imagem inteira preservada)','select',options=['Centro','Topo','Base','Esquerda','Direita'],default='Centro')]
 PROJECT_TABS=['Informações gerais','Imagens e mídia','Funcionalidades','Arquitetura e tecnologias','Links e acessos','Resultados e roadmap','SEO e publicação']
 project=MODULES['projetos']
 for f in project['fields']:
@@ -81,6 +84,18 @@ ICONS=['database','brain','cloud','code','card','people','chart','cube','rocket'
 def fail(message): raise HTTPException(422,message)
 
 
+def tag_key(value):
+    return ''.join(c for c in unicodedata.normalize('NFKD',value) if not unicodedata.combining(c)).casefold()
+
+
+def normalize_tags(values):
+    result={}
+    for value in values:
+        label=' '.join(unicodedata.normalize('NFKC',value).split())
+        if label:result.setdefault(tag_key(label),label)
+    return list(result.values())
+
+
 def url_ok(value):
     parsed=urlparse(value)
     return parsed.scheme in {'https','http'} and bool(parsed.hostname) and not parsed.username and not parsed.password
@@ -111,7 +126,7 @@ def validate(module,data,publishing=False):
     schema=MODULES[module]; result={}
     if not isinstance(data,dict): fail('Dados inválidos.')
     for f in schema['fields']:
-        k,kind=f['key'],f['kind']; v=data.get(k,f.get('default',False if kind=='boolean' else [] if kind in {'lines','links','metrics','gallery','references','services','order','smartblocks','smartmedia','finaldemos'} else ''))
+        k,kind=f['key'],f['kind']; v=data.get(k,f.get('default',False if kind=='boolean' else [] if kind in {'tags','lines','links','metrics','gallery','references','services','order','smartblocks','smartmedia','finaldemos'} else ''))
         if kind=='finaldemos':
             v=final_demos(v,publishing)
         elif kind in {'smartblocks','smartmedia'}:
@@ -120,9 +135,10 @@ def validate(module,data,publishing=False):
             if type(v)!=bool: fail(f"{f['label']}: valor inválido.")
         elif kind=='number':
             if type(v)!=int or not -10000<=v<=10000: fail(f"{f['label']}: número inválido.")
-        elif kind in {'lines','gallery','references','order'}:
+        elif kind in {'lines','tags','gallery','references','order'}:
             if not isinstance(v,list) or len(v)>300 or any(not isinstance(x,str) or len(x)>10000 for x in v): fail(f"{f['label']}: lista inválida.")
             v=[x.strip() for x in v if x.strip()]
+            if kind=='tags':v=normalize_tags(v)
         elif kind in {'links','metrics','services'}:
             if not isinstance(v,list) or len(v)>30 or any(not isinstance(x,dict) for x in v): fail(f"{f['label']}: lista inválida.")
             keys={'label','url'} if kind=='links' else {'label','value'} if kind=='metrics' else {'title','shortTitle','tagline','description','icon','color'}

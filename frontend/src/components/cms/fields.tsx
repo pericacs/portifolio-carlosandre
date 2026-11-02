@@ -8,7 +8,13 @@ import s from '@/app/admin/admin.module.css';
 type Option={id:string;module:string;title:string};
 export function CmsField({field:f,value,onChange,options}:{field:Field;value:any;onChange:(v:any)=>void;options:Option[]}){
  const[busy,setBusy]=useState(false),[error,setError]=useState('');
+ const[tag,setTag]=useState('');
  const id='field-'+f.key;const label=<span>{f.label}{f.required?' *':''}</span>;
+ if(f.kind==='tags'){
+  const key=(v:string)=>v.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR');
+  function add(raw:string){const cleaned=raw.normalize('NFKC').trim().replace(/\s+/g,' ');if(!cleaned)return;const known=options.find(o=>o.module==='article-tags'&&key(o.title)===key(cleaned))?.title||cleaned;if(!(value||[]).some((x:string)=>key(x)===key(known)))onChange([...(value||[]),known]);setTag('');}
+  return <fieldset className={s.repeatField}><legend>{f.label}</legend><label className={s.cmsField} htmlFor={id}>Selecionar ou cadastrar tag<input id={id} list="article-tag-options" value={tag} onChange={e=>setTag(e.target.value)} onKeyDown={e=>{if(e.key==='Enter'){e.preventDefault();add(tag);}}}/></label><datalist id="article-tag-options">{options.filter(o=>o.module==='article-tags').map(o=><option key={o.id} value={o.title}/>)}</datalist><button type="button" className={s.secondary} onClick={()=>add(tag)}>Adicionar tag</button><p>Escolha uma sugestão ou digite um novo nome. Acentos, maiúsculas e espaços não criam duplicatas.</p><div className={s.cmsActions}>{(value||[]).map((x:string)=><button type="button" className={s.secondary} key={x} aria-label={'Remover tag '+x} onClick={()=>onChange(value.filter((v:string)=>v!==x))}>{x} ×</button>)}</div></fieldset>;
+ }
  if(f.kind==='finaldemos')return <FinalDemos value={value} onChange={onChange}/>;
  if(['smartblocks','smartmedia'].includes(f.kind))return <SmartFields field={f} value={value} onChange={onChange}/>;
  if(['richtext','finalrich'].includes(f.kind))return <div className={s.cmsField}>{label}<RichEditor label={f.label} value={value||''} onChange={onChange}/></div>;

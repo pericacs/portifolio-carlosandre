@@ -1,0 +1,18 @@
+{
+  "phase": "before",
+  "screens": [
+    "docs\\screenshots\\visual-cms\\before\\home-1440.png",
+    "docs\\screenshots\\visual-cms\\before\\artigos-1440.png",
+    "docs\\screenshots\\visual-cms\\before\\cms-1440.png",
+    "docs\\screenshots\\visual-cms\\before\\home-768.png",
+    "docs\\screenshots\\visual-cms\\before\\artigos-768.png",
+    "docs\\screenshots\\visual-cms\\before\\cms-768.png",
+    "docs\\screenshots\\visual-cms\\before\\home-390.png",
+    "docs\\screenshots\\visual-cms\\before\\artigos-390.png",
+    "docs\\screenshots\\visual-cms\\before\\cms-390.png"
+  ],
+  "checks": [],
+  "pages": [],
+  "errors": [],
+  "result": "passed"
+}

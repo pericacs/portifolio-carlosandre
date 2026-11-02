@@ -1,0 +1,14 @@
+{
+  "result": "passed",
+  "widths": [
+    1440,
+    768,
+    390
+  ],
+  "publishedFixtures": 5,
+  "homeCount": 4,
+  "ordering": "publication date descending, flags and manual order ignored",
+  "cards": "aligned with equal row heights",
+  "tags": "no invented tags",
+  "cms": "both replacement titles shown; cover alignment persists; draft keeps published ownership"
+}

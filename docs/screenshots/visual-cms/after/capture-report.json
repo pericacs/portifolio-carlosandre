@@ -1,0 +1,134 @@
+{
+  "phase": "after",
+  "screens": [
+    "docs\\screenshots\\visual-cms\\after\\home-1440.png",
+    "docs\\screenshots\\visual-cms\\after\\artigos-1440.png",
+    "docs\\screenshots\\visual-cms\\after\\cms-1440.png",
+    "docs\\screenshots\\visual-cms\\after\\home-768.png",
+    "docs\\screenshots\\visual-cms\\after\\artigos-768.png",
+    "docs\\screenshots\\visual-cms\\after\\cms-768.png",
+    "docs\\screenshots\\visual-cms\\after\\home-390.png",
+    "docs\\screenshots\\visual-cms\\after\\artigos-390.png",
+    "docs\\screenshots\\visual-cms\\after\\cms-390.png"
+  ],
+  "checks": [
+    {
+      "name": "home",
+      "width": 1440,
+      "covers": "16:9, contain, original fully visible"
+    },
+    {
+      "name": "artigos",
+      "width": 1440,
+      "covers": "16:9, contain, original fully visible"
+    },
+    {
+      "name": "home",
+      "width": 768,
+      "covers": "16:9, contain, original fully visible"
+    },
+    {
+      "name": "artigos",
+      "width": 768,
+      "covers": "16:9, contain, original fully visible"
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "covers": "16:9, contain, original fully visible"
+    },
+    {
+      "name": "artigos",
+      "width": 390,
+      "covers": "16:9, contain, original fully visible"
+    }
+  ],
+  "pages": [
+    {
+      "url": "/",
+      "zoom": 1,
+      "ratio": 1,
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "url": "/",
+      "zoom": 1.25,
+      "ratio": 1.25,
+      "width": 1152,
+      "overflow": false
+    },
+    {
+      "url": "/",
+      "zoom": 1.5,
+      "ratio": 1.5,
+      "width": 960,
+      "overflow": false
+    },
+    {
+      "url": "/",
+      "zoom": 2,
+      "ratio": 2,
+      "width": 720,
+      "overflow": false
+    },
+    {
+      "url": "/artigos",
+      "zoom": 1,
+      "ratio": 1,
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "url": "/artigos",
+      "zoom": 1.25,
+      "ratio": 1.25,
+      "width": 1152,
+      "overflow": false
+    },
+    {
+      "url": "/artigos",
+      "zoom": 1.5,
+      "ratio": 1.5,
+      "width": 960,
+      "overflow": false
+    },
+    {
+      "url": "/artigos",
+      "zoom": 2,
+      "ratio": 2,
+      "width": 720,
+      "overflow": false
+    },
+    {
+      "url": "/admin/artigos/e1e9c349-78ef-42f6-879b-b9b8c184085c",
+      "zoom": 1,
+      "ratio": 1,
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "url": "/admin/artigos/e1e9c349-78ef-42f6-879b-b9b8c184085c",
+      "zoom": 1.25,
+      "ratio": 1.25,
+      "width": 1152,
+      "overflow": false
+    },
+    {
+      "url": "/admin/artigos/e1e9c349-78ef-42f6-879b-b9b8c184085c",
+      "zoom": 1.5,
+      "ratio": 1.5,
+      "width": 960,
+      "overflow": false
+    },
+    {
+      "url": "/admin/artigos/e1e9c349-78ef-42f6-879b-b9b8c184085c",
+      "zoom": 2,
+      "ratio": 2,
+      "width": 720,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "result": "passed"
+}

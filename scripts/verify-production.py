@@ -60,7 +60,7 @@ try:
     run("exec",prefix+"-db","createdb","-U","portfolio","recovery")
     subprocess.run(["docker","exec","-i",prefix+"-db","pg_restore","-U","portfolio","-d","recovery","--exit-on-error","--single-transaction"],input=dump,check=True)
     revision = run("exec",prefix+"-db","psql","-U","portfolio","-d","recovery","-Atc","SELECT version_num FROM alembic_version",capture=True)
-    assert revision == "0003"
+    assert revision == "0004"
     run("run","-d","--name",prefix+"-web","--network",prefix,"--network-alias","frontend","-e","API_INTERNAL_URL=http://"+prefix+"-api:8000",frontend)
     run("run","-d","--name",prefix+"-api","--network",prefix,"--network-alias","backend",*env,*prod,"-v",prefix+"-media:/app/uploads",backend)
     time.sleep(3)

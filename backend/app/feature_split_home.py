@@ -9,6 +9,7 @@ from app.admin import now
 
 
 def feature_split(db,apply=False,expected_version=None):
+    if apply:cms.lock_editorial(db)
     query=sa.select(m.cms_entries).where(m.cms_entries.c.module=='artigos',m.cms_entries.c.slug=='o-split-do-mal',m.cms_entries.c.deleted_at.is_(None))
     row=db.execute(query.with_for_update() if apply else query).mappings().first()
     if not row or not row['published_data']:raise ValueError('O SPLIT DO MAL precisa existir e estar publicado. Nenhum registro foi criado ou publicado.')
@@ -20,6 +21,7 @@ def feature_split(db,apply=False,expected_version=None):
     if expected_version is None:raise ValueError('Informe a versão obtida na consulta prévia.')
     cms.version_check(row,expected_version)
     if public.get('featured') is True and row['data'].get('featured') is True:return result
+    cms.replace_editorial(db,row,{**public,'featured':True,'spotlight':False},None)
     # Change only the approved flag in each snapshot; never publish pending edits.
     updated=db.execute(m.cms_entries.update().where(m.cms_entries.c.id==row['id']).values(data={**row['data'],'featured':True},published_data={**public,'featured':True},version=row['version']+1,updated_at=now()).returning(m.cms_entries)).mappings().one()
     cms.revision(db,updated,'feature_home',None)

@@ -8,6 +8,8 @@ from app.cms import UPLOAD_ROOT,refs,revision,publish_entry
 from app.cms_schema import validate
 
 def install(db):
+ from app.article_editorial import lock_editorial
+ lock_editorial(db)
  root=Path(__file__).parent/'data/articles'
  mapping={}
  for a in json.loads((root/'manifest.json').read_text()):

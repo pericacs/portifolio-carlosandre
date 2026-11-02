@@ -1,0 +1,36 @@
+{
+  "result": "passed",
+  "tokens": "shared CSS scale, minimum 1rem",
+  "contrast": [
+    {
+      "fg": "435888",
+      "bg": "ffffff",
+      "ratio": 7.023264636743313
+    },
+    {
+      "fg": "075bce",
+      "bg": "ffffff",
+      "ratio": 6.182444572211366
+    },
+    {
+      "fg": "526482",
+      "bg": "fcfdff",
+      "ratio": 5.888508650265631
+    },
+    {
+      "fg": "465a76",
+      "bg": "f4f7fb",
+      "ratio": 6.548510395539735
+    },
+    {
+      "fg": "ffffff",
+      "bg": "075bce",
+      "ratio": 6.182444572211366
+    },
+    {
+      "fg": "244a73",
+      "bg": "edf3fb",
+      "ratio": 8.172651435804125
+    }
+  ]
+}

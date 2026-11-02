@@ -10,6 +10,7 @@ from app import models as m
 from app.db import get_engine
 from app.admin import now,audit
 from app.cms import publish_entry
+from app.article_editorial import lock_editorial
 from app.contact_notifications import deliver
 from app.config import get_settings
 
@@ -31,6 +32,7 @@ def notification_ready(settings):
 
 
 def tick(db):
+    lock_editorial(db)
     rows=db.execute(sa.select(m.cms_entries).where(m.cms_entries.c.status=='scheduled',m.cms_entries.c.scheduled_at<=now(),m.cms_entries.c.deleted_at.is_(None)).with_for_update(skip_locked=True).limit(20)).mappings().all()
     for row in rows:
         try:
