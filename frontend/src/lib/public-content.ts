@@ -33,9 +33,9 @@ export const publicData=cache(async()=>{
  const profile=modules.perfil?.[0]||{},settings=modules.configuracoes?.[0]||{};
  const period=(x:any)=>{
   const old=x._legacy;
-  if(old&&(x.startMonth||'')===(old.startMonth||'')&&(x.endMonth||'')===(old.endMonth||'')&&!!x.endDateValidationRequired===!!old.endDateValidationRequired&&!x.current)return old.period;
+  if(old&&(x.startMonth||'')===(old.startMonth||'')&&(x.endMonth||'')===(old.endMonth||'')&&!!x.endDateValidationRequired===!!old.endDateValidationRequired&&!x.current)return old.period.replace(/\s*[·–]\s*término em validação/i,'');
   const format=(s:string)=>s?new Intl.DateTimeFormat('pt-BR',{month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(s+'-01T12:00:00Z')):'';
-  return `${format(x.startMonth)}${x.current?' – Atual':x.endDateValidationRequired?' – término em validação':x.endMonth?' – '+format(x.endMonth):''}`;
+  return `${format(x.startMonth)}${x.current?' – Atual':x.endDateValidationRequired?'':x.endMonth?' – '+format(x.endMonth):''}`;
  };
  const experiences=(modules.experiencias||[]).map(x=>({...x._legacy,...x,id:x._legacy?.id||x.id,period:period(x),wordmark:x._legacy?.wordmark||x.company,displayRole:x.displayRole||x.role,tags:x.tags||[],narrative:x.narrative||[],responsibilities:x.responsibilities||[],technologies:x.technologies||[],results:x.results||[]}));
  const skills=(modules.categorias||[]).map(x=>({...x,items:(modules.skills||[]).filter(v=>v.categoryId===x.id).map(v=>v.title)}));

@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-02",
+  "base": "7c1aa6b",
+  "backend": {
+    "passed": 135,
+    "skipped": 20,
+    "warnings": 1
+  },
+  "build": "passed",
+  "typecheck": "passed",
+  "alembic": "upgrade and check passed",
+  "browser": {
+    "pages": 53,
+    "combinations": 318,
+    "cmsTabs": 288,
+    "widths": [
+      1440,
+      768,
+      390
+    ],
+    "nativeZoom": [
+      100,
+      125,
+      150,
+      200
+    ]
+  },
+  "data": "disposable local copy; no production writes; source images and professional data untouched"
+}

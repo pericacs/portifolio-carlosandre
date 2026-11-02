@@ -21,6 +21,7 @@ from app.db import get_db
 from app.admin import authenticated, audit, now, digest, rate_limit, require_origin
 from app.cms_schema import MODULES, validate, fail, public_project
 from app.article_publications import published_articles,publication_instant,eligibility
+from app.article_editorial import lock_editorial,replace_editorial,editorial_state
 
 router=APIRouter(prefix='/api/admin/cms',dependencies=[Depends(authenticated)])
 public=APIRouter(prefix='/api')
@@ -33,6 +34,7 @@ def module_check(module):
 
 def get_entry(db,module,entry_id,lock=False):
     module_check(module)
+    if lock and module=='artigos':lock_editorial(db)
     query=sa.select(m.cms_entries).where(m.cms_entries.c.id==entry_id,m.cms_entries.c.module==module,m.cms_entries.c.deleted_at.is_(None))
     if lock: query=query.with_for_update()
     row=db.execute(query).mappings().first()
@@ -125,6 +127,16 @@ def options(db:Session=Depends(get_db)):
     return [dict(r) for r in db.execute(sa.select(m.cms_entries.c.id,m.cms_entries.c.module,m.cms_entries.c.title).where(m.cms_entries.c.deleted_at.is_(None)).order_by(m.cms_entries.c.title).limit(3000)).mappings()]
 
 
+@router.get('/article-settings')
+def article_settings(db:Session=Depends(get_db)):
+    from app.cms_schema import normalize_tags,tag_key
+    tags={}
+    for row in db.execute(sa.select(m.cms_entries.c.data,m.cms_entries.c.published_data).where(m.cms_entries.c.module=='artigos',m.cms_entries.c.deleted_at.is_(None)).order_by(m.cms_entries.c.created_at,m.cms_entries.c.id)).mappings():
+        for snapshot in (row['published_data'],row['data']):
+            for tag in normalize_tags((snapshot or {}).get('tags',[])):tags.setdefault(tag_key(tag),tag)
+    return {'tags':sorted(tags.values(),key=tag_key),'owners':editorial_state(db)}
+
+
 @router.get('/media')
 def media_list(page:int=Query(1,ge=1),db:Session=Depends(get_db)):
     condition=m.media_assets.c.archived_at.is_(None)
@@ -208,6 +220,7 @@ def listing(module:str,q:str=Query('',max_length=200),status:str='',page:int=Que
 @router.post('/{module}',status_code=201)
 def create(module:str,body:Save,user=Depends(authenticated),db:Session=Depends(get_db)):
     module_check(module);data=validate(module,body.data)
+    if module=='artigos':canonical_article_tags(db,data)
     rate_limit(db,'cms-write:'+str(user['admin_id']),240)
     entry_id=uuid4();slug='main' if MODULES[module].get('singleton') else data['slug']
     try:
@@ -227,6 +240,7 @@ def update(module:str,entry_id:UUID,body:Save,user=Depends(authenticated),db:Ses
     rate_limit(db,'cms-write:'+str(user['admin_id']),240)
     row=get_entry(db,module,entry_id,True);version_check(row,body.version)
     data=validate(module,body.data)
+    if module=='artigos':canonical_article_tags(db,data)
     if '_legacy' in row['data']: data['_legacy']=row['data']['_legacy']
     refs(db,entry_id,module,data,'draft')
     try:
@@ -237,10 +251,21 @@ def update(module:str,entry_id:UUID,body:Save,user=Depends(authenticated),db:Ses
     return dict(result)
 
 
+def canonical_article_tags(db,data):
+    from app.cms_schema import tag_key
+    existing={tag_key(tag):tag for tag in article_settings(db)['tags']}
+    data['tags']=[existing.get(tag_key(tag),tag) for tag in data.get('tags',[])]
+
+
 def publish_entry(db,row,actor,data=None):
     source=data or row['data'];payload=validate(row['module'],source,True)
     if '_legacy' in source: payload['_legacy']=source['_legacy']
     if row['module']=='projetos': payload=public_project(payload)
+    if row['module']=='artigos':
+        canonical_article_tags(db,payload)
+        if payload.get('planned') or payload.get('visible') is False:
+            payload.update(featured=False,spotlight=False)
+        replace_editorial(db,row,payload,actor)
     refs(db,row['id'],row['module'],payload,'published')
     for table in (m.cms_links,m.cms_media_refs): db.execute(table.delete().where(table.c.entry_id==row['id'],table.c.scope=='scheduled'))
     result=db.execute(m.cms_entries.update().where(m.cms_entries.c.id==row['id']).values(published_data=payload,published_at=publication_instant(db,row,now()) if row['module']=='artigos' else now(),status='published',scheduled_at=None,scheduled_data=None,version=row['version']+1,editor_id=actor).returning(m.cms_entries)).mappings().one()

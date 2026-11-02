@@ -1,0 +1,2913 @@
+{
+  "phase": "after",
+  "screens": [
+    "docs\\screenshots\\visual-cms\\after\\home-1440.png",
+    "docs\\screenshots\\visual-cms\\after\\artigos-1440.png",
+    "docs\\screenshots\\visual-cms\\after\\cms-1440.png",
+    "docs\\screenshots\\visual-cms\\after\\home-768.png",
+    "docs\\screenshots\\visual-cms\\after\\artigos-768.png",
+    "docs\\screenshots\\visual-cms\\after\\cms-768.png",
+    "docs\\screenshots\\visual-cms\\after\\home-390.png",
+    "docs\\screenshots\\visual-cms\\after\\artigos-390.png",
+    "docs\\screenshots\\visual-cms\\after\\cms-390.png"
+  ],
+  "checks": [
+    {
+      "name": "home",
+      "width": 1440,
+      "covers": "16:9, contain, original fully visible"
+    },
+    {
+      "name": "artigos",
+      "width": 1440,
+      "covers": "16:9, contain, original fully visible"
+    },
+    {
+      "name": "home",
+      "width": 768,
+      "covers": "16:9, contain, original fully visible"
+    },
+    {
+      "name": "artigos",
+      "width": 768,
+      "covers": "16:9, contain, original fully visible"
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "covers": "16:9, contain, original fully visible"
+    },
+    {
+      "name": "artigos",
+      "width": 390,
+      "covers": "16:9, contain, original fully visible"
+    },
+    "tags: create, normalize, deduplicate, save, reload; QA draft removed"
+  ],
+  "pages": [
+    {
+      "url": "/",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/sobre",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/sobre",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/sobre",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/sobre",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/sobre",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/sobre",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/experiencia",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/experiencia",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/experiencia",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/experiencia",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/experiencia",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/experiencia",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/cases",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/cases",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/cases",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/cases",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/cases",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/cases",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/privacidade",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/privacidade",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/privacidade",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/privacidade",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/privacidade",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/privacidade",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/projetos/smartfamily",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/projetos/smartfamily",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/projetos/smartfamily",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/projetos/smartfamily",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/projetos/smartfamily",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/projetos/smartfamily",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos/engenharia-de-dados-aplicada-ao-split-payment-do-bem",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos/engenharia-de-dados-aplicada-ao-split-payment-do-bem",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos/engenharia-de-dados-aplicada-ao-split-payment-do-bem",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos/engenharia-de-dados-aplicada-ao-split-payment-do-bem",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos/engenharia-de-dados-aplicada-ao-split-payment-do-bem",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos/engenharia-de-dados-aplicada-ao-split-payment-do-bem",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos/split-payment-do-bem-e-split-payment-do-mal",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos/split-payment-do-bem-e-split-payment-do-mal",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos/split-payment-do-bem-e-split-payment-do-mal",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos/split-payment-do-bem-e-split-payment-do-mal",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos/split-payment-do-bem-e-split-payment-do-mal",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/artigos/split-payment-do-bem-e-split-payment-do-mal",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/perfil/223b8177-be95-57e6-bf2f-a5bb6924ef1e",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/perfil/223b8177-be95-57e6-bf2f-a5bb6924ef1e",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/perfil/223b8177-be95-57e6-bf2f-a5bb6924ef1e",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/perfil/223b8177-be95-57e6-bf2f-a5bb6924ef1e",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/perfil/223b8177-be95-57e6-bf2f-a5bb6924ef1e",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/perfil/223b8177-be95-57e6-bf2f-a5bb6924ef1e",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias/dc86ce30-85d1-574f-9c30-c44ae65fcf81",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias/dc86ce30-85d1-574f-9c30-c44ae65fcf81",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias/dc86ce30-85d1-574f-9c30-c44ae65fcf81",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias/dc86ce30-85d1-574f-9c30-c44ae65fcf81",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias/dc86ce30-85d1-574f-9c30-c44ae65fcf81",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias/dc86ce30-85d1-574f-9c30-c44ae65fcf81",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias/novo",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias/novo",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias/novo",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias/novo",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes/fce60f1d-df6e-54ac-ab10-93d606208d7f",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes/fce60f1d-df6e-54ac-ab10-93d606208d7f",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes/fce60f1d-df6e-54ac-ab10-93d606208d7f",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes/fce60f1d-df6e-54ac-ab10-93d606208d7f",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes/fce60f1d-df6e-54ac-ab10-93d606208d7f",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes/fce60f1d-df6e-54ac-ab10-93d606208d7f",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes/novo",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes/novo",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes/novo",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes/novo",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes/24d75c61-df1f-5487-add6-7db376b5d199",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes/24d75c61-df1f-5487-add6-7db376b5d199",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes/24d75c61-df1f-5487-add6-7db376b5d199",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes/24d75c61-df1f-5487-add6-7db376b5d199",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes/24d75c61-df1f-5487-add6-7db376b5d199",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes/24d75c61-df1f-5487-add6-7db376b5d199",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes/novo",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes/novo",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes/novo",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes/novo",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas/cc1f643d-6702-5d05-a10f-8f7ba21965d1",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas/cc1f643d-6702-5d05-a10f-8f7ba21965d1",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas/cc1f643d-6702-5d05-a10f-8f7ba21965d1",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas/cc1f643d-6702-5d05-a10f-8f7ba21965d1",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas/cc1f643d-6702-5d05-a10f-8f7ba21965d1",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas/cc1f643d-6702-5d05-a10f-8f7ba21965d1",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas/novo",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas/novo",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas/novo",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas/novo",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/curriculo/2980bbc5-4463-511c-9eeb-46c7a8398f4a",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/curriculo/2980bbc5-4463-511c-9eeb-46c7a8398f4a",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/curriculo/2980bbc5-4463-511c-9eeb-46c7a8398f4a",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/curriculo/2980bbc5-4463-511c-9eeb-46c7a8398f4a",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/curriculo/2980bbc5-4463-511c-9eeb-46c7a8398f4a",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/curriculo/2980bbc5-4463-511c-9eeb-46c7a8398f4a",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias/cf6d7d47-afa2-566a-bbd1-2aba270b089b",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias/cf6d7d47-afa2-566a-bbd1-2aba270b089b",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias/cf6d7d47-afa2-566a-bbd1-2aba270b089b",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias/cf6d7d47-afa2-566a-bbd1-2aba270b089b",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias/cf6d7d47-afa2-566a-bbd1-2aba270b089b",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias/cf6d7d47-afa2-566a-bbd1-2aba270b089b",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias/novo",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias/novo",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias/novo",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias/novo",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills/975ead75-dde7-53a1-b934-07a2da7ae65f",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills/975ead75-dde7-53a1-b934-07a2da7ae65f",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills/975ead75-dde7-53a1-b934-07a2da7ae65f",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills/975ead75-dde7-53a1-b934-07a2da7ae65f",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills/975ead75-dde7-53a1-b934-07a2da7ae65f",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills/975ead75-dde7-53a1-b934-07a2da7ae65f",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills/novo",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills/novo",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills/novo",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills/novo",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos/8e3dae0c-6768-5ddb-92ca-0b49b4ab4ddd",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos/8e3dae0c-6768-5ddb-92ca-0b49b4ab4ddd",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos/8e3dae0c-6768-5ddb-92ca-0b49b4ab4ddd",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos/8e3dae0c-6768-5ddb-92ca-0b49b4ab4ddd",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos/8e3dae0c-6768-5ddb-92ca-0b49b4ab4ddd",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos/8e3dae0c-6768-5ddb-92ca-0b49b4ab4ddd",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos/novo",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos/novo",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos/novo",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos/novo",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases/d47a41a3-4430-50df-84a2-a8a05082b525",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases/d47a41a3-4430-50df-84a2-a8a05082b525",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases/d47a41a3-4430-50df-84a2-a8a05082b525",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases/d47a41a3-4430-50df-84a2-a8a05082b525",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases/d47a41a3-4430-50df-84a2-a8a05082b525",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases/d47a41a3-4430-50df-84a2-a8a05082b525",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases/novo",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases/novo",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases/novo",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases/novo",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/8752a2ee-398a-4f83-9368-16494226f5f8",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/8752a2ee-398a-4f83-9368-16494226f5f8",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/8752a2ee-398a-4f83-9368-16494226f5f8",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/8752a2ee-398a-4f83-9368-16494226f5f8",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/8752a2ee-398a-4f83-9368-16494226f5f8",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/8752a2ee-398a-4f83-9368-16494226f5f8",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/novo",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/novo",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/novo",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/novo",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos/8297eb2c-2c53-5e97-9538-df31ed32f315",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos/8297eb2c-2c53-5e97-9538-df31ed32f315",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos/8297eb2c-2c53-5e97-9538-df31ed32f315",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos/8297eb2c-2c53-5e97-9538-df31ed32f315",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos/8297eb2c-2c53-5e97-9538-df31ed32f315",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos/8297eb2c-2c53-5e97-9538-df31ed32f315",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos/novo",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos/novo",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos/novo",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos/novo",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos/novo",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/configuracoes/b22ed5fb-6ed0-5753-9e12-0447022c2702",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/configuracoes/b22ed5fb-6ed0-5753-9e12-0447022c2702",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/configuracoes/b22ed5fb-6ed0-5753-9e12-0447022c2702",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/configuracoes/b22ed5fb-6ed0-5753-9e12-0447022c2702",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/configuracoes/b22ed5fb-6ed0-5753-9e12-0447022c2702",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/configuracoes/b22ed5fb-6ed0-5753-9e12-0447022c2702",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/auditoria",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/auditoria",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/auditoria",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/auditoria",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/auditoria",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/auditoria",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/seguranca",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/seguranca",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/seguranca",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/seguranca",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/seguranca",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/seguranca",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/login",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/login",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/login",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/login",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/login",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/login",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/recuperar-senha",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/recuperar-senha",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/recuperar-senha",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/recuperar-senha",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/recuperar-senha",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/recuperar-senha",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/redefinir-senha",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/redefinir-senha",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/redefinir-senha",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/redefinir-senha",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/redefinir-senha",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/redefinir-senha",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/perfil",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/perfil",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/perfil",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/perfil",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/perfil",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/perfil",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/experiencias",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/formacoes",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/certificacoes",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/idiomas",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/curriculo",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/curriculo",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/curriculo",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/curriculo",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/curriculo",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/curriculo",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/categorias",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/skills",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/projetos",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/cases",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/videos",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/configuracoes",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/configuracoes",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/configuracoes",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/configuracoes",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/configuracoes",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/configuracoes",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/54e7f7bb-8edc-438d-bb56-01d9a6dcd51f",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/54e7f7bb-8edc-438d-bb56-01d9a6dcd51f",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/54e7f7bb-8edc-438d-bb56-01d9a6dcd51f",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/54e7f7bb-8edc-438d-bb56-01d9a6dcd51f",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/54e7f7bb-8edc-438d-bb56-01d9a6dcd51f",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/54e7f7bb-8edc-438d-bb56-01d9a6dcd51f",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/importar",
+      "viewportWidth": 1440,
+      "zoom": 1,
+      "viewport": 1440,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/importar",
+      "viewportWidth": 1440,
+      "zoom": 1.25,
+      "viewport": 1152,
+      "nativeZoom": 1.25,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/importar",
+      "viewportWidth": 1440,
+      "zoom": 1.5,
+      "viewport": 960,
+      "nativeZoom": 1.5,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/importar",
+      "viewportWidth": 1440,
+      "zoom": 2,
+      "viewport": 720,
+      "nativeZoom": 2,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/importar",
+      "viewportWidth": 768,
+      "zoom": 1,
+      "viewport": 768,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    },
+    {
+      "url": "/admin/artigos/importar",
+      "viewportWidth": 390,
+      "zoom": 1,
+      "viewport": 390,
+      "nativeZoom": 1,
+      "overflow": false,
+      "minFont": 16
+    }
+  ],
+  "errors": [],
+  "result": "passed"
+}
