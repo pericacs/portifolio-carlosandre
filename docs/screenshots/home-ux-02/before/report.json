@@ -1,0 +1,12 @@
+{
+  "phase": "before",
+  "screens": [
+    "docs\\screenshots\\home-ux-02\\before\\home-1440.png",
+    "docs\\screenshots\\home-ux-02\\before\\home-768.png",
+    "docs\\screenshots\\home-ux-02\\before\\home-390.png"
+  ],
+  "layouts": [],
+  "regressions": [],
+  "errors": [],
+  "result": "passed"
+}
